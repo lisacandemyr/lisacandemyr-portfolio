@@ -57,6 +57,10 @@ body {
   animation: floatRight 1500ms;
 }
 
+.float-left {
+  animation: floatLeft 1500ms;
+}
+
 .fade-in {
   animation: fadeIn 2500ms;
 }
@@ -86,6 +90,17 @@ body {
 @keyframes floatRight {
   0% {
     transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes floatLeft {
+  0% {
+    transform: translateX(-100%);
     opacity: 0;
   }
   100% {

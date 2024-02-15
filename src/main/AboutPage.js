@@ -2,7 +2,7 @@ import "./AboutPage.css";
 
 function AboutPage() {
   return (
-    <div className="AboutPage float-up">
+    <div className="AboutPage float-up hidden">
       <div class="about-page" id="about-page">
         <h2 class="text-center outline-light-mode float-up">about</h2>
         <p class="text-center fade-in">
