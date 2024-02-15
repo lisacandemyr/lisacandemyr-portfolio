@@ -2,8 +2,8 @@ import "./HomePage.css";
 
 function HomePage() {
   return (
-    <div className="HomePage float-up">
-      <div className="homepage" id="homepage">
+    <div className="HomePage float-up hidden">
+      <div className="home-page" id="home-page">
         <h1 className="text-center outline-light-mode">
           Hey I’m{" "}
           <span className="size">
