@@ -172,8 +172,42 @@
   }
 }
 
+@media (max-width: 1000px) {
+  .GalleryPage .gallery-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
 @media (max-width: 800px) {
+  .GalleryPage .gallery-1,
+  .GalleryPage .gallery-2,
+  .GalleryPage .gallery-3,
+  .GalleryPage .gallery-4 {
+    margin-top: -50px;
+  }
+
   .GalleryPage .gallery-page .grid {
+    grid-template-columns: 1fr;
+    height: 500px;
+  }
+
+  .GalleryPage .gallery-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 730px) {
+  .GalleryPage .gallery-container-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .GalleryPage .gallery-container-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 400px) {
+  .GalleryPage .gallery-container {
     grid-template-columns: 1fr;
   }
 }

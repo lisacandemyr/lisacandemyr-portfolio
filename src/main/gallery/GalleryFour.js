@@ -12,9 +12,9 @@ const images = require.context("./live-music", true);
 const imageList1 = fileNames1.map((fileName) => images(`./${fileName}`));
 const imageList2 = fileNames2.map((fileName) => images(`./${fileName}`));
 
-function GalleryThree() {
+function GalleryFour() {
   return (
-    <div className="GalleryFour">
+    <div className="GalleryFour hidden">
       <div class="gallery-4" id="gallery-4">
         <div class="grid fade-in">
           <div class="text-start">
@@ -43,4 +43,4 @@ function GalleryThree() {
   );
 }
 
-export default GalleryThree;
+export default GalleryFour;
