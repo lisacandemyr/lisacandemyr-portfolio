@@ -1,0 +1,106 @@
+@font-face {
+  font-family: "Tangerine";
+  src: url("fonts/TangerineRegular.woff2") format("woff2"),
+    url("fonts/TangerineRegular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --dark-color: rgb(30, 30, 30);
+  --light-color: rgb(255, 255, 255);
+  --transparent: rgba(255, 255, 255, 0);
+  --text-headline: "Tangerine";
+  --text-paragraph: "Red Hat Display", sans-serif;
+}
+
+body {
+  background: var(--light-color);
+  margin: 0;
+  padding: 0;
+}
+
+.light-mode {
+  background: var(--light-color);
+  color: var(--dark-color);
+}
+
+.dark-mode {
+  background: var(--dark-color);
+  color: var(--light-color);
+}
+
+.outline-light-mode {
+  color: var(--transparent);
+  -webkit-text-stroke: 1px var(--dark-color);
+}
+
+.outline-dark-mode {
+  color: var(--transparent);
+  -webkit-text-stroke: 0.5px var(--light-color);
+}
+
+.hidden {
+  display: none;
+}
+
+.float-up {
+  animation: floatUp 1500ms;
+}
+
+.float-down {
+  animation: floatDown 1500ms;
+}
+
+.float-right {
+  animation: floatRight 1500ms;
+}
+
+.fade-in {
+  animation: fadeIn 2500ms;
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes floatDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes floatRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
