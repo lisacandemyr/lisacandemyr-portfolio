@@ -16,6 +16,7 @@
 
 body {
   background: var(--light-color);
+  color: var(--dark-color);
   margin: 0;
   padding: 0;
 }

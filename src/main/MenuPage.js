@@ -2,7 +2,7 @@ import "./MenuPage.css";
 
 function MenuPage() {
   return (
-    <div className="MenuPage">
+    <div className="MenuPage hidden">
       <div className="menu-page" id="menu-page">
         <div className="row">
           <div className="col-3"></div>

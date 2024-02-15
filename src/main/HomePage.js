@@ -14,7 +14,7 @@ function HomePage() {
             <span className="ca">Ca</span>ndemyr.
           </span>
         </h1>
-        <h2 className="text-center text">
+        <h2 className="text-center">
           I’m a junior web developer and photographer
         </h2>
         <div className="links text-center fade-in">

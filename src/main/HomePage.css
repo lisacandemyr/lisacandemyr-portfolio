@@ -29,7 +29,6 @@
 }
 
 .HomePage .home-page .links a {
-  color: var(--dark-color);
   font-family: var(--text-paragraph);
   font-size: 12px;
   font-weight: 500;
@@ -40,7 +39,6 @@
 }
 
 .HomePage .home-page .links a:hover {
-  color: var(--dark-color);
   cursor: pointer;
   transform: scale(1.1);
 }
