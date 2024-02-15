@@ -1,11 +1,18 @@
 import React from "react";
 
+function generateFileNames(prefix, count) {
+  return Array.from(
+    { length: count },
+    (_, index) => `${prefix}-${index + 1}.jpg`
+  );
+}
+const fileNames = generateFileNames("gm", 36);
 const images = require.context("./greenwich-market", true);
-const imageList = images.keys().map((image) => images(image));
+const imageList = fileNames.map((fileName) => images(`./${fileName}`));
 
 function GalleryOne() {
   return (
-    <div className="GalleryOne">
+    <div className="GalleryOne hidden">
       <div className="gallery-1" id="gallery-1">
         <div className="grid fade-in">
           <div className="text-start"></div>
@@ -21,7 +28,7 @@ function GalleryOne() {
         </div>
         <div class="gallery-container">
           {imageList.map((image, index) => (
-            <img key={index} src={image} alt={`image-${index}`} />
+            <img key={index} src={image} alt={`Greenwich Market ${index}`} />
           ))}
         </div>
       </div>
