@@ -12,7 +12,7 @@ const imageList = fileNames.map((fileName) => images(`./${fileName}`));
 
 function GalleryThree() {
   return (
-    <div className="GalleryThree">
+    <div className="GalleryThree hidden">
       <div className="gallery-3" id="gallery-3">
         <div className="grid fade-in">
           <div className="text-start">
