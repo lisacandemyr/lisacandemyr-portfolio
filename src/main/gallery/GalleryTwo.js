@@ -12,7 +12,7 @@ const imageList = fileNames.map((fileName) => images(`./${fileName}`));
 
 function GalleryTwo() {
   return (
-    <div className="GalleryTwo">
+    <div className="GalleryTwo hidden">
       <div className="gallery-2" id="gallery-2">
         <div className="grid fade-in">
           <div className="text-start">
@@ -25,7 +25,7 @@ function GalleryTwo() {
           </div>
           <div className="text-center">
             <h3>Ehla Eat</h3>
-            <p>Community</p>
+            <p>Eastern Mediterranean Food</p>
           </div>
           <div className="text-end">
             <a className="ryan-london-btn btn" data-target-gallery="gallery-3">
@@ -35,7 +35,7 @@ function GalleryTwo() {
         </div>
         <div class="gallery-container">
           {imageList.map((image, index) => (
-            <img key={index} src={image} alt={`image-${index}`} />
+            <img key={index} src={image} alt={`Ehla Eat ${index}`} />
           ))}
         </div>
       </div>
