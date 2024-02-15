@@ -2,7 +2,7 @@ import "./ContactPage.css";
 
 function ContactPage() {
   return (
-    <div className="ContactPage float-up">
+    <div className="ContactPage float-up hidden">
       <div className="contact-page" id="contact-page">
         <h2 className="text-center outline-light-mode">Contact</h2>
         <p className="text-center">
