@@ -1,9 +1,22 @@
 import "./HomePage.css";
 
 function HomePage({ toggleDarkMode }) {
+  const handleClick = (pageId) => {
+    const home = document.getElementById("home-page");
+    const page = document.getElementById(pageId);
+
+    if (page.classList.contains("hidden")) {
+      home.classList.add("fade-out");
+      setTimeout(() => {
+        page.classList.remove("hidden");
+        home.classList.add("hidden");
+      }, 500);
+    }
+  };
+
   return (
-    <div className="HomePage float-up">
-      <div className="home-page" id="home-page">
+    <div className="HomePage float-up" id="home-page">
+      <div className="home-page">
         <h1
           className={`text-center ${
             toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
@@ -22,39 +35,39 @@ function HomePage({ toggleDarkMode }) {
         <h2 className="text-center">
           I’m a junior web developer and photographer
         </h2>
-        <div className="links text-center fade-in">
-          <a
-            href="#projects-page"
-            className={`link projects-btn btn ${
+        <div className="text-center fade-in">
+          <button
+            onClick={() => handleClick("project-page")}
+            className={`link project-btn btn ${
               toggleDarkMode ? "text-dark" : "text-light"
             }`}
           >
-            <i className="fa-regular fa-arrow-right"></i> projects
-          </a>
-          <a
-            href="#gallery-page"
+            <i className="fa-regular fa-arrow-right"></i> Projects
+          </button>
+          <button
+            onClick={() => handleClick("gallery-page")}
             className={`link gallery-btn btn ${
               toggleDarkMode ? "text-dark" : "text-light"
             }`}
           >
-            <i className="fa-regular fa-arrow-right"></i> gallery
-          </a>
-          <a
-            href="#about-page"
+            <i className="fa-regular fa-arrow-right"></i> Gallery
+          </button>
+          <button
+            onClick={() => handleClick("about-page")}
             className={`link about-btn btn ${
               toggleDarkMode ? "text-dark" : "text-light"
             }`}
           >
-            <i className="fa-regular fa-arrow-right"></i> about
-          </a>
-          <a
-            href="#contact-page"
+            <i className="fa-regular fa-arrow-right"></i> About
+          </button>
+          <button
+            onClick={() => handleClick("contact-page")}
             className={`link contact-btn btn ${
               toggleDarkMode ? "text-dark" : "text-light"
             }`}
           >
-            <i className="fa-regular fa-arrow-right"></i> contact
-          </a>
+            <i className="fa-regular fa-arrow-right"></i> Contact
+          </button>
         </div>
       </div>
     </div>

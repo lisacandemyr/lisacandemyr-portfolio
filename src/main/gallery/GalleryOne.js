@@ -11,6 +11,21 @@ const images = require.context("./greenwich-market", true);
 const imageList = fileNames.map((fileName) => images(`./${fileName}`));
 
 function GalleryOne({ toggleDarkMode }) {
+  const handleClick = (targetGalleryId) => {
+    const currentGallery = document.getElementById("gallery-1");
+    const targetGallery = document.getElementById(targetGalleryId);
+
+    if (!targetGallery.classList.contains("hidden")) {
+      return;
+    }
+
+    currentGallery.classList.add("fade-out");
+    setTimeout(() => {
+      currentGallery.classList.add("hidden");
+    }, 1000);
+    targetGallery.classList.remove("hidden");
+  };
+
   return (
     <div className="GalleryOne hidden" id="gallery-1">
       <div className="gallery-1">
@@ -23,16 +38,19 @@ function GalleryOne({ toggleDarkMode }) {
             </p>
           </div>
           <div className="text-end">
-            <a className="ehla-eat-btn btn" data-target-gallery="gallery-2">
+            <button
+              onClick={() => handleClick("gallery-2")}
+              className="ehla-eat-btn btn"
+            >
               <i
                 className={`fa-thin fa-chevron-right ${
                   toggleDarkMode ? "gallery-btn-light" : "gallery-btn-dark"
                 }`}
               ></i>
-            </a>
+            </button>
           </div>
         </div>
-        <div className="gallery-container">
+        <div className="gallery-container fade-in">
           {imageList.map((image, index) => (
             <img key={index} src={image} alt={`Greenwich Market ${index}`} />
           ))}

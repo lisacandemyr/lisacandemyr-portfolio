@@ -32,7 +32,7 @@ function Navbar({ toggleDarkMode, toggleDarkTheme }) {
           </div>
           <div>
             <button
-              className={`btn ${
+              className={`menu-btn btn ${
                 toggleDarkMode ? "menu-btn-light" : "menu-btn-dark"
               }`}
             >
