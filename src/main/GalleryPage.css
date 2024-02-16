@@ -84,6 +84,14 @@
   background-size: 100%;
 }
 
+.GalleryPage .gallery-btn-light {
+  color: var(--dark-color);
+}
+
+.GalleryPage .gallery-btn-dark {
+  color: var(--light-color);
+}
+
 .GalleryPage .gallery-1 .grid,
 .GalleryPage .gallery-2 .grid,
 .GalleryPage .gallery-3 .grid,

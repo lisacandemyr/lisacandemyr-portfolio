@@ -21,13 +21,19 @@ body {
   padding: 0;
 }
 
-.light-mode {
+.light {
   background: var(--light-color);
+}
+
+.dark {
+  background: var(--dark-color);
+}
+
+.text-light {
   color: var(--dark-color);
 }
 
-.dark-mode {
-  background: var(--dark-color);
+.text-dark {
   color: var(--light-color);
 }
 
@@ -63,6 +69,10 @@ body {
 
 .fade-in {
   animation: fadeIn 2500ms;
+}
+
+.fade-out {
+  animation: fadeOut 1500ms;
 }
 
 @keyframes floatUp {
@@ -118,5 +128,17 @@ body {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
   }
 }

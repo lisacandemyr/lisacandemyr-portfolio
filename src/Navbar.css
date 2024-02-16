@@ -37,7 +37,7 @@
   display: flex;
 }
 
-.Navbar .theme-btn {
+.Navbar .theme-btn-light {
   background: var(--transparent);
   border: none;
   color: var(--dark-color);
@@ -46,8 +46,23 @@
   transition: all 300ms ease-in-out;
 }
 
-.Navbar .menu-btn {
+.Navbar .theme-btn-dark {
+  background: var(--transparent);
+  border: none;
+  color: var(--light-color);
+  font-size: 25px;
+  margin-right: 15px;
+  transition: all 300ms ease-in-out;
+}
+
+.Navbar .menu-btn-light {
   color: var(--dark-color);
+  font-size: 37px;
+  transition: all 300ms ease-in-out;
+}
+
+.Navbar .menu-btn-dark {
+  color: var(--light-color);
   font-size: 37px;
   transition: all 300ms ease-in-out;
 }
@@ -57,6 +72,10 @@
   font-size: 40px;
   margin: 0 7px 0 4.75px;
   transition: all 750ms ease-in-out;
+}
+
+.Navbar .menu-btn-close i {
+  transition: all 300ms ease-in-out;
 }
 
 .Navbar .theme-btn:hover,

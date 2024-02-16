@@ -5,14 +5,14 @@ import GalleryThree from "./gallery/GalleryThree.js";
 import GalleryFour from "./gallery/GalleryFour.js";
 import "./GalleryPage.css";
 
-function GalleryPage() {
+function GalleryPage({ toggleDarkMode }) {
   return (
     <div className="GalleryPage">
-      <Gallery />
-      <GalleryOne />
-      <GalleryTwo />
-      <GalleryThree />
-      <GalleryFour />
+      <Gallery toggleDarkMode={toggleDarkMode} />
+      <GalleryOne toggleDarkMode={toggleDarkMode} />
+      <GalleryTwo toggleDarkMode={toggleDarkMode} />
+      <GalleryThree toggleDarkMode={toggleDarkMode} />
+      <GalleryFour toggleDarkMode={toggleDarkMode} />
     </div>
   );
 }

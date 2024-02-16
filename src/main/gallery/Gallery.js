@@ -1,8 +1,14 @@
-function Gallery() {
+function Gallery({ toggleDarkMode }) {
   return (
-    <div className="Gallery hidden">
-      <div className="gallery-page" id="gallery-page">
-        <h2 className="text-center outline-light-mode float-up">Gallery</h2>
+    <div className="Gallery hidden" id="gallery-page">
+      <div className="gallery-page">
+        <h2
+          className={`text-center float-up ${
+            toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
+          }`}
+        >
+          Gallery
+        </h2>
         <div className="grid text-center fade-in">
           <a className="greenwich-market" id="greenwich-market">
             <h3>Greenwich Market</h3>

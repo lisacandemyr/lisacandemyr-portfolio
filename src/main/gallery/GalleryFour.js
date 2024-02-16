@@ -12,28 +12,34 @@ const images = require.context("./live-music", true);
 const imageList1 = fileNames1.map((fileName) => images(`./${fileName}`));
 const imageList2 = fileNames2.map((fileName) => images(`./${fileName}`));
 
-function GalleryFour() {
+function GalleryFour({ toggleDarkMode }) {
   return (
-    <div className="GalleryFour hidden">
-      <div class="gallery-4" id="gallery-4">
-        <div class="grid fade-in">
-          <div class="text-start">
-            <a class="ryan-london-btn btn" data-target-gallery="gallery-3">
-              <i class="fa-thin fa-chevron-left"></i>
+    <div className="GalleryFour hidden" id="gallery-4">
+      <div className="gallery-4">
+        <div className="grid fade-in">
+          <div className="text-start">
+            <a className="ryan-london-btn btn" data-target-gallery="gallery-3">
+              <i
+                className={`fa-thin fa-chevron-left ${
+                  toggleDarkMode ? "gallery-btn-light" : "gallery-btn-dark"
+                }`}
+              ></i>
             </a>
           </div>
-          <div class="text-center">
-            <h3 class="text">Live Music</h3>
-            <p class="text">Events</p>
+          <div className="text-center">
+            <h3>Live Music</h3>
+            <p className={`${toggleDarkMode ? "text-dark" : "text-light"}`}>
+              Events
+            </p>
           </div>
-          <div class="text-end"></div>
+          <div className="text-end"></div>
         </div>
-        <div class="gallery-container-2 float-up">
+        <div className="gallery-container-2 float-up">
           {imageList1.map((image, index) => (
             <img key={index} src={image} alt={`Ryan London ${index}`} />
           ))}
         </div>
-        <div class="gallery-container-3 float-up">
+        <div className="gallery-container-3 float-up">
           {imageList2.map((image, index) => (
             <img key={index} src={image} alt={`Live Music ${index}`} />
           ))}

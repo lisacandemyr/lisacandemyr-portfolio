@@ -1,13 +1,22 @@
 import "./ContactPage.css";
 
-function ContactPage() {
+function ContactPage({ toggleDarkMode }) {
   return (
-    <div className="ContactPage float-up hidden">
-      <div className="contact-page" id="contact-page">
-        <h2 className="text-center outline-light-mode">Contact</h2>
+    <div className="ContactPage float-up hidden" id="contact-page">
+      <div className="contact-page">
+        <h2
+          className={`text-center ${
+            toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
+          }`}
+        >
+          Contact
+        </h2>
         <p className="text-center">
           <strong>Email</strong>
-          <a href="mailto:lisa_candemyr@hotmail.com" className="btn">
+          <a
+            href="mailto:lisa_candemyr@hotmail.com"
+            className={`btn ${toggleDarkMode ? "text-dark" : "text-light"}`}
+          >
             <i className="fa-regular fa-arrow-right"></i> lisa_candemyr
             <strong>@</strong>hotmail.com
           </a>
@@ -16,7 +25,7 @@ function ContactPage() {
           <strong>Socials</strong>
           <a
             href="https://www.linkedin.com/in/lisa-candemyr"
-            className="btn"
+            className={`btn ${toggleDarkMode ? "text-dark" : "text-light"}`}
             target="_blank"
             rel="noreferrer"
           >
@@ -25,7 +34,7 @@ function ContactPage() {
           /
           <a
             href="https://github.com/lisacandemyr"
-            className="btn"
+            className={`btn ${toggleDarkMode ? "text-dark" : "text-light"}`}
             target="_blank"
             rel="noreferrer"
           >

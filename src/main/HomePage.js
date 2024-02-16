@@ -1,10 +1,15 @@
 import "./HomePage.css";
 
-function HomePage() {
+function HomePage({ toggleDarkMode }) {
   return (
-    <div className="HomePage float-up hidden">
+    <div className="HomePage float-up">
       <div className="home-page" id="home-page">
-        <h1 className="text-center outline-light-mode">
+        <h1
+          className={`text-center ${
+            toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
+          }`}
+        >
+          {" "}
           Hey I’m{" "}
           <span className="size">
             Li<span className="sa">sa</span>
@@ -18,16 +23,36 @@ function HomePage() {
           I’m a junior web developer and photographer
         </h2>
         <div className="links text-center fade-in">
-          <a href="#projects-page" className="projects-btn btn">
+          <a
+            href="#projects-page"
+            className={`link projects-btn btn ${
+              toggleDarkMode ? "text-dark" : "text-light"
+            }`}
+          >
             <i className="fa-regular fa-arrow-right"></i> projects
           </a>
-          <a href="#gallery-page" className="gallery-btn btn">
+          <a
+            href="#gallery-page"
+            className={`link gallery-btn btn ${
+              toggleDarkMode ? "text-dark" : "text-light"
+            }`}
+          >
             <i className="fa-regular fa-arrow-right"></i> gallery
           </a>
-          <a href="#about-page" className="about-btn btn">
+          <a
+            href="#about-page"
+            className={`link about-btn btn ${
+              toggleDarkMode ? "text-dark" : "text-light"
+            }`}
+          >
             <i className="fa-regular fa-arrow-right"></i> about
           </a>
-          <a href="#contact-page" className="contact-btn btn">
+          <a
+            href="#contact-page"
+            className={`link contact-btn btn ${
+              toggleDarkMode ? "text-dark" : "text-light"
+            }`}
+          >
             <i className="fa-regular fa-arrow-right"></i> contact
           </a>
         </div>

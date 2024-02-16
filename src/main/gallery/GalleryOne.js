@@ -10,23 +10,29 @@ const fileNames = generateFileNames("gm", 36);
 const images = require.context("./greenwich-market", true);
 const imageList = fileNames.map((fileName) => images(`./${fileName}`));
 
-function GalleryOne() {
+function GalleryOne({ toggleDarkMode }) {
   return (
-    <div className="GalleryOne hidden">
-      <div className="gallery-1" id="gallery-1">
+    <div className="GalleryOne hidden" id="gallery-1">
+      <div className="gallery-1">
         <div className="grid fade-in">
           <div className="text-start"></div>
           <div className="text-center">
             <h3>Greenwich Market</h3>
-            <p>Community</p>
+            <p className={`${toggleDarkMode ? "text-dark" : "text-light"}`}>
+              Community
+            </p>
           </div>
           <div className="text-end">
             <a className="ehla-eat-btn btn" data-target-gallery="gallery-2">
-              <i className="fa-thin fa-chevron-right"></i>
+              <i
+                className={`fa-thin fa-chevron-right ${
+                  toggleDarkMode ? "gallery-btn-light" : "gallery-btn-dark"
+                }`}
+              ></i>
             </a>
           </div>
         </div>
-        <div class="gallery-container">
+        <div className="gallery-container">
           {imageList.map((image, index) => (
             <img key={index} src={image} alt={`Greenwich Market ${index}`} />
           ))}

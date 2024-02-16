@@ -1,11 +1,21 @@
 import "./AboutPage.css";
 
-function AboutPage() {
+function AboutPage({ toggleDarkMode }) {
   return (
-    <div className="AboutPage float-up hidden">
-      <div class="about-page" id="about-page">
-        <h2 class="text-center outline-light-mode float-up">about</h2>
-        <p class="text-center fade-in">
+    <div className="AboutPage float-up hidden" id="about-page">
+      <div className="about-page">
+        <h2
+          className={`text-center float-up ${
+            toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
+          }`}
+        >
+          about
+        </h2>
+        <p
+          className={`text-center fade-in ${
+            toggleDarkMode ? "text-dark" : "text-light"
+          }`}
+        >
           Greetings, I'm Lisa - a <strong>junior web developer</strong>{" "}
           originally from Sweden but currently based in the UK.
           <br />
@@ -23,9 +33,12 @@ function AboutPage() {
             my portfolio, featuring an array of my projects and photography.
           </em>
         </p>
-        <p class="text-center fade-in">
-          <a href="#" class="btn">
-            <i class="fa-regular fa-arrow-down-right"></i> My resume
+        <p className="text-center fade-in">
+          <a
+            href="#"
+            className={`btn ${toggleDarkMode ? "text-dark" : "text-light"}`}
+          >
+            <i className="fa-regular fa-arrow-down-right"></i> My resume
           </a>
         </p>
       </div>
