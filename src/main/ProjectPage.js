@@ -2,7 +2,7 @@ import "./ProjectPage.css";
 
 function ProjectPage({ toggleDarkMode }) {
   return (
-    <div className="ProjectPage hidden" id="project-page">
+    <div className="ProjectPage hidden page" id="project-page">
       <div className="project-page">
         <div className="row">
           <div className="col-6"></div>
@@ -14,13 +14,13 @@ function ProjectPage({ toggleDarkMode }) {
                 }`}
               >
                 01
-                <a
+                <button
                   className={`${
                     toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
                   }`}
                 >
                   template
-                </a>
+                </button>
               </li>
               <li
                 className={`${
@@ -28,13 +28,13 @@ function ProjectPage({ toggleDarkMode }) {
                 }`}
               >
                 02
-                <a
+                <button
                   className={`${
                     toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
                   }`}
                 >
                   template
-                </a>
+                </button>
               </li>
               <li
                 className={`${
@@ -42,13 +42,13 @@ function ProjectPage({ toggleDarkMode }) {
                 }`}
               >
                 03
-                <a
+                <button
                   className={`${
                     toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
                   }`}
                 >
                   template
-                </a>
+                </button>
               </li>
               <li
                 className={`${
@@ -56,13 +56,13 @@ function ProjectPage({ toggleDarkMode }) {
                 }`}
               >
                 04
-                <a
+                <button
                   className={`${
                     toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
                   }`}
                 >
                   template
-                </a>
+                </button>
               </li>
             </ul>
           </div>

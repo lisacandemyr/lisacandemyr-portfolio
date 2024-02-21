@@ -40,8 +40,8 @@ function HomePage({ toggleDarkMode }) {
   };
 
   return (
-    <div className="HomePage float-up page" id="home-page">
-      <div className="home-page">
+    <div className="HomePage page" id="home-page">
+      <div className="home-page float-up">
         <h1
           className={`text-center ${
             toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
@@ -49,7 +49,11 @@ function HomePage({ toggleDarkMode }) {
         >
           {" "}
           Hey I’m{" "}
-          <span className="size">
+          <span
+            className={`size ${
+              toggleDarkMode ? "size-light-mode" : "size-dark-mode"
+            }`}
+          >
             Li<span className="sa">sa</span>
           </span>
           <span className="hide">
@@ -58,7 +62,7 @@ function HomePage({ toggleDarkMode }) {
           </span>
         </h1>
         <h2 className="text-center">
-          I’m a junior web developer and photographer
+          I'm a junior web developer and photographer
         </h2>
         <div className="text-center fade-in">
           <button

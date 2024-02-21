@@ -13,7 +13,7 @@ function Gallery({ toggleDarkMode }) {
   };
 
   return (
-    <div className="Gallery hidden" id="gallery-page">
+    <div className="Gallery hidden page" id="gallery-page">
       <div className="gallery-page">
         <h2
           className={`text-center float-up ${

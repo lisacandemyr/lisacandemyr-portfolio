@@ -15,9 +15,6 @@ function MenuPage({ closeMenu, isMenuVisible, toggleDarkMode }) {
     const gallery3 = document.getElementById("gallery-3");
     const gallery4 = document.getElementById("gallery-4");
 
-    console.log("selectedPage:", selectedPage);
-    console.log("isMenuVisible:", isMenuVisible);
-
     [
       home,
       project,
@@ -36,7 +33,9 @@ function MenuPage({ closeMenu, isMenuVisible, toggleDarkMode }) {
 
     if (!selectedPage && !isMenuVisible) {
       if (home) {
-        home.classList.remove("hidden");
+        setTimeout(() => {
+          home.classList.remove("hidden");
+        }, 500);
       }
     }
 

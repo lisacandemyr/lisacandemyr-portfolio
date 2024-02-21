@@ -6,15 +6,19 @@
 .ProjectPage .project-page ul {
   list-style: none;
   position: absolute;
+  margin-left: 55px;
 }
 
-.ProjectPage .project-page a {
+.ProjectPage .project-page button {
+  background: var(--transparent);
+  border: none;
   color: var(--transparent);
   font-family: var(--text-headline);
-  font-size: 60px;
+  font-size: 55px;
   font-weight: 100;
   letter-spacing: -3px;
   margin-left: 10px;
+  padding: 0;
   text-decoration: none;
   transition: all 300ms ease-in-out;
 }
@@ -52,10 +56,10 @@
   }
 
   .ProjectPage .project-page .col-4 {
-    margin: 40px 30px;
+    margin: -5px -20px;
   }
 
-  .ProjectPage .project-page a {
+  .ProjectPage .project-page button {
     font-size: 45px;
     letter-spacing: -2px;
   }
@@ -63,6 +67,6 @@
 
 @media (max-width: 400px) {
   .ProjectPage .project-page .col-4 {
-    margin: 30px 10px;
+    margin: -15px -40px;
   }
 }

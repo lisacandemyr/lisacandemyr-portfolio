@@ -11,7 +11,7 @@ function ContactPage({ toggleDarkMode }) {
         >
           Contact
         </h2>
-        <p className="text-center">
+        <p className="text-center fade-in">
           <strong>Email</strong>
           <a
             href="mailto:lisa_candemyr@hotmail.com"
@@ -21,7 +21,7 @@ function ContactPage({ toggleDarkMode }) {
             <strong>@</strong>hotmail.com
           </a>
         </p>
-        <p className="text-center">
+        <p className="text-center fade-in">
           <strong>Socials</strong>
           <a
             href="https://www.linkedin.com/in/lisa-candemyr"

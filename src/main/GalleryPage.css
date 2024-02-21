@@ -1,6 +1,6 @@
 .GalleryPage .gallery-page h2 {
   font-family: var(--text-headline);
-  font-size: 60px;
+  font-size: 55px;
   letter-spacing: -3px;
   margin-bottom: 25px;
   text-transform: lowercase;
@@ -218,5 +218,13 @@
 @media (max-width: 400px) {
   .GalleryPage .gallery-container {
     grid-template-columns: 1fr;
+  }
+
+  .GalleryPage .gallery-page h2 {
+    font-size: 45px;
+  }
+
+  .GalleryPage .gallery-page h3 {
+    font-size: 25px;
   }
 }
