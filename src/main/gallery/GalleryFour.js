@@ -37,7 +37,7 @@ function GalleryFour({ toggleDarkMode }) {
               className="ryan-london-btn btn"
             >
               <i
-                className={`fa-thin fa-chevron-left ${
+                className={`fa-thin fa-angle-left ${
                   toggleDarkMode ? "gallery-btn-light" : "gallery-btn-dark"
                 }`}
               ></i>
@@ -61,6 +61,9 @@ function GalleryFour({ toggleDarkMode }) {
             <img key={index} src={image} alt={`Live Music ${index}`} />
           ))}
         </div>
+        <a href="#gallery-4">
+          <i className="fa-thin fa-angle-up"></i>
+        </a>
       </div>
     </div>
   );

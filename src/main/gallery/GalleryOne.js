@@ -43,7 +43,7 @@ function GalleryOne({ toggleDarkMode }) {
               className="ehla-eat-btn btn"
             >
               <i
-                className={`fa-thin fa-chevron-right ${
+                className={`fa-thin fa-angle-right ${
                   toggleDarkMode ? "gallery-btn-light" : "gallery-btn-dark"
                 }`}
               ></i>
@@ -55,6 +55,9 @@ function GalleryOne({ toggleDarkMode }) {
             <img key={index} src={image} alt={`Greenwich Market ${index}`} />
           ))}
         </div>
+        <a href="#gallery-1">
+          <i className="fa-thin fa-angle-up"></i>
+        </a>
       </div>
     </div>
   );

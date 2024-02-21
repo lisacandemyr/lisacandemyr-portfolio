@@ -36,7 +36,7 @@ function GalleryTwo({ toggleDarkMode }) {
               className="greenwich-market-btn btn"
             >
               <i
-                className={`fa-thin fa-chevron-left ${
+                className={`fa-thin fa-angle-left ${
                   toggleDarkMode ? "gallery-btn-light" : "gallery-btn-dark"
                 }`}
               ></i>
@@ -54,7 +54,7 @@ function GalleryTwo({ toggleDarkMode }) {
               className="ryan-london-btn btn"
             >
               <i
-                className={`fa-thin fa-chevron-right ${
+                className={`fa-thin fa-angle-right ${
                   toggleDarkMode ? "gallery-btn-light" : "gallery-btn-dark"
                 }`}
               ></i>
@@ -66,6 +66,9 @@ function GalleryTwo({ toggleDarkMode }) {
             <img key={index} src={image} alt={`Ehla Eat ${index}`} />
           ))}
         </div>
+        <a href="#gallery-2">
+          <i className="fa-thin fa-angle-up"></i>
+        </a>
       </div>
     </div>
   );

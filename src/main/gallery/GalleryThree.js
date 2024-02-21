@@ -35,7 +35,7 @@ function GalleryThree({ toggleDarkMode }) {
               className="ehla-eat-btn btn"
             >
               <i
-                className={`fa-thin fa-chevron-left ${
+                className={`fa-thin fa-angle-left ${
                   toggleDarkMode ? "gallery-btn-light" : "gallery-btn-dark"
                 }`}
               ></i>
@@ -53,7 +53,7 @@ function GalleryThree({ toggleDarkMode }) {
               className="live-music-btn btn"
             >
               <i
-                className={`fa-thin fa-chevron-right ${
+                className={`fa-thin fa-angle-right ${
                   toggleDarkMode ? "gallery-btn-light" : "gallery-btn-dark"
                 }`}
               ></i>
@@ -65,6 +65,9 @@ function GalleryThree({ toggleDarkMode }) {
             <img key={index} src={image} alt={`Ryan London ${index}`} />
           ))}
         </div>
+        <a href="#gallery-3">
+          <i className="fa-thin fa-angle-up"></i>
+        </a>
       </div>
     </div>
   );
