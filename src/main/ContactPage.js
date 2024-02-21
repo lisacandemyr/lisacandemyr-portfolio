@@ -2,7 +2,7 @@ import "./ContactPage.css";
 
 function ContactPage({ toggleDarkMode }) {
   return (
-    <div className="ContactPage float-up hidden" id="contact-page">
+    <div className="ContactPage float-up hidden page" id="contact-page">
       <div className="contact-page">
         <h2
           className={`text-center ${

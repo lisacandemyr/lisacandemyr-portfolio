@@ -3,19 +3,44 @@ import "./HomePage.css";
 function HomePage({ toggleDarkMode }) {
   const handleClick = (pageId) => {
     const home = document.getElementById("home-page");
+    const menu = document.getElementById("menu-page");
     const page = document.getElementById(pageId);
 
     if (page.classList.contains("hidden")) {
       home.classList.add("fade-out");
+      menu.classList.add("fade-out");
       setTimeout(() => {
         page.classList.remove("hidden");
         home.classList.add("hidden");
+        menu.classList.add("hidden");
+        home.classList.remove("fade-out");
+        menu.classList.remove("fade-out");
+      }, 500);
+    } else if (home.classList.contains("hidden")) {
+      page.classList.add("fade-out");
+      menu.classList.add("fade-out");
+      setTimeout(() => {
+        home.classList.remove("hidden");
+        page.classList.add("hidden");
+        menu.classList.add("hidden");
+        page.classList.remove("fade-out");
+        menu.classList.remove("fade-out");
+      }, 500);
+    } else if (menu.classList.contains("hidden")) {
+      page.classList.add("fade-out");
+      home.classList.add("fade-out");
+      setTimeout(() => {
+        menu.classList.remove("hidden");
+        page.classList.add("hidden");
+        home.classList.add("hidden");
+        page.classList.remove("fade-out");
+        home.classList.remove("fade-out");
       }, 500);
     }
   };
 
   return (
-    <div className="HomePage float-up" id="home-page">
+    <div className="HomePage float-up page" id="home-page">
       <div className="home-page">
         <h1
           className={`text-center ${

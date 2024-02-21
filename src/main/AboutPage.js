@@ -2,7 +2,7 @@ import "./AboutPage.css";
 
 function AboutPage({ toggleDarkMode }) {
   return (
-    <div className="AboutPage float-up hidden" id="about-page">
+    <div className="AboutPage float-up hidden page" id="about-page">
       <div className="about-page">
         <h2
           className={`text-center float-up ${
