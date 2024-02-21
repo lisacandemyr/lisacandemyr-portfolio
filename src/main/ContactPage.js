@@ -15,7 +15,9 @@ function ContactPage({ toggleDarkMode }) {
           <strong>Email</strong>
           <a
             href="mailto:lisa_candemyr@hotmail.com"
-            className={`btn ${toggleDarkMode ? "text-dark" : "text-light"}`}
+            className={`btn ${
+              toggleDarkMode ? "links-light-mode" : "links-dark-mode"
+            }`}
           >
             <i className="fa-regular fa-arrow-right"></i> lisa_candemyr
             <strong>@</strong>hotmail.com
@@ -25,7 +27,9 @@ function ContactPage({ toggleDarkMode }) {
           <strong>Socials</strong>
           <a
             href="https://www.linkedin.com/in/lisa-candemyr"
-            className={`btn ${toggleDarkMode ? "text-dark" : "text-light"}`}
+            className={`btn ${
+              toggleDarkMode ? "links-light-mode" : "links-dark-mode"
+            }`}
             target="_blank"
             rel="noreferrer"
           >
@@ -34,7 +38,9 @@ function ContactPage({ toggleDarkMode }) {
           /
           <a
             href="https://github.com/lisacandemyr"
-            className={`btn ${toggleDarkMode ? "text-dark" : "text-light"}`}
+            className={`btn ${
+              toggleDarkMode ? "links-light-mode" : "links-dark-mode"
+            }`}
             target="_blank"
             rel="noreferrer"
           >

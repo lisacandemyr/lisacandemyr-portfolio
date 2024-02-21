@@ -12,7 +12,6 @@
 }
 
 .AboutPage .about-page p {
-  color: var(--dark-color);
   font-family: var(--text-paragraph);
   font-size: 12px;
   font-weight: 500;
@@ -22,7 +21,6 @@
 }
 
 .AboutPage .about-page a {
-  color: var(--dark-color);
   display: absolute;
   font-family: var(--text-paragraph);
   font-size: 12px;
@@ -35,7 +33,6 @@
 }
 
 .AboutPage .about-page a:hover {
-  color: var(--dark-color);
   cursor: pointer;
   transform: scale(1.1);
 }

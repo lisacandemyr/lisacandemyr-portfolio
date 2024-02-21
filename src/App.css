@@ -7,16 +7,15 @@
 }
 
 :root {
-  --dark-color: rgb(30, 30, 30);
-  --light-color: rgb(255, 255, 255);
+  --dark-color: #c94d3a;
+  --light-color: #ffcfd7;
   --transparent: rgba(255, 255, 255, 0);
   --text-headline: "Tangerine";
   --text-paragraph: "Red Hat Display", sans-serif;
-  --scrollbar-color: rgba(128, 128, 128, 0.5);
 }
 
 ::-webkit-scrollbar {
-  background-color: transparent;
+  background-color: rgb(201, 77, 58);
   width: 20px;
 }
 
@@ -25,14 +24,14 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(128, 128, 128, 0.5);
+  background-color: rgba(255, 207, 215, 0.5);
   border-radius: 20px;
   border: 6px solid transparent;
   background-clip: content-box;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(128, 128, 128, 1);
+  background-color: rgba(255, 207, 215, 1);
 }
 
 body {
@@ -50,11 +49,11 @@ body {
   background: var(--dark-color);
 }
 
-.text-light {
+.text-light-mode {
   color: var(--dark-color);
 }
 
-.text-dark {
+.text-dark-mode {
   color: var(--light-color);
 }
 
@@ -66,6 +65,14 @@ body {
 .outline-dark-mode {
   color: var(--transparent);
   -webkit-text-stroke: 0.75px var(--light-color);
+}
+
+.links-light-mode {
+  color: #c94d3a;
+}
+
+.links-dark-mode {
+  color: #ffcfd7;
 }
 
 .hidden {

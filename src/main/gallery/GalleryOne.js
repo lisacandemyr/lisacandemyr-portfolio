@@ -33,7 +33,11 @@ function GalleryOne({ toggleDarkMode }) {
           <div className="text-start"></div>
           <div className="text-center">
             <h3>Greenwich Market</h3>
-            <p className={`${toggleDarkMode ? "text-dark" : "text-light"}`}>
+            <p
+              className={`${
+                toggleDarkMode ? "text-light-mode" : "text-dark-mode"
+              }`}
+            >
               Community
             </p>
           </div>

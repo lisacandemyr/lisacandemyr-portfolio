@@ -18,13 +18,20 @@ function App() {
     setToggleDarkMode(!toggleDarkMode);
   };
 
+  const lightBackground = "#ffcfd7";
+  const lightText = "#c94d3a";
+  const darkBackground = "#c94d3a";
+  const darkText = "#ffcfd7";
+
   const darkTheme = createTheme({
     palette: {
       mode: toggleDarkMode ? "light" : "dark",
-      main: "#f8f8f8",
-    },
-    secondary: {
-      main: "#f8f8f8",
+      background: {
+        default: toggleDarkMode ? lightBackground : darkBackground,
+      },
+      text: {
+        primary: toggleDarkMode ? lightText : darkText,
+      },
     },
   });
 

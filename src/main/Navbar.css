@@ -83,7 +83,8 @@
   transition: all 300ms ease-in-out;
 }
 
-.Navbar .theme-btn:hover,
+.Navbar .theme-btn-light:hover,
+.Navbar .theme-btn-dark:hover,
 .Navbar .menu-btn:hover {
   cursor: pointer;
   transform: scale(1.1);

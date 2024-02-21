@@ -13,7 +13,7 @@ function AboutPage({ toggleDarkMode }) {
         </h2>
         <p
           className={`text-center fade-in ${
-            toggleDarkMode ? "text-dark" : "text-light"
+            toggleDarkMode ? "text-light-mode" : "text-dark-mode"
           }`}
         >
           Greetings, I'm Lisa - a <strong>junior web developer</strong>{" "}
@@ -36,7 +36,9 @@ function AboutPage({ toggleDarkMode }) {
         <p className="text-center fade-in">
           <a
             href="#"
-            className={`btn ${toggleDarkMode ? "text-dark" : "text-light"}`}
+            className={`btn ${
+              toggleDarkMode ? "links-light-mode" : "links-dark-mode"
+            }`}
           >
             <i className="fa-regular fa-arrow-down-right"></i> My resume
           </a>

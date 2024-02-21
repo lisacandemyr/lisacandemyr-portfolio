@@ -68,7 +68,7 @@ function HomePage({ toggleDarkMode }) {
           <button
             onClick={() => handleClick("project-page")}
             className={`link project-btn btn ${
-              toggleDarkMode ? "text-dark" : "text-light"
+              toggleDarkMode ? "links-light-mode" : "links-dark-mode"
             }`}
           >
             <i className="fa-regular fa-arrow-right"></i> Projects
@@ -76,7 +76,7 @@ function HomePage({ toggleDarkMode }) {
           <button
             onClick={() => handleClick("gallery-page")}
             className={`link gallery-btn btn ${
-              toggleDarkMode ? "text-dark" : "text-light"
+              toggleDarkMode ? "links-light-mode" : "links-dark-mode"
             }`}
           >
             <i className="fa-regular fa-arrow-right"></i> Gallery
@@ -84,7 +84,7 @@ function HomePage({ toggleDarkMode }) {
           <button
             onClick={() => handleClick("about-page")}
             className={`link about-btn btn ${
-              toggleDarkMode ? "text-dark" : "text-light"
+              toggleDarkMode ? "links-light-mode" : "links-dark-mode"
             }`}
           >
             <i className="fa-regular fa-arrow-right"></i> About
@@ -92,7 +92,7 @@ function HomePage({ toggleDarkMode }) {
           <button
             onClick={() => handleClick("contact-page")}
             className={`link contact-btn btn ${
-              toggleDarkMode ? "text-dark" : "text-light"
+              toggleDarkMode ? "links-light-mode" : "links-dark-mode"
             }`}
           >
             <i className="fa-regular fa-arrow-right"></i> Contact

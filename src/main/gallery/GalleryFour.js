@@ -45,7 +45,11 @@ function GalleryFour({ toggleDarkMode }) {
           </div>
           <div className="text-center">
             <h3>Live Music</h3>
-            <p className={`${toggleDarkMode ? "text-dark" : "text-light"}`}>
+            <p
+              className={`${
+                toggleDarkMode ? "text-light-mode" : "text-dark-mode"
+              }`}
+            >
               Events
             </p>
           </div>
