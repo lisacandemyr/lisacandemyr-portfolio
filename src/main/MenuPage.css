@@ -8,7 +8,9 @@
   position: absolute;
 }
 
-.MenuPage .menu-page a {
+.MenuPage .menu-page button {
+  background: var(--transparent);
+  border: none;
   color: var(--transparent);
   font-family: var(--text-headline);
   font-size: 60px;

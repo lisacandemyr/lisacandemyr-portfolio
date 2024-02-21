@@ -1,8 +1,115 @@
+import React, { useState, useEffect } from "react";
 import "./MenuPage.css";
 
-function MenuPage({ toggleDarkMode }) {
+function MenuPage({ closeMenu, isMenuVisible, toggleDarkMode }) {
+  const [selectedPage, setSelectedPage] = useState(null);
+
+  useEffect(() => {
+    const home = document.getElementById("home-page");
+    const project = document.getElementById("project-page");
+    const gallery = document.getElementById("gallery-page");
+    const about = document.getElementById("about-page");
+    const contact = document.getElementById("contact-page");
+    const gallery1 = document.getElementById("gallery-1");
+    const gallery2 = document.getElementById("gallery-2");
+    const gallery3 = document.getElementById("gallery-3");
+    const gallery4 = document.getElementById("gallery-4");
+
+    console.log("selectedPage:", selectedPage);
+    console.log("isMenuVisible:", isMenuVisible);
+
+    [
+      home,
+      project,
+      gallery,
+      about,
+      contact,
+      gallery1,
+      gallery2,
+      gallery3,
+      gallery4,
+    ].forEach((page) => {
+      if (page) {
+        page.classList.add("hidden");
+      }
+    });
+
+    if (!selectedPage && !isMenuVisible) {
+      if (home) {
+        home.classList.remove("hidden");
+      }
+    }
+
+    if (!isMenuVisible) {
+      const selectedElement = document.getElementById(selectedPage);
+      if (selectedElement) {
+        setTimeout(() => {
+          selectedElement.classList.remove("hidden");
+        }, 500);
+      }
+    }
+  }, [selectedPage, isMenuVisible]);
+
+  const handleClick = (pageId) => {
+    const home = document.getElementById("home-page");
+    const project = document.getElementById("project-page");
+    const gallery = document.getElementById("gallery-page");
+    const about = document.getElementById("about-page");
+    const contact = document.getElementById("contact-page");
+    const menu = document.getElementById("menu-page");
+    const gallery1 = document.getElementById("gallery-1");
+    const gallery2 = document.getElementById("gallery-2");
+    const gallery3 = document.getElementById("gallery-3");
+    const gallery4 = document.getElementById("gallery-4");
+
+    [
+      home,
+      project,
+      gallery,
+      about,
+      contact,
+      menu,
+      gallery1,
+      gallery2,
+      gallery3,
+      gallery4,
+    ].forEach((element) => {
+      if (element) {
+        element.classList.add("fade-out");
+      }
+    });
+
+    setTimeout(() => {
+      [
+        home,
+        project,
+        gallery,
+        about,
+        contact,
+        menu,
+        gallery1,
+        gallery2,
+        gallery3,
+        gallery4,
+      ].forEach((element) => {
+        if (element) {
+          element.classList.add("hidden");
+          element.classList.remove("fade-out");
+        }
+      });
+
+      const selectedElement = document.getElementById(pageId);
+      if (selectedElement) {
+        selectedElement.classList.remove("hidden");
+      }
+      setSelectedPage(pageId);
+    }, 500);
+
+    closeMenu();
+  };
+
   return (
-    <div className="MenuPage hidden" id="menu-page">
+    <div className={`MenuPage ${isMenuVisible ? "" : "hidden"}`} id="menu-page">
       <div className="menu-page">
         <div className="row">
           <div className="col-3"></div>
@@ -14,13 +121,14 @@ function MenuPage({ toggleDarkMode }) {
                 }`}
               >
                 01
-                <a
+                <button
+                  onClick={() => handleClick("home-page")}
                   className={`${
                     toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
                   }`}
                 >
                   home
-                </a>
+                </button>
               </li>
               <li
                 className={`${
@@ -28,13 +136,14 @@ function MenuPage({ toggleDarkMode }) {
                 }`}
               >
                 02
-                <a
+                <button
+                  onClick={() => handleClick("project-page")}
                   className={`${
                     toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
                   }`}
                 >
                   projects
-                </a>
+                </button>
               </li>
               <li
                 className={`${
@@ -42,13 +151,14 @@ function MenuPage({ toggleDarkMode }) {
                 }`}
               >
                 03
-                <a
+                <button
+                  onClick={() => handleClick("gallery-page")}
                   className={`${
                     toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
                   }`}
                 >
                   gallery
-                </a>
+                </button>
               </li>
               <li
                 className={`${
@@ -56,13 +166,14 @@ function MenuPage({ toggleDarkMode }) {
                 }`}
               >
                 04
-                <a
+                <button
+                  onClick={() => handleClick("about-page")}
                   className={`${
                     toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
                   }`}
                 >
                   about
-                </a>
+                </button>
               </li>
               <li
                 className={`${
@@ -70,13 +181,14 @@ function MenuPage({ toggleDarkMode }) {
                 }`}
               >
                 05
-                <a
+                <button
+                  onClick={() => handleClick("contact-page")}
                   className={`${
                     toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
                   }`}
                 >
                   contact
-                </a>
+                </button>
               </li>
             </ul>
           </div>
