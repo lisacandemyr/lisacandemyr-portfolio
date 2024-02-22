@@ -9,7 +9,7 @@ function AboutPage({ toggleDarkMode }) {
             toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
           }`}
         >
-          about
+          About
         </h2>
         <p
           className={`text-center fade-in ${

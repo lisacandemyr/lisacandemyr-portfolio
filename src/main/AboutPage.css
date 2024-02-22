@@ -1,5 +1,5 @@
 .AboutPage .about-page {
-  margin: 0 auto;
+  margin: 100px auto;
   max-width: 850px;
 }
 
@@ -21,7 +21,6 @@
 }
 
 .AboutPage .about-page a {
-  display: absolute;
   font-family: var(--text-paragraph);
   font-size: 12px;
   font-weight: 500;
@@ -38,6 +37,10 @@
 }
 
 @media (max-width: 400px) {
+  .AboutPage .about-page {
+    margin: 25px 10px;
+  }
+
   .AboutPage .about-page h2 {
     font-size: 45px;
   }
