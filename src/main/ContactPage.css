@@ -1,6 +1,6 @@
 .ContactPage .contact-page {
-  position: relative;
-  top: 65px;
+  display: block;
+  margin: 100px 0;
 }
 
 .ContactPage .contact-page h2 {
@@ -14,7 +14,6 @@
 .ContactPage .contact-page p {
   font-family: var(--text-paragraph);
   font-size: 12px;
-  font-weight: 500;
   text-transform: uppercase;
   transition: all 300ms ease-in-out;
 }
@@ -23,7 +22,6 @@
   font-family: var(--text-paragraph);
   font-size: 12px;
   font-weight: 500;
-  text-decoration: none;
   text-transform: uppercase;
   transition: all 300ms ease-in-out;
 }
@@ -35,7 +33,7 @@
 
 @media (max-width: 400px) {
   .ContactPage .contact-page {
-    margin: 20px;
+    margin: 50px 10px;
   }
 
   .ContactPage .contact-page h2 {
