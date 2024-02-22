@@ -5,36 +5,41 @@ import "./Navbar.css";
 function Navbar({ toggleDarkMode, toggleDarkTheme }) {
   const [isMenuVisible, setMenuVisible] = useState(false);
 
-  const showMenu = () => {
-    const pagesToHide = [
+  const showMenu = (pageId) => {
+    const pages = [
       "home-page",
       "project-page",
       "gallery-page",
       "about-page",
       "contact-page",
-      "gallery-1",
-      "gallery-2",
-      "gallery-3",
-      "gallery-4",
     ];
 
-    pagesToHide.forEach((page) => {
-      const element = document.getElementById(page);
-
-      if (element) {
-        element.classList.add("fade-out");
+    pages.forEach((id) => {
+      const page = document.getElementById(id);
+      if (id === pageId) {
         setTimeout(() => {
-          element.classList.add("hidden");
-          element.classList.remove("fade-out");
+          page.classList.remove("hidden");
+        }, 500);
+      } else {
+        page.classList.add("fade-out");
+        setTimeout(() => {
+          page.classList.add("hidden");
+          page.classList.remove("fade-out");
+          setMenuVisible(true);
         }, 500);
       }
     });
-
-    setMenuVisible(true);
   };
 
   const closeMenu = () => {
-    setMenuVisible(false);
+    const menu = document.getElementById("menu-page");
+
+    menu.classList.add("fade-out");
+    setTimeout(() => {
+      menu.classList.add("hidden");
+      menu.classList.remove("fade-out");
+      setMenuVisible(false);
+    }, 500);
   };
 
   const goToHomepage = () => {
