@@ -1,42 +1,33 @@
+import React, { useState } from "react";
 import "./HomePage.css";
 
 function HomePage({ toggleDarkMode }) {
-  const handleClick = (pageId) => {
-    const home = document.getElementById("home-page");
-    const menu = document.getElementById("menu-page");
-    const page = document.getElementById(pageId);
+  const [selectedPage, setSelectedPage] = useState(null);
 
-    if (page.classList.contains("hidden")) {
-      home.classList.add("fade-out");
-      menu.classList.add("fade-out");
-      setTimeout(() => {
-        page.classList.remove("hidden");
-        home.classList.add("hidden");
-        menu.classList.add("hidden");
-        home.classList.remove("fade-out");
-        menu.classList.remove("fade-out");
-      }, 500);
-    } else if (home.classList.contains("hidden")) {
-      page.classList.add("fade-out");
-      menu.classList.add("fade-out");
-      setTimeout(() => {
-        home.classList.remove("hidden");
-        page.classList.add("hidden");
-        menu.classList.add("hidden");
-        page.classList.remove("fade-out");
-        menu.classList.remove("fade-out");
-      }, 500);
-    } else if (menu.classList.contains("hidden")) {
-      page.classList.add("fade-out");
-      home.classList.add("fade-out");
-      setTimeout(() => {
-        menu.classList.remove("hidden");
-        page.classList.add("hidden");
-        home.classList.add("hidden");
-        page.classList.remove("fade-out");
-        home.classList.remove("fade-out");
-      }, 500);
-    }
+  const handleClick = (pageId) => {
+    const pages = [
+      "home-page",
+      "project-page",
+      "gallery-page",
+      "about-page",
+      "contact-page",
+    ];
+
+    pages.forEach((id) => {
+      const page = document.getElementById(id);
+      if (id === pageId) {
+        setSelectedPage(pageId);
+        setTimeout(() => {
+          page.classList.remove("hidden");
+        }, 500);
+      } else {
+        page.classList.add("fade-out");
+        setTimeout(() => {
+          page.classList.add("hidden");
+          page.classList.remove("fade-out");
+        }, 500);
+      }
+    });
   };
 
   return (
@@ -67,7 +58,7 @@ function HomePage({ toggleDarkMode }) {
         <div className="text-center fade-in">
           <button
             onClick={() => handleClick("project-page")}
-            className={`link project-btn btn ${
+            className={`link btn ${
               toggleDarkMode ? "links-light-mode" : "links-dark-mode"
             }`}
           >
@@ -75,7 +66,7 @@ function HomePage({ toggleDarkMode }) {
           </button>
           <button
             onClick={() => handleClick("gallery-page")}
-            className={`link gallery-btn btn ${
+            className={`link btn ${
               toggleDarkMode ? "links-light-mode" : "links-dark-mode"
             }`}
           >
@@ -83,7 +74,7 @@ function HomePage({ toggleDarkMode }) {
           </button>
           <button
             onClick={() => handleClick("about-page")}
-            className={`link about-btn btn ${
+            className={`link btn ${
               toggleDarkMode ? "links-light-mode" : "links-dark-mode"
             }`}
           >
@@ -91,7 +82,7 @@ function HomePage({ toggleDarkMode }) {
           </button>
           <button
             onClick={() => handleClick("contact-page")}
-            className={`link contact-btn btn ${
+            className={`link btn ${
               toggleDarkMode ? "links-light-mode" : "links-dark-mode"
             }`}
           >
