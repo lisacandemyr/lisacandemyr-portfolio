@@ -12,6 +12,10 @@ function Navbar({ toggleDarkMode, toggleDarkTheme }) {
       "gallery-page",
       "about-page",
       "contact-page",
+      "gallery-1",
+      "gallery-2",
+      "gallery-3",
+      "gallery-4",
     ];
 
     pages.forEach((id) => {

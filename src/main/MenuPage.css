@@ -1,45 +1,31 @@
 .MenuPage .menu-page {
-  position: relative;
-  top: -30px;
-  margin-left: 15px;
+  display: flex;
+  justify-content: center;
+  margin: 50px 250px 0 0;
 }
 
 .MenuPage .menu-page ul {
   list-style: none;
-  position: absolute;
 }
 
 .MenuPage .menu-page button {
   background: var(--transparent);
   border: none;
-  color: var(--transparent);
   font-family: var(--text-headline);
   font-size: 55px;
-  font-weight: 100;
   letter-spacing: -3px;
   margin-left: 10px;
   padding: 0;
-  text-decoration: none;
+  text-transform: lowercase;
   transition: all 300ms ease-in-out;
 }
 
-.MenuPage .menu-light-mode {
-  color: var(--dark-color);
-  font-family: var(--text-paragraph);
-  font-size: 12px;
-  font-weight: 900;
-  letter-spacing: -1px;
-  text-decoration: none;
-  transition: all 300ms ease-in-out;
-}
-
+.MenuPage .menu-light-mode,
 .MenuPage .menu-dark-mode {
-  color: var(--light-color);
   font-family: var(--text-paragraph);
   font-size: 12px;
   font-weight: 900;
   letter-spacing: -1px;
-  text-decoration: none;
   transition: all 300ms ease-in-out;
 }
 
@@ -51,22 +37,19 @@
 }
 
 @media (max-width: 800px) {
-  .MenuPage .menu-page .col-3 {
-    display: none;
+  .MenuPage .menu-page {
+    justify-content: left;
+    margin: 50px 0 0 40px;
   }
+}
 
-  .MenuPage .menu-page .col-8 {
-    margin: 40px 20px;
+@media (max-width: 400px) {
+  .MenuPage .menu-page {
+    margin: 50px 0 0 20px;
   }
 
   .MenuPage .menu-page button {
     font-size: 45px;
     letter-spacing: -2px;
-  }
-}
-
-@media (max-width: 400px) {
-  .MenuPage .menu-page .col-8 {
-    margin: 30px 0;
   }
 }
