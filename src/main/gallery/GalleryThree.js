@@ -22,8 +22,11 @@ function GalleryThree({ toggleDarkMode }) {
     currentGallery.classList.add("fade-out");
     setTimeout(() => {
       currentGallery.classList.add("hidden");
+      currentGallery.classList.remove("fade-out");
     }, 1000);
-    targetGallery.classList.remove("hidden");
+    setTimeout(() => {
+      targetGallery.classList.remove("hidden");
+    }, 700);
   };
   return (
     <div className="GalleryThree hidden" id="gallery-3">

@@ -7,6 +7,7 @@ function Gallery({ toggleDarkMode }) {
       gallery.classList.add("fade-out");
       setTimeout(() => {
         gallery.classList.add("hidden");
+        gallery.classList.remove("fade-out");
       }, 1000);
       page.classList.remove("hidden");
     }
@@ -26,23 +27,17 @@ function Gallery({ toggleDarkMode }) {
           <button
             onClick={() => handleClick("gallery-1")}
             className="greenwich-market"
-            id="greenwich-market"
           >
             <h3>Greenwich Market</h3>
             <p>Community</p>
           </button>
-          <button
-            onClick={() => handleClick("gallery-2")}
-            className="ehla-eat"
-            id="ehla-eat"
-          >
+          <button onClick={() => handleClick("gallery-2")} className="ehla-eat">
             <h3>Ehla Eat</h3>
             <p>Eastern Mediterranean Food</p>
           </button>
           <button
             onClick={() => handleClick("gallery-3")}
             className="ryan-london"
-            id="ryan-london"
           >
             <h3>Ryan London</h3>
             <p>Leather Goods</p>
@@ -50,7 +45,6 @@ function Gallery({ toggleDarkMode }) {
           <button
             onClick={() => handleClick("gallery-4")}
             className="live-music"
-            id="live-music"
           >
             <h3>Live Music</h3>
             <p>Events</p>

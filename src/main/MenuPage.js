@@ -149,7 +149,7 @@ function MenuPage({ closeMenu, isMenuVisible, toggleDarkMode }) {
             03
             <button
               onClick={() => handleClick("gallery-page")}
-              className={`${
+              className={`gallery-btn ${
                 toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
               }`}
             >
