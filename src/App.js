@@ -14,6 +14,10 @@ import CssBaseline from "@mui/material/CssBaseline";
 function App() {
   const [toggleDarkMode, setToggleDarkMode] = useState(true);
 
+  const rootStyles = document.documentElement.style;
+  rootStyles.setProperty("--filter", toggleDarkMode ? "none" : "invert(100%)");
+  rootStyles.setProperty("--opacity", toggleDarkMode ? "0.2" : "0.5");
+
   const scrollbarTrackColor = toggleDarkMode ? "#c94d3a" : "#ffcfd7";
   const scrollbarThumbColor = toggleDarkMode ? "#ffcfd780" : "#c94d3a80";
   const scrollbarThumbColorHover = toggleDarkMode ? "#ffcfd7" : "#c94d3a";
@@ -43,6 +47,7 @@ function App() {
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
       <div className="App">
+        <div className="grain"></div>
         <Navbar
           toggleDarkMode={toggleDarkMode}
           toggleDarkTheme={toggleDarkTheme}

@@ -150,3 +150,64 @@ body {
     opacity: 0;
   }
 }
+
+.grain {
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateZ(0);
+  z-index: -1;
+}
+
+.grain::before {
+  animation: noise 7s steps(10) infinite;
+  background-image: url(main/gallery/background-noise.jpg);
+  background-size: 200px;
+  background-repeat: repeat;
+  content: "";
+  filter: var(--filter);
+  height: 600%;
+  width: 600%;
+  opacity: var(--opacity);
+  pointer-events: none;
+  position: fixed;
+  top: -300%;
+  left: -150%;
+  z-index: 9999;
+}
+
+@keyframes noise {
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  20% {
+    transform: translate(-15%, 5%);
+  }
+  30% {
+    transform: translate(7%, -25%);
+  }
+  40% {
+    transform: translate(-5%, 25%);
+  }
+  50% {
+    transform: translate(-15%, 10%);
+  }
+  60% {
+    transform: translate(15%);
+  }
+  70% {
+    transform: translateY(15%);
+  }
+  80% {
+    transform: translate(3%, 35%);
+  }
+  90% {
+    transform: translate(-10%, 10%);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
