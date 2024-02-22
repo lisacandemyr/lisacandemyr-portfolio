@@ -67,64 +67,67 @@ function Navbar({ toggleDarkMode, toggleDarkTheme }) {
 
     setTimeout(() => {
       home.classList.remove("hidden");
-    }, 600);
+    }, 550);
   };
 
   return (
     <div className="Navbar float-down">
-      <nav>
-        <div>
-          <button
-            onClick={goToHomepage}
-            className={`brand ms-3 ${
-              toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
-            }`}
-          >
-            L<span className="letter">C</span>
-            <span className="stop">.</span>
-          </button>
-        </div>
-        <div className="btn-container">
+      <header>
+        <nav>
           <div>
             <button
-              className={`btn ${
-                toggleDarkMode ? "theme-btn-light" : "theme-btn-dark"
+              onClick={goToHomepage}
+              className={`brand ms-3 ${
+                toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
               }`}
-              id="toggle"
-              onClick={toggleDarkTheme}
             >
-              <i
-                className={`fa-lightbulb ${
-                  toggleDarkMode ? "fa-solid" : "fa-thin"
-                }`}
-              ></i>
+              L<span className="letter">C</span>
+              <span className="stop">.</span>
             </button>
           </div>
-          <div>
-            <button
-              onClick={() => showMenu("menu-page")}
-              className={`menu-btn btn ${
-                toggleDarkMode ? "menu-btn-light" : "menu-btn-dark"
-              }
+          <div className="btn-container">
+            <div>
+              <button
+                className={`btn ${
+                  toggleDarkMode ? "theme-btn-light" : "theme-btn-dark"
+                }`}
+                onClick={toggleDarkTheme}
+              >
+                <i
+                  className={`fa-lightbulb ${
+                    toggleDarkMode ? "fa-solid" : "fa-thin"
+                  }`}
+                ></i>
+              </button>
+            </div>
+            <div>
+              <button
+                onClick={() => showMenu("menu-page")}
+                className={`btn ${
+                  toggleDarkMode ? "menu-btn-light" : "menu-btn-dark"
+                }
               } ${isMenuVisible ? "hidden" : ""} `}
-            >
-              <i className="fa-thin fa-ellipsis-stroke-vertical"></i>
-              <i className="fa-thin fa-ellipsis-stroke-vertical"></i>
-              <i className="fa-thin fa-ellipsis-stroke-vertical"></i>
-            </button>
-            <button
-              onClick={closeMenu}
-              className={`menu-btn-close btn ${isMenuVisible ? "" : "hidden"}`}
-            >
-              <i
-                className={`fa-solid fa-xmark ${
-                  toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
+              >
+                <i className="fa-thin fa-ellipsis-stroke-vertical"></i>
+                <i className="fa-thin fa-ellipsis-stroke-vertical"></i>
+                <i className="fa-thin fa-ellipsis-stroke-vertical"></i>
+              </button>
+              <button
+                onClick={closeMenu}
+                className={`menu-btn-close btn ${
+                  isMenuVisible ? "" : "hidden"
                 }`}
-              ></i>
-            </button>
+              >
+                <i
+                  className={`fa-solid fa-xmark ${
+                    toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
+                  }`}
+                ></i>
+              </button>
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </header>
       <MenuPage
         isMenuVisible={isMenuVisible}
         showMenu={showMenu}
