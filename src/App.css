@@ -14,26 +14,6 @@
   --text-paragraph: "Red Hat Display", sans-serif;
 }
 
-::-webkit-scrollbar {
-  background-color: rgb(201, 77, 58);
-  width: 20px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 207, 215, 0.5);
-  border-radius: 20px;
-  border: 6px solid transparent;
-  background-clip: content-box;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(255, 207, 215, 1);
-}
-
 body {
   background: var(--light-color);
   color: var(--dark-color);

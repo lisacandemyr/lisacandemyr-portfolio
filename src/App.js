@@ -14,6 +14,10 @@ import CssBaseline from "@mui/material/CssBaseline";
 function App() {
   const [toggleDarkMode, setToggleDarkMode] = useState(true);
 
+  const scrollbarTrackColor = toggleDarkMode ? "#c94d3a" : "#ffcfd7";
+  const scrollbarThumbColor = toggleDarkMode ? "#ffcfd780" : "#c94d3a80";
+  const scrollbarThumbColorHover = toggleDarkMode ? "#ffcfd7" : "#c94d3a";
+
   const toggleDarkTheme = () => {
     setToggleDarkMode(!toggleDarkMode);
   };
@@ -52,6 +56,25 @@ function App() {
           <MenuPage toggleDarkMode={toggleDarkMode} />
         </main>
       </div>
+      <style>
+        {`
+          ::-webkit-scrollbar {
+            background-color: ${scrollbarTrackColor};
+            width: 20px;
+          }
+
+          ::-webkit-scrollbar-thumb {
+            background-color: ${scrollbarThumbColor};
+            border-radius: 20px;
+            border: 6px solid transparent;
+            background-clip: content-box;
+          }
+
+          ::-webkit-scrollbar-thumb:hover {
+            background-color: ${scrollbarThumbColorHover};
+          }
+        `}
+      </style>
     </ThemeProvider>
   );
 }
