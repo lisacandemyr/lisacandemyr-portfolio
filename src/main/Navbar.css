@@ -7,7 +7,7 @@
 .Navbar .brand {
   font-family: var(--text-headline);
   font-size: 55px;
-  letter-spacing: -5px;
+  letter-spacing: -4px;
   text-transform: lowercase;
   transition: all 300ms ease-in-out;
 }
@@ -98,7 +98,7 @@
 
 @media (max-width: 400px) {
   .Navbar nav {
-    margin: 10px 20px;
+    margin: 10px 10px 10px 15px;
   }
 
   .Navbar .theme-btn-light {
