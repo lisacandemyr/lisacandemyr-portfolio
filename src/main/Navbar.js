@@ -85,7 +85,7 @@ function Navbar({ toggleDarkMode, toggleDarkTheme }) {
           <div>
             <button
               onClick={goToHomepage}
-              className={`brand ms-lg-3 ${
+              className={`brand ${
                 toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
               }`}
             >
