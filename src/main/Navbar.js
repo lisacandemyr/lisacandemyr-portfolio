@@ -73,7 +73,6 @@ function Navbar({ toggleDarkMode, toggleDarkTheme }) {
         }, 500);
       }
     });
-
     setTimeout(() => {
       home.classList.remove("hidden");
     }, 550);
@@ -86,7 +85,7 @@ function Navbar({ toggleDarkMode, toggleDarkTheme }) {
           <div>
             <button
               onClick={goToHomepage}
-              className={`brand ms-3 ${
+              className={`brand ms-lg-3 ${
                 toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
               }`}
             >

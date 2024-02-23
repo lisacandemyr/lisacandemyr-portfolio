@@ -100,4 +100,12 @@
   .Navbar nav {
     margin: 10px 20px;
   }
+
+  .Navbar .theme-btn-light {
+    margin-right: 0;
+  }
+
+  .Navbar .theme-btn-dark {
+    margin-right: 0;
+  }
 }
