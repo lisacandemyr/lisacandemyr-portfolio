@@ -1,3 +1,4 @@
+import lisaCV from "./lisacandemyr-cv.pdf";
 import "./AboutPage.css";
 
 function AboutPage({ toggleDarkMode }) {
@@ -35,10 +36,12 @@ function AboutPage({ toggleDarkMode }) {
         </p>
         <p className="text-center fade-in">
           <a
-            href="#"
+            href={lisaCV}
             className={`btn ${
               toggleDarkMode ? "links-light-mode" : "links-dark-mode"
             }`}
+            target="_blank"
+            download="lisacandemyr-cv.pdf"
           >
             <i className="fa-regular fa-arrow-down-right"></i> My resume
           </a>
