@@ -1,16 +1,14 @@
 import React from "react";
 
-function generateFileNames(prefix, start, count) {
+function generateFileNames(prefix, count) {
   return Array.from(
     { length: count },
-    (_, index) => `${prefix}-${start + index}.jpg`
+    (_, index) => `${prefix}-${index + 1}.jpg`
   );
 }
-const fileNames1 = generateFileNames("lm", 1, 4);
-const fileNames2 = generateFileNames("lm", 5, 5);
+const fileNames = generateFileNames("lm", 6);
 const images = require.context("./live-music", true);
-const imageList1 = fileNames1.map((fileName) => images(`./${fileName}`));
-const imageList2 = fileNames2.map((fileName) => images(`./${fileName}`));
+const imageList = fileNames.map((fileName) => images(`./${fileName}`));
 
 function GalleryFour({ toggleDarkMode }) {
   const handleClick = (targetGalleryId) => {
@@ -38,7 +36,7 @@ function GalleryFour({ toggleDarkMode }) {
           <div className="text-start">
             <button
               onClick={() => handleClick("gallery-3")}
-              className="ryan-london-btn btn"
+              className="ehla-eat-btn btn"
             >
               <i
                 className={`fa-thin fa-angle-left ${
@@ -60,12 +58,7 @@ function GalleryFour({ toggleDarkMode }) {
           <div className="text-end"></div>
         </div>
         <div className="gallery-container-2 fade-in">
-          {imageList1.map((image, index) => (
-            <img key={index} src={image} alt={`Ryan London ${index}`} />
-          ))}
-        </div>
-        <div className="gallery-container-3 fade-in">
-          {imageList2.map((image, index) => (
+          {imageList.map((image, index) => (
             <img key={index} src={image} alt={`Live Music ${index}`} />
           ))}
         </div>
