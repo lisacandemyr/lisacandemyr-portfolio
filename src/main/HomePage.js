@@ -51,7 +51,9 @@ function HomePage({ toggleDarkMode }) {
             {" "}
             <span className="ca">Ca</span>ndemyr.
           </span>
-          <span className="size-surname hidden">Candemyr</span>
+          <span className="size-surname hidden">
+            <span className="ca">Ca</span>ndemyr
+          </span>
         </h1>
         <h2 className="text-center">
           I'm a junior web developer and photographer
