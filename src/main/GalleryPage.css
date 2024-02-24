@@ -256,6 +256,12 @@
   }
 
   .GalleryPage .gallery-page h3 {
-    font-size: 25px;
+    font-size: 23px;
+    letter-spacing: -0.5px;
+  }
+
+  .GalleryPage .gallery-page p {
+    font-size: 12px;
+    letter-spacing: -0.25px;
   }
 }
