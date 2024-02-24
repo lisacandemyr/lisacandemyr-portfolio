@@ -19,8 +19,8 @@
 .GalleryPage .gallery-page h3 {
   font-family: var(--text-paragraph);
   font-size: 28px;
-  line-height: 25px;
   letter-spacing: -1px;
+  line-height: 25px;
   text-transform: lowercase;
 }
 
@@ -126,6 +126,11 @@
   transform: scale(1.1);
 }
 
+.GalleryPage .gallery-1 .transparent,
+.GalleryPage .gallery-4 .transparent {
+  color: rgba(255, 255, 255, 0);
+}
+
 .GalleryPage .gallery-1 a,
 .GalleryPage .gallery-2 a,
 .GalleryPage .gallery-3 a,
@@ -226,7 +231,23 @@
   .GalleryPage .gallery-2,
   .GalleryPage .gallery-3,
   .GalleryPage .gallery-4 {
-    margin-top: -50px;
+    margin-top: 0;
+  }
+
+  .GalleryPage .gallery-1 h3,
+  .GalleryPage .gallery-2 h3,
+  .GalleryPage .gallery-3 h3,
+  .GalleryPage .gallery-4 h3 {
+    font-size: 28px;
+    line-height: 25px;
+  }
+
+  .GalleryPage .gallery-1 p,
+  .GalleryPage .gallery-2 p,
+  .GalleryPage .gallery-3 p,
+  .GalleryPage .gallery-4 p {
+    font-size: 13px;
+    line-height: 0;
   }
 
   .GalleryPage .gallery-page .grid {
@@ -258,12 +279,30 @@
 
   .GalleryPage .gallery-page h3 {
     font-size: 23px;
-    line-height: 20px;
     letter-spacing: -0.5px;
+    line-height: 20px;
   }
 
   .GalleryPage .gallery-page p {
     font-size: 12px;
     letter-spacing: -0.25px;
+  }
+
+  .GalleryPage .gallery-1 h3,
+  .GalleryPage .gallery-2 h3,
+  .GalleryPage .gallery-3 h3,
+  .GalleryPage .gallery-4 h3 {
+    font-size: 23px;
+    letter-spacing: -0.5px;
+    line-height: 20px;
+  }
+
+  .GalleryPage .gallery-1 p,
+  .GalleryPage .gallery-2 p,
+  .GalleryPage .gallery-3 p,
+  .GalleryPage .gallery-4 p {
+    font-size: 12px;
+    letter-spacing: -0.25px;
+    line-height: 12px;
   }
 }

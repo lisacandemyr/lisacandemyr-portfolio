@@ -33,7 +33,11 @@ function GalleryOne({ toggleDarkMode }) {
     <div className="GalleryOne hidden" id="gallery-1">
       <div className="gallery-1">
         <div className="grid fade-in">
-          <div className="text-start"></div>
+          <div className="text-start">
+            <button className="transparent btn">
+              <i className="fa-thin fa-angle-left"></i>
+            </button>
+          </div>
           <div className="text-center">
             <h3>Greenwich Market</h3>
             <p

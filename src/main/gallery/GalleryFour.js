@@ -55,7 +55,11 @@ function GalleryFour({ toggleDarkMode }) {
               Events
             </p>
           </div>
-          <div className="text-end"></div>
+          <div className="text-end">
+            <button className="transparent btn">
+              <i className="fa-thin fa-angle-right"></i>
+            </button>
+          </div>
         </div>
         <div className="gallery-container-2 fade-in">
           {imageList.map((image, index) => (
