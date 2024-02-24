@@ -37,10 +37,6 @@
 }
 
 @media (max-width: 400px) {
-  .AboutPage .about-page {
-    margin: 50px 10px;
-  }
-
   .AboutPage .about-page h2 {
     font-size: 45px;
   }

@@ -32,10 +32,6 @@
 }
 
 @media (max-width: 400px) {
-  .ContactPage .contact-page {
-    margin: 75px 10px;
-  }
-
   .ContactPage .contact-page h2 {
     font-size: 45px;
   }
