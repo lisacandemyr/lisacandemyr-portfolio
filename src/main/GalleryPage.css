@@ -18,14 +18,15 @@
 
 .GalleryPage .gallery-page h3 {
   font-family: var(--text-paragraph);
-  font-size: 30px;
+  font-size: 28px;
+  line-height: 25px;
   letter-spacing: -1px;
   text-transform: lowercase;
 }
 
 .GalleryPage .gallery-page p {
   font-family: var(--text-paragraph);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
   line-height: 0;
   text-transform: uppercase;
@@ -257,6 +258,7 @@
 
   .GalleryPage .gallery-page h3 {
     font-size: 23px;
+    line-height: 20px;
     letter-spacing: -0.5px;
   }
 
