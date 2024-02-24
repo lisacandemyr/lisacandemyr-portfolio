@@ -48,11 +48,21 @@ body {
 }
 
 .links-light-mode {
+  border: 1px solid var(--dark-color);
   color: #c94d3a;
+  transition: all 300ms ease-in-out;
 }
 
 .links-dark-mode {
+  border: 1px solid var(--light-color);
   color: #ffcfd7;
+  transition: all 300ms ease-in-out;
+}
+
+.links-light-mode:hover,
+.links-dark-mode:hover {
+  border: 1px solid var(--transparent);
+  transition: all 300ms ease-in-out;
 }
 
 .hidden {

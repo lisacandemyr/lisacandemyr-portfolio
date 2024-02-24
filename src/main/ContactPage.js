@@ -38,7 +38,7 @@ function ContactPage({ toggleDarkMode }) {
           /
           <a
             href="https://github.com/lisacandemyr"
-            className={`btn ${
+            className={`btn  ${
               toggleDarkMode ? "links-light-mode" : "links-dark-mode"
             }`}
             target="_blank"

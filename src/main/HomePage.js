@@ -59,7 +59,7 @@ function HomePage({ toggleDarkMode }) {
         <div className="text-center fade-in">
           <button
             onClick={() => handleClick("project-page")}
-            className={`link btn ${
+            className={`link project-btn btn ${
               toggleDarkMode ? "links-light-mode" : "links-dark-mode"
             }`}
           >
@@ -67,7 +67,7 @@ function HomePage({ toggleDarkMode }) {
           </button>
           <button
             onClick={() => handleClick("gallery-page")}
-            className={`link btn ${
+            className={`link gallery-btn btn ${
               toggleDarkMode ? "links-light-mode" : "links-dark-mode"
             }`}
           >
@@ -75,15 +75,15 @@ function HomePage({ toggleDarkMode }) {
           </button>
           <button
             onClick={() => handleClick("about-page")}
-            className={`link btn ${
+            className={`link about-btn btn ${
               toggleDarkMode ? "links-light-mode" : "links-dark-mode"
             }`}
           >
-            <i className="fa-regular fa-arrow-right"></i> About
+            <i className="fa-regular fa-arrow-right"></i> About ME
           </button>
           <button
             onClick={() => handleClick("contact-page")}
-            className={`link btn ${
+            className={`link contact-btn btn ${
               toggleDarkMode ? "links-light-mode" : "links-dark-mode"
             }`}
           >
