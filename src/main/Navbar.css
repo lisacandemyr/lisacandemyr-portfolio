@@ -39,19 +39,25 @@
 .Navbar .menu-btn-light {
   color: var(--dark-color);
   font-size: 37px;
+  line-height: 40px;
+  padding: 0;
   transition: all 300ms ease-in-out;
 }
 
 .Navbar .menu-btn-dark {
   color: var(--light-color);
   font-size: 37px;
+  line-height: 40px;
+  padding: 0;
   transition: all 300ms ease-in-out;
 }
 
 .Navbar .menu-btn-close {
   color: var(--dark-color);
   font-size: 40px;
+  line-height: 40px;
   margin: 0 7px 0 4.75px;
+  padding: 0;
   transition: all 750ms ease-in-out;
 }
 
@@ -81,6 +87,10 @@
 @media (max-width: 400px) {
   .Navbar nav {
     margin: 10px 10px 10px 15px;
+  }
+
+  .Navbar .btn-container {
+    padding: 10px 10px 0 0;
   }
 
   .Navbar .theme-btn-light {
