@@ -40,6 +40,12 @@
   transform: scale(1.1);
 }
 
+@media (max-width: 600px) {
+  .HomePage .home-page {
+    margin: 100px 10px;
+  }
+}
+
 @media (max-width: 400px) {
   .HomePage .home-page {
     margin: 50px 10px;
@@ -64,8 +70,19 @@
     transition: all 300ms ease-in-out;
   }
 
+  .HomePage .home-page .size-surname {
+    display: block;
+    font-size: 35px;
+    letter-spacing: -1.5px;
+    position: relative;
+    top: -190px;
+    left: 72px;
+    transition: all 300ms ease-in-out;
+  }
+
   .HomePage .home-page h2 {
     font-size: 30px;
+    margin-top: -60px;
   }
 
   .HomePage .home-page .hide {
