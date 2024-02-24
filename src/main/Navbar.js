@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import MenuPage from "./MenuPage";
+import logoLight from "./logo-light.png";
+import logoDark from "./logo-dark.png";
 import "./Navbar.css";
 
 function Navbar({ toggleDarkMode, toggleDarkTheme }) {
@@ -83,14 +85,12 @@ function Navbar({ toggleDarkMode, toggleDarkTheme }) {
       <header>
         <nav>
           <div>
-            <button
-              onClick={goToHomepage}
-              className={`brand ${
-                toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
-              }`}
-            >
-              L<span className="letter">C</span>
-              <span className="stop">.</span>
+            <button onClick={goToHomepage} className="brand">
+              <img
+                src={toggleDarkMode ? logoLight : logoDark}
+                width="45"
+                alt="Logotype"
+              ></img>
             </button>
           </div>
           <div className="btn-container">

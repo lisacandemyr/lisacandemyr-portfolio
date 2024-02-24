@@ -1,38 +1,20 @@
 .Navbar nav {
+  align-items: center;
   display: flex;
   justify-content: space-between;
   margin: 40px 80px;
 }
 
 .Navbar .brand {
-  font-family: var(--text-headline);
-  font-size: 55px;
-  letter-spacing: -4px;
-  text-transform: lowercase;
   transition: all 300ms ease-in-out;
 }
-
 .Navbar button {
   background: var(--transparent);
   border: none;
 }
 
-.Navbar .brand .letter {
-  display: inline-block;
-  transform: rotate(-20deg);
-}
-
-.Navbar .brand .stop {
-  font-size: 55px;
-  position: relative;
-  top: -31px;
-  left: -25px;
-}
-
 .Navbar .brand:hover {
-  color: var(--transparent);
   cursor: pointer;
-  transform: scale(1.1);
 }
 
 .Navbar .btn-container {
