@@ -55,9 +55,7 @@ function HomePage({ toggleDarkMode }) {
             <span className="ca">Ca</span>ndemyr
           </span>
         </h1>
-        <h2 className="text-center">
-          I'm a junior web developer and photographer
-        </h2>
+        <h2 className="text-center">junior web developer and photographer</h2>
         <div className="text-center fade-in">
           <button
             onClick={() => handleClick("project-page")}
