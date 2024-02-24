@@ -51,7 +51,11 @@ function HomePage({ toggleDarkMode }) {
             {" "}
             <span className="ca">Ca</span>ndemyr.
           </span>
-          <span className="size-surname hidden">
+          <span
+            className={`size-surname hidden ${
+              toggleDarkMode ? "size-surname-light" : "size-surname-dark"
+            }`}
+          >
             <span className="ca">Ca</span>ndemyr
           </span>
         </h1>
