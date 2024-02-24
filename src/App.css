@@ -73,6 +73,10 @@ body {
   letter-spacing: -1px;
 }
 
+.even-more-spacing {
+  letter-spacing: 0;
+}
+
 .float-up {
   animation: floatUp 1500ms;
 }

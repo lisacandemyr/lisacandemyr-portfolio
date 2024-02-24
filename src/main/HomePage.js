@@ -56,7 +56,7 @@ function HomePage({ toggleDarkMode }) {
               toggleDarkMode ? "size-surname-light" : "size-surname-dark"
             }`}
           >
-            <span className="ca">Ca</span>ndemyr
+            <span className="even-more-spacing">C</span>andemyr
           </span>
         </h1>
         <h2 className="text-center">junior web developer and photographer</h2>

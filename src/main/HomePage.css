@@ -102,7 +102,7 @@
     letter-spacing: -1.5px;
     margin: -230px 0 0 144px;
     opacity: 0.5;
-    -webkit-text-stroke: 1px var(--light-color);
+    -webkit-text-stroke: 0.75px var(--light-color);
     transition: all 750ms ease-in-out;
   }
 
