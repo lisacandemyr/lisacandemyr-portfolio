@@ -18,20 +18,20 @@ function AboutPage({ toggleDarkMode }) {
           }`}
         >
           Greetings, I'm Lisa - a <strong>junior web developer</strong>{" "}
-          originally from Sweden but currently based in the UK.
+          originally from Sweden but currently based in Bath, UK.
           <br />
           <br />
           Alongside designing and building digital experiences, I also have a
-          keen interest in photography. I have previously worked as a
-          professional <strong>photographer</strong> and have included some of
-          my work in my web developement portfolio.
+          keen interest in photography. I have previously done some professional
+          work as a <strong>photographer</strong> and have included some of it
+          in my web developement portfolio.
           <br />
           <br />
           <em>
             This year, I am dedicated to continuely improve my proficiency in
             web development and design, alongside shooting more film
             photography. Visit my website regularly to witness the expansion of
-            my portfolio, featuring an array of my projects and photography.
+            my portfolio, featuring an array of my projects and images.
           </em>
         </p>
         <p className="text-center fade-in">
