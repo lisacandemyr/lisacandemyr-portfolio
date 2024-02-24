@@ -21,7 +21,8 @@ function Gallery({ toggleDarkMode }) {
             toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
           }`}
         >
-          Gallery
+          G<span className="more-spacing">a</span>lle
+          <span className="more-spacing">r</span>y
         </h2>
         <div className="grid text-center fade-in">
           <button

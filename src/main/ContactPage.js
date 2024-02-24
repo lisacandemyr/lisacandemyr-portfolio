@@ -9,7 +9,7 @@ function ContactPage({ toggleDarkMode }) {
             toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
           }`}
         >
-          Contact
+          Con<span className="more-spacing">t</span>act
         </h2>
         <p className="text-center fade-in">
           <strong>Email</strong>

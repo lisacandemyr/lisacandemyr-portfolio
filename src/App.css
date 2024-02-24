@@ -59,6 +59,10 @@ body {
   display: none;
 }
 
+.more-spacing {
+  letter-spacing: -1px;
+}
+
 .float-up {
   animation: floatUp 1500ms;
 }

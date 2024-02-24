@@ -153,7 +153,8 @@ function MenuPage({ closeMenu, isMenuVisible, toggleDarkMode }) {
                 toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
               }`}
             >
-              Gallery
+              G<span className="more-spacing">a</span>lle
+              <span className="more-spacing">r</span>y
             </button>
           </li>
           <li
@@ -183,7 +184,7 @@ function MenuPage({ closeMenu, isMenuVisible, toggleDarkMode }) {
                 toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
               }`}
             >
-              Contact
+              Con<span className="more-spacing">t</span>act
             </button>
           </li>
         </ul>
