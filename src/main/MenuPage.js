@@ -179,7 +179,7 @@ function MenuPage({ closeMenu, isMenuVisible, toggleDarkMode }) {
             05
             <button
               onClick={() => handleClick("contact-page")}
-              className={`${
+              className={`contact-btn ${
                 toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
               }`}
             >

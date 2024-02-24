@@ -6,7 +6,7 @@
 .ContactPage .contact-page h2 {
   font-family: var(--text-headline);
   font-size: 55px;
-  letter-spacing: -3px;
+  letter-spacing: -2.5px;
   text-transform: lowercase;
   transition: all 300ms ease-in-out;
 }
