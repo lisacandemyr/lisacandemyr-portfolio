@@ -6,7 +6,7 @@ function generateFileNames(prefix, count) {
     (_, index) => `${prefix}-${index + 1}.jpg`
   );
 }
-const fileNames = generateFileNames("gm", 36);
+const fileNames = generateFileNames("gm", 30);
 const images = require.context("./greenwich-market", true);
 const imageList = fileNames.map((fileName) => images(`./${fileName}`));
 
