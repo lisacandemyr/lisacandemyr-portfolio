@@ -20,8 +20,9 @@
 
 .HomePage .home-page h2 {
   font-family: var(--text-paragraph);
-  font-size: 30px;
-  letter-spacing: -1px;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: -2px;
   margin: -33px 0 20px 20px;
   transition: all 300ms ease-in-out;
 }
@@ -57,7 +58,7 @@
   }
 
   .HomePage .home-page h2 {
-    font-size: 25px;
+    font-size: 30px;
   }
 }
 
@@ -111,8 +112,9 @@
   }
 
   .HomePage .home-page h2 {
-    font-size: 34px;
-    letter-spacing: -2px;
+    font-size: 36px;
+    letter-spacing: -2.5px;
+    line-height: 30px;
     margin: 100px 20px 20px 20px;
   }
 

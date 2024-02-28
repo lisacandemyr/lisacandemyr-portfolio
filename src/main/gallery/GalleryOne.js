@@ -63,7 +63,12 @@ function GalleryOne({ toggleDarkMode }) {
         </div>
         <div className="gallery-container fade-in">
           {imageList.map((image, index) => (
-            <img key={index} src={image} alt={`Greenwich Market ${index}`} />
+            <img
+              key={index}
+              src={image}
+              alt={`Greenwich Market ${index}`}
+              className="gallery-image"
+            />
           ))}
         </div>
         <a href="#gallery-1">

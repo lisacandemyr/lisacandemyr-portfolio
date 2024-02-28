@@ -70,7 +70,12 @@ function GalleryTwo({ toggleDarkMode }) {
         </div>
         <div className="gallery-container fade-in">
           {imageList.map((image, index) => (
-            <img key={index} src={image} alt={`Ehla Eat ${index}`} />
+            <img
+              key={index}
+              src={image}
+              alt={`Ehla Eat ${index}`}
+              className="gallery-image"
+            />
           ))}
         </div>
         <a href="#gallery-2">

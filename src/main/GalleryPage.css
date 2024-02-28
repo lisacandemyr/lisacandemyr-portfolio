@@ -19,14 +19,14 @@
 .GalleryPage .gallery-page h3 {
   font-family: var(--text-paragraph);
   font-size: 28px;
-  letter-spacing: -1px;
-  line-height: 25px;
+  letter-spacing: -1.25px;
+  line-height: 26px;
   text-transform: lowercase;
 }
 
 .GalleryPage .gallery-page p {
   font-family: var(--text-paragraph);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
   line-height: 0;
   text-transform: uppercase;
@@ -44,12 +44,13 @@
   background-size: 105%;
   color: rgba(255, 207, 215, 1);
   cursor: pointer;
+  transition: all 300ms ease-in-out;
 }
 
 .GalleryPage .greenwich-market {
   background-image: linear-gradient(
-      rgba(47, 51, 68, 0.1),
-      rgba(47, 51, 68, 0.1)
+      rgba(201, 77, 58, 0.4),
+      rgba(201, 77, 58, 0.4)
     ),
     url(gallery/greenwich-market.jpg);
   background-position: center;
@@ -59,8 +60,8 @@
 
 .GalleryPage .ehla-eat {
   background-image: linear-gradient(
-      rgba(47, 51, 68, 0.1),
-      rgba(47, 51, 68, 0.1)
+      rgba(201, 77, 58, 0.4),
+      rgba(201, 77, 58, 0.4)
     ),
     url(gallery/ehla-eat.jpg);
   background-position: center;
@@ -70,8 +71,8 @@
 
 .GalleryPage .ryan-london {
   background-image: linear-gradient(
-      rgba(47, 51, 68, 0.1),
-      rgba(47, 51, 68, 0.1)
+      rgba(201, 77, 58, 0.4),
+      rgba(201, 77, 58, 0.4)
     ),
     url(gallery/ryan-london.jpg);
   background-position: center;
@@ -81,13 +82,45 @@
 
 .GalleryPage .live-music {
   background-image: linear-gradient(
-      rgba(47, 51, 68, 0.1),
-      rgba(47, 51, 68, 0.1)
+      rgba(201, 77, 58, 0.3),
+      rgba(201, 77, 58, 0.3)
     ),
     url(gallery/music.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
+}
+
+.GalleryPage .greenwich-market:hover {
+  background-image: linear-gradient(
+      rgba(201, 77, 58, 0.2),
+      rgba(201, 77, 58, 0.2)
+    ),
+    url(gallery/greenwich-market.jpg);
+}
+
+.GalleryPage .ehla-eat:hover {
+  background-image: linear-gradient(
+      rgba(201, 77, 58, 0.2),
+      rgba(201, 77, 58, 0.2)
+    ),
+    url(gallery/ehla-eat.jpg);
+}
+
+.GalleryPage .ryan-london:hover {
+  background-image: linear-gradient(
+      rgba(201, 77, 58, 0.2),
+      rgba(201, 77, 58, 0.2)
+    ),
+    url(gallery/ryan-london.jpg);
+}
+
+.GalleryPage .live-music:hover {
+  background-image: linear-gradient(
+      rgba(201, 77, 58, 0.1),
+      rgba(201, 77, 58, 0.1)
+    ),
+    url(gallery/music.jpg);
 }
 
 .GalleryPage .gallery-btn-light {
@@ -161,7 +194,7 @@
 .GalleryPage .gallery-4 h3 {
   font-family: var(--text-paragraph);
   font-size: 30px;
-  letter-spacing: -1px;
+  letter-spacing: -1.5px;
   text-transform: lowercase;
   transition: all 300ms ease-in-out;
 }
@@ -191,8 +224,7 @@
   transition: all 300ms ease-in-out;
 }
 
-.GalleryPage .gallery-container img,
-.GalleryPage .gallery-container-2 img {
+.GalleryPage .gallery-image {
   max-width: 100%;
   transition: all 300ms ease-in-out;
 }

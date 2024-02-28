@@ -7,8 +7,8 @@
 }
 
 :root {
-  --dark-color: #c94d3a;
-  --light-color: #ffcfd7;
+  --dark-color: rgb(201, 77, 58);
+  --light-color: rgb(255, 207, 215);
   --transparent: rgba(255, 255, 255, 0);
   --text-headline: "Tangerine";
   --text-paragraph: "Red Hat Display", sans-serif;
