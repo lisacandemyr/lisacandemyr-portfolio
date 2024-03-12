@@ -169,13 +169,16 @@
 .GalleryPage .gallery-3 a,
 .GalleryPage .gallery-4 a {
   animation: backToTop 1500ms infinite;
+  border: 1px solid var(--light-color);
+  border-radius: 50% 50% 0 0;
   color: var(--light-color);
   font-size: 40px;
   position: fixed;
   bottom: 0;
   left: 50%;
-  opacity: 0.5;
-  text-decoration: none;
+  opacity: 0.75;
+  padding: 0 1%;
+  text-decoration: underline;
   transform: translateX(-50%);
   transition: all 300ms ease-in-out;
 }
