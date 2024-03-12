@@ -43,7 +43,7 @@ function AboutPage({ toggleDarkMode }) {
             target="_blank"
             download="lisacandemyr-cv.pdf"
           >
-            <i className="fa-regular fa-arrow-down-right"></i> My resume
+            • <i className="fa-regular fa-arrow-down-right"></i> My Resume •
           </a>
         </p>
       </div>

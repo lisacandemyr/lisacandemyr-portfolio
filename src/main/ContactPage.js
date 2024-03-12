@@ -19,8 +19,8 @@ function ContactPage({ toggleDarkMode }) {
               toggleDarkMode ? "links-light-mode" : "links-dark-mode"
             }`}
           >
-            <i className="fa-regular fa-arrow-right"></i> lisa_candemyr
-            <strong>@</strong>hotmail.com
+            • lisa_candemyr
+            <strong>@</strong>hotmail.com •
           </a>
         </p>
         <p className="text-center fade-in">
@@ -33,7 +33,7 @@ function ContactPage({ toggleDarkMode }) {
             target="_blank"
             rel="noreferrer"
           >
-            <i className="fa-regular fa-arrow-right"></i> Linkedin
+            • Linkedin •
           </a>
           /
           <a
@@ -44,7 +44,7 @@ function ContactPage({ toggleDarkMode }) {
             target="_blank"
             rel="noreferrer"
           >
-            <i className="fa-regular fa-arrow-right"></i> GitHub
+            • GitHub •
           </a>
         </p>
       </div>

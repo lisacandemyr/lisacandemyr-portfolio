@@ -67,7 +67,7 @@ function HomePage({ toggleDarkMode }) {
               toggleDarkMode ? "links-light-mode" : "links-dark-mode"
             }`}
           >
-            <i className="fa-regular fa-arrow-right"></i> Projects
+            • Projects •
           </button>
           <button
             onClick={() => handleClick("gallery-page")}
@@ -75,7 +75,7 @@ function HomePage({ toggleDarkMode }) {
               toggleDarkMode ? "links-light-mode" : "links-dark-mode"
             }`}
           >
-            <i className="fa-regular fa-arrow-right"></i> Gallery
+            • Gallery •
           </button>
           <button
             onClick={() => handleClick("about-page")}
@@ -83,7 +83,7 @@ function HomePage({ toggleDarkMode }) {
               toggleDarkMode ? "links-light-mode" : "links-dark-mode"
             }`}
           >
-            <i className="fa-regular fa-arrow-right"></i> About ME
+            • About Me •
           </button>
           <button
             onClick={() => handleClick("contact-page")}
@@ -91,7 +91,7 @@ function HomePage({ toggleDarkMode }) {
               toggleDarkMode ? "links-light-mode" : "links-dark-mode"
             }`}
           >
-            <i className="fa-regular fa-arrow-right"></i> Contact
+            • Contact •
           </button>
         </div>
       </div>
