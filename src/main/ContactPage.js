@@ -45,6 +45,17 @@ function ContactPage({ toggleDarkMode }) {
             rel="noreferrer"
           >
             • GitHub •
+          </a>{" "}
+          /
+          <a
+            href="https://instagram.com/lisacandemyr"
+            className={`btn  ${
+              toggleDarkMode ? "links-light-mode" : "links-dark-mode"
+            }`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            • Instagram •
           </a>
         </p>
       </div>
