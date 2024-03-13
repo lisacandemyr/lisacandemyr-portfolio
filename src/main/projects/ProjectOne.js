@@ -1,6 +1,3 @@
-import React, { useState } from "react";
-import logoLight from "../logo-light.png";
-import logoDark from "../logo-dark.png";
 import "../ProjectPage.css";
 
 function ProjectOne({ toggleDarkMode }) {

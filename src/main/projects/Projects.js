@@ -1,3 +1,5 @@
+import "../ProjectPage.css";
+
 function Projects({ toggleDarkMode }) {
   const handleClick = () => {
     const projectPage = document.getElementById("project-page");
@@ -42,7 +44,6 @@ function Projects({ toggleDarkMode }) {
             >
               li<span className="sa">sa</span>
               <span className="ca">ca</span>ndemyr
-              <small>.com</small>
             </button>
           </li>
           <li

@@ -1,14 +1,14 @@
-.ProjectPage .project-page {
+.Projects .project-page {
   display: flex;
   justify-content: center;
   margin: 75px 0 0 250px;
 }
 
-.ProjectPage .project-page ul {
+.Projects .project-page ul {
   list-style: none;
 }
 
-.ProjectPage .project-page button {
+.Projects .project-page button {
   background: var(--transparent);
   border: none;
   font-family: var(--text-headline);
@@ -20,8 +20,8 @@
   transition: all 300ms ease-in-out;
 }
 
-.ProjectPage .project-light-mode,
-.ProjectPage .project-dark-mode {
+.Projects .project-light-mode,
+.Projects .project-dark-mode {
   font-family: var(--text-paragraph);
   font-size: 12px;
   font-weight: 900;
@@ -29,28 +29,28 @@
   transition: all 300ms ease-in-out;
 }
 
-.ProjectPage .project-light-mode:hover,
-.ProjectPage .project-dark-mode:hover {
+.Projects .project-light-mode:hover,
+.Projects .project-dark-mode:hover {
   color: var(--transparent);
   cursor: pointer;
   transform: scale(1.1);
 }
 
-.ProjectPage .project-page .sa {
+.Projects .project-page .sa {
   letter-spacing: -2px;
 }
 
-.ProjectPage .project-page .ca {
+.Projects .project-page .ca {
   letter-spacing: -1px;
 }
 
-.ProjectPage .project-page small {
+.Projects .project-page small {
   font-size: 20px;
   letter-spacing: 0;
 }
 
 .ProjectOne .project-one {
-  margin: 115px 0 0 0;
+  margin-top: 115px;
   overflow: hidden;
 }
 
@@ -245,24 +245,32 @@
 }
 
 @media (max-width: 800px) {
-  .ProjectPage .project-page {
+  .Projects .project-page {
     justify-content: left;
-    margin-left: 40px;
+    margin-left: 30px;
+  }
+
+  .ProjectOne .project-one {
+    margin-top: 85px;
   }
 }
 
 @media (max-width: 400px) {
-  .ProjectPage .project-page {
-    margin-left: 20px;
+  .Projects .project-page {
+    margin-left: 5px;
   }
 
-  .ProjectPage .project-page button {
+  .Projects .project-page button {
     font-size: 45px;
     letter-spacing: -2px;
   }
 
   .ProjectOne .grid {
     grid-row-gap: 25px;
+  }
+
+  .ProjectOne .project-one {
+    margin-top: 50px;
   }
 
   .ProjectOne .grid-item-1 {
