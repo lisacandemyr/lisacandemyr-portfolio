@@ -86,13 +86,16 @@ function ProjectOne({ toggleDarkMode }) {
                 >
                   • Show Project •
                 </button>
-                <button
+                <a
+                  href="https://github.com/lisacandemyr/lisacandemyr-portfolio"
+                  target="_blank"
+                  rel="noreferrer"
                   className={`link project-btn btn ${
                     toggleDarkMode ? "links-dark-mode" : "links-light-mode"
                   }`}
                 >
                   • GitHub Code •
-                </button>
+                </a>
               </div>
             </div>
           </div>
