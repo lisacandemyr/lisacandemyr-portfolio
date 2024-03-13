@@ -9,7 +9,9 @@ function ProjectOne({ toggleDarkMode }) {
       <div className="project-one">
         <div className="grid">
           <div className="grid-item-1 float-left">
-            <div className="background">[image]</div>
+            <div className="background">
+              <p>[illustration]</p>
+            </div>
           </div>
           <div
             className={`grid-item-2 float-right ${
@@ -75,8 +77,9 @@ function ProjectOne({ toggleDarkMode }) {
                   it's a manifestation of my identity as a developer and a
                   professional. With meticulous attention to detail and a keen
                   eye for design, I've crafted an intuitive and visually
-                  appealing platform that serves as a virtual resume, showcasing
-                  my expertise, accomplishments and projects.
+                  appealing platform from scratch in VScode, that serves as a
+                  virtual resume, showcasing my expertise, accomplishments and
+                  projects.
                 </p>
                 <button
                   className={`link project-btn btn ${
