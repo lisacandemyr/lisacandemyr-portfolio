@@ -7,17 +7,6 @@ function ProjectOne({ toggleDarkMode }) {
   return (
     <div className="ProjectOne page hidden" id="project-1">
       <div className="project-one">
-        <div className="btn-container text-end">
-          <button className="project-next-btn btn" disabled>
-            <i
-              className={`fa-thin fa-angle-right ${
-                toggleDarkMode
-                  ? "project-btn-light-mode"
-                  : "project-btn-dark-mode"
-              }`}
-            ></i>
-          </button>
-        </div>
         <div className="grid">
           <div className="grid-item-1 float-left">
             <div className="background">[image]</div>
@@ -32,7 +21,7 @@ function ProjectOne({ toggleDarkMode }) {
                 toggleDarkMode ? "text-dark-mode" : "text-light-mode"
               }`}
             >
-              <div className="col-4">
+              <div className="col-md-4">
                 <ul>
                   <li>
                     Code
@@ -72,7 +61,7 @@ function ProjectOne({ toggleDarkMode }) {
                   </p>
                 </ul>
               </div>
-              <div className="col-8">
+              <div className="col-md-8">
                 <h6>Branding / Web Developement / Photography</h6>
                 <p>
                   <strong>Introduction:</strong> As a passionate developer, I
@@ -110,6 +99,17 @@ function ProjectOne({ toggleDarkMode }) {
               </div>
             </div>
           </div>
+        </div>
+        <div className="btn-container text-end">
+          <button className="project-next-btn btn" disabled>
+            <i
+              className={`fa-thin fa-angle-right ${
+                toggleDarkMode
+                  ? "project-btn-light-mode"
+                  : "project-btn-dark-mode"
+              }`}
+            ></i>
+          </button>
         </div>
       </div>
     </div>
