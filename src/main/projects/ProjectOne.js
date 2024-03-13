@@ -64,22 +64,19 @@ function ProjectOne({ toggleDarkMode }) {
               <div className="col-md-8">
                 <h6>Branding / Web Developement / Photography</h6>
                 <p>
-                  <strong>Introduction:</strong> As a passionate developer, I
-                  embarked on a journey to create my own personal portfolio
-                  project, a digital space that reflects my skills, experiences,
-                  and aspirations. This project holds a special place in my
-                  heart as it represents not only my technical capabilities but
-                  also my creative expression and dedication to continuous
-                  learning and growth.
+                  Motivated by a genuine interest towards design and web
+                  development, I embarked on an eight-month journey immersed in
+                  coding and learning through SheCodes.io. This platform
+                  encapsulates all the knowledge and skills I've acquired
+                  throughout the course and more.
                   <br />
                   <br />
-                  <strong>Concept and Purpose:</strong> My personal portfolio
-                  project is more than just a collection of code; it's a
-                  manifestation of my identity as a developer and a
+                  My personal portfolio is more than just a collection of code -
+                  it's a manifestation of my identity as a developer and a
                   professional. With meticulous attention to detail and a keen
-                  eye for design, I crafted an intuitive and visually appealing
-                  platform that serves as a virtual resume, showcasing my
-                  expertise, accomplishments, and projects to the world.
+                  eye for design, I've crafted an intuitive and visually
+                  appealing platform that serves as a virtual resume, showcasing
+                  my expertise, accomplishments and projects.
                 </p>
                 <button
                   className={`link project-btn btn ${
