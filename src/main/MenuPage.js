@@ -5,92 +5,84 @@ function MenuPage({ closeMenu, isMenuVisible, toggleDarkMode }) {
   const [selectedPage, setSelectedPage] = useState(null);
 
   useEffect(() => {
-    const home = document.getElementById("home-page");
-    const project = document.getElementById("project-page");
-    const gallery = document.getElementById("gallery-page");
-    const about = document.getElementById("about-page");
-    const contact = document.getElementById("contact-page");
-    const gallery1 = document.getElementById("gallery-1");
-    const gallery2 = document.getElementById("gallery-2");
-    const gallery3 = document.getElementById("gallery-3");
-    const gallery4 = document.getElementById("gallery-4");
+    const hidePages = () => {
+      const pagesToHide = [
+        "home-page",
+        "project-page",
+        "gallery-page",
+        "about-page",
+        "contact-page",
+        "gallery-1",
+        "gallery-2",
+        "gallery-3",
+        "gallery-4",
+        "project-1",
+      ];
 
-    [
-      home,
-      project,
-      gallery,
-      about,
-      contact,
-      gallery1,
-      gallery2,
-      gallery3,
-      gallery4,
-    ].forEach((page) => {
-      if (page) {
-        page.classList.add("hidden");
+      pagesToHide.forEach((pageId) => {
+        const page = document.getElementById(pageId);
+        if (page) {
+          page.classList.add("hidden");
+        }
+      });
+
+      if (!selectedPage && !isMenuVisible) {
+        const home = document.getElementById("home-page");
+        if (home) {
+          setTimeout(() => {
+            home.classList.remove("hidden");
+          }, 500);
+        }
+      }
+
+      if (!isMenuVisible) {
+        const selectedElement = document.getElementById(selectedPage);
+        if (selectedElement) {
+          setTimeout(() => {
+            selectedElement.classList.remove("hidden");
+          }, 500);
+        }
+        if (selectedElement === "home-page") {
+          setSelectedPage("home-page");
+        }
+      }
+    };
+
+    hidePages();
+
+    const homeButton = document.querySelector(".brand");
+    homeButton.addEventListener("click", () => {
+      if (!isMenuVisible) {
+        setSelectedPage("home-page");
       }
     });
-
-    if (!selectedPage && !isMenuVisible) {
-      if (home) {
-        setTimeout(() => {
-          home.classList.remove("hidden");
-        }, 500);
-      }
-    }
-
-    if (!isMenuVisible) {
-      const selectedElement = document.getElementById(selectedPage);
-      if (selectedElement) {
-        setTimeout(() => {
-          selectedElement.classList.remove("hidden");
-        }, 500);
-      }
-    }
   }, [selectedPage, isMenuVisible]);
 
   const handleClick = (pageId) => {
-    const home = document.getElementById("home-page");
-    const project = document.getElementById("project-page");
-    const gallery = document.getElementById("gallery-page");
-    const about = document.getElementById("about-page");
-    const contact = document.getElementById("contact-page");
-    const menu = document.getElementById("menu-page");
-    const gallery1 = document.getElementById("gallery-1");
-    const gallery2 = document.getElementById("gallery-2");
-    const gallery3 = document.getElementById("gallery-3");
-    const gallery4 = document.getElementById("gallery-4");
+    const pages = [
+      "home-page",
+      "project-page",
+      "gallery-page",
+      "about-page",
+      "contact-page",
+      "menu-page",
+      "gallery-1",
+      "gallery-2",
+      "gallery-3",
+      "gallery-4",
+      "project-1",
+    ];
 
-    [
-      home,
-      project,
-      gallery,
-      about,
-      contact,
-      menu,
-      gallery1,
-      gallery2,
-      gallery3,
-      gallery4,
-    ].forEach((element) => {
+    pages.forEach((pageId) => {
+      const element = document.getElementById(pageId);
       if (element) {
         element.classList.add("fade-out");
       }
     });
 
     setTimeout(() => {
-      [
-        home,
-        project,
-        gallery,
-        about,
-        contact,
-        menu,
-        gallery1,
-        gallery2,
-        gallery3,
-        gallery4,
-      ].forEach((element) => {
+      pages.forEach((pageId) => {
+        const element = document.getElementById(pageId);
         if (element) {
           element.classList.add("hidden");
           element.classList.remove("fade-out");
@@ -101,6 +93,7 @@ function MenuPage({ closeMenu, isMenuVisible, toggleDarkMode }) {
       if (selectedElement) {
         selectedElement.classList.remove("hidden");
       }
+
       setSelectedPage(pageId);
     }, 500);
 

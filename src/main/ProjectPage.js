@@ -1,68 +1,18 @@
+import Projects from "./projects/Projects.js";
+import ProjectOne from "./projects/ProjectOne.js";
+import ProjectTwo from "./projects/ProjectTwo.js";
+import ProjectThree from "./projects/ProjectThree.js";
+import ProjectFour from "./projects/ProjectFour.js";
 import "./ProjectPage.css";
 
 function ProjectPage({ toggleDarkMode }) {
   return (
-    <div className="ProjectPage hidden page" id="project-page">
-      <div className="project-page">
-        <ul className="float-left">
-          <li
-            className={`${
-              toggleDarkMode ? "project-light-mode" : "project-dark-mode"
-            }`}
-          >
-            01
-            <button
-              className={`${
-                toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
-              }`}
-            >
-              Project
-            </button>
-          </li>
-          <li
-            className={`${
-              toggleDarkMode ? "project-light-mode" : "project-dark-mode"
-            }`}
-          >
-            02
-            <button
-              className={`${
-                toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
-              }`}
-            >
-              Project
-            </button>
-          </li>
-          <li
-            className={`${
-              toggleDarkMode ? "project-light-mode" : "project-dark-mode"
-            }`}
-          >
-            03
-            <button
-              className={`${
-                toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
-              }`}
-            >
-              Project
-            </button>
-          </li>
-          <li
-            className={`${
-              toggleDarkMode ? "project-light-mode" : "project-dark-mode"
-            }`}
-          >
-            04
-            <button
-              className={`${
-                toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
-              }`}
-            >
-              Project
-            </button>
-          </li>
-        </ul>
-      </div>
+    <div className="ProjectPage">
+      <Projects toggleDarkMode={toggleDarkMode} />
+      <ProjectOne toggleDarkMode={toggleDarkMode} />
+      <ProjectTwo toggleDarkMode={toggleDarkMode} />
+      <ProjectThree toggleDarkMode={toggleDarkMode} />
+      <ProjectFour toggleDarkMode={toggleDarkMode} />
     </div>
   );
 }

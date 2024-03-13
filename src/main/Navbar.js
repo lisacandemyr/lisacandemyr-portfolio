@@ -8,6 +8,7 @@ function Navbar({ toggleDarkMode, toggleDarkTheme }) {
   const [isMenuVisible, setMenuVisible] = useState(false);
 
   const showMenu = (pageId) => {
+    const project1 = document.getElementById("project-1");
     const pages = [
       "home-page",
       "project-page",
@@ -32,9 +33,26 @@ function Navbar({ toggleDarkMode, toggleDarkTheme }) {
           page.classList.add("hidden");
           page.classList.remove("fade-out");
           setMenuVisible(true);
-        }, 500);
+        }, 600);
       }
     });
+
+    if (project1) {
+      const grid1 = document.querySelector("#project-1 .grid-item-1");
+      const grid2 = document.querySelector("#project-1 .grid-item-2");
+      grid1.classList.remove("float-left");
+      grid1.classList.add("float-out-leftside");
+      grid2.classList.remove("float-right");
+      grid2.classList.add("float-out-rightside");
+      setTimeout(() => {
+        project1.classList.add("hidden");
+        project1.classList.remove("fade-out");
+        grid1.classList.add("float-left");
+        grid1.classList.remove("float-out-leftside");
+        grid2.classList.add("float-right");
+        grid2.classList.remove("float-out-rightside");
+      }, 550);
+    }
   };
 
   const closeMenu = () => {
@@ -49,9 +67,10 @@ function Navbar({ toggleDarkMode, toggleDarkTheme }) {
   };
 
   const goToHomepage = () => {
-    setMenuVisible(false);
+    const homePage = document.getElementById("home-page");
+    const menuPage = document.getElementById("menu-page");
+    const project1 = document.getElementById("project-1");
 
-    const home = document.getElementById("home-page");
     const pagesToHide = [
       "project-page",
       "gallery-page",
@@ -62,6 +81,7 @@ function Navbar({ toggleDarkMode, toggleDarkTheme }) {
       "gallery-2",
       "gallery-3",
       "gallery-4",
+      "project-1",
     ];
 
     pagesToHide.forEach((page) => {
@@ -75,9 +95,33 @@ function Navbar({ toggleDarkMode, toggleDarkTheme }) {
         }, 500);
       }
     });
-    setTimeout(() => {
-      home.classList.remove("hidden");
-    }, 550);
+
+    if (project1) {
+      const grid1 = document.querySelector("#project-1 .grid-item-1");
+      const grid2 = document.querySelector("#project-1 .grid-item-2");
+      grid1.classList.remove("float-left");
+      grid1.classList.add("float-out-leftside");
+      grid2.classList.remove("float-right");
+      grid2.classList.add("float-out-rightside");
+      setTimeout(() => {
+        project1.classList.add("hidden");
+        project1.classList.remove("fade-out");
+        grid1.classList.add("float-left");
+        grid1.classList.remove("float-out-leftside");
+        grid2.classList.add("float-right");
+        grid2.classList.remove("float-out-rightside");
+        homePage.classList.remove("hidden");
+      }, 600);
+    }
+
+    if (menuPage) {
+      menuPage.classList.add("fade-out");
+      setTimeout(() => {
+        menuPage.classList.add("hidden");
+        menuPage.classList.remove("fade-out");
+        setMenuVisible(false);
+      }, 500);
+    }
   };
 
   return (

@@ -7,7 +7,7 @@
 }
 
 :root {
-  --dark-color: rgb(201, 77, 58);
+  --dark-color: #c94d3a;
   --light-color: rgb(255, 207, 215);
   --transparent: rgba(255, 255, 255, 0);
   --text-headline: "Tangerine";
@@ -93,6 +93,14 @@ body {
   animation: floatLeft 1500ms;
 }
 
+.float-out-rightside {
+  animation: floatOutRight 1000ms;
+}
+
+.float-out-leftside {
+  animation: floatOutLeft 1000ms;
+}
+
 .fade-in {
   animation: fadeIn 2500ms;
 }
@@ -142,6 +150,28 @@ body {
   100% {
     transform: translateX(0%);
     opacity: 1;
+  }
+}
+
+@keyframes floatOutRight {
+  0% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes floatOutLeft {
+  0% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
   }
 }
 
