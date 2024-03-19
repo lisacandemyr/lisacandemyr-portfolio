@@ -1,8 +1,8 @@
-.HomePage .home-page {
-  margin: 150px 20px;
+.HomePage {
+  margin: 11.5% 20px;
 }
 
-.HomePage .home-page h1 {
+.HomePage h1 {
   font-family: var(--text-headline);
   font-size: 70px;
   letter-spacing: -4px;
@@ -10,15 +10,15 @@
   transition: all 300ms ease-in-out;
 }
 
-.HomePage .home-page h1 .sa {
+.HomePage h1 .sa {
   letter-spacing: -2px;
 }
 
-.HomePage .home-page h1 .ca {
+.HomePage h1 .ca {
   letter-spacing: -1px;
 }
 
-.HomePage .home-page h2 {
+.HomePage h2 {
   font-family: var(--text-paragraph);
   font-size: 32px;
   font-weight: 400;
@@ -27,106 +27,93 @@
   transition: all 300ms ease-in-out;
 }
 
-.HomePage .home-page .link {
-  font-family: var(--text-paragraph);
-  font-size: 12px;
-  font-weight: 500;
+.HomePage .link {
   margin: 10px 20px 0 20px;
-  text-transform: uppercase;
-  transition: all 300ms ease-in-out;
-}
-
-.HomePage .home-page .link:hover {
-  cursor: pointer;
-  transform: scale(1.1);
+  width: 115px;
 }
 
 @media (max-width: 710.5px) {
-  .HomePage .home-page h1 {
+  .HomePage {
+    margin: 20% 20px;
+  }
+
+  .HomePage h1 {
     line-height: 55px;
     margin-bottom: 20px;
   }
 
-  .HomePage .home-page h2 {
+  .HomePage h2 {
     margin: 0 0 20px 0;
+  }
+
+  .HomePage .link {
+    margin: 0 20px 10px 20px;
   }
 }
 
 @media (max-width: 600px) {
-  .HomePage .home-page {
-    margin: 100px 10px;
-  }
-
-  .HomePage .home-page h2 {
+  .HomePage h2 {
     font-size: 30px;
   }
 }
 
 @media (max-width: 400px) {
-  .HomePage .home-page {
+  .HomePage {
     margin: 50px 10px;
   }
 
-  .HomePage .home-page h1 {
+  .HomePage h1 {
     font-size: 100px;
     letter-spacing: -7px;
     line-height: 120px;
   }
 
-  .HomePage .home-page .size-light-mode {
+  .HomePage .size-light-mode {
     font-size: 210px;
     line-height: 150px;
     -webkit-text-stroke: 1px var(--dark-color);
     transition: all 300ms ease-in-out;
   }
 
-  .HomePage .home-page .size-dark-mode {
+  .HomePage .size-dark-mode {
     font-size: 210px;
     line-height: 150px;
     -webkit-text-stroke: 1px var(--light-color);
     transition: all 300ms ease-in-out;
   }
 
-  .HomePage .home-page .size-surname-light {
+  .HomePage .size-surname-light {
     display: block;
     font-size: 35px;
     letter-spacing: -1.5px;
     margin: -230px 0 0 140px;
     opacity: 0.5;
     -webkit-text-stroke: 0.75px var(--dark-color);
-    transition: all 750ms ease-in-out;
+    transition: all 300ms ease-in-out;
   }
 
-  .HomePage .home-page .size-surname-dark {
+  .HomePage .size-surname-dark {
     display: block;
     font-size: 35px;
     letter-spacing: -1.5px;
     margin: -230px 0 0 140px;
     opacity: 0.5;
     -webkit-text-stroke: 0.75px var(--light-color);
-    transition: all 750ms ease-in-out;
+    transition: all 300ms ease-in-out;
   }
 
-  .HomePage .home-page .hide {
+  .HomePage .hide {
     display: none;
   }
 
-  .HomePage .home-page h2 {
+  .HomePage h2 {
     font-size: 36px;
     letter-spacing: -2.5px;
     line-height: 30px;
-    margin: 100px 20px 20px 20px;
+    margin: 100px 20px 30px 20px;
   }
 
-  .HomePage .home-page .about-btn,
-  .HomePage .home-page .contact-btn {
-    margin-top: 10px;
-  }
-
-  .HomePage .home-page .project-btn,
-  .HomePage .home-page .gallery-btn,
-  .HomePage .home-page .about-btn,
-  .HomePage .home-page .contact-btn {
+  .HomePage .link {
     width: 130px;
   }
 }

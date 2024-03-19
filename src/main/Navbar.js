@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import MenuPage from "./MenuPage";
-import logoLight from "./logo-light.png";
-import logoDark from "./logo-dark.png";
+import logoLightMode from "./logo-light.png";
+import logoDarkMode from "./logo-dark.png";
 import "./Navbar.css";
 
 function Navbar({ toggleDarkMode, toggleDarkTheme }) {
+  // State to manage menu visibility
   const [isMenuVisible, setMenuVisible] = useState(false);
 
+  // Function to show menu
   const showMenu = (pageId) => {
     const project1 = document.getElementById("project-1");
     const pages = [
@@ -38,35 +40,36 @@ function Navbar({ toggleDarkMode, toggleDarkTheme }) {
     });
 
     if (project1) {
-      const grid1 = document.querySelector("#project-1 .grid-item-1");
-      const grid2 = document.querySelector("#project-1 .grid-item-2");
+      const grid1 = document.querySelector(".project-grid-item-1");
+      const grid2 = document.querySelector(".project-grid-item-2");
       grid1.classList.remove("float-left");
       grid1.classList.add("float-out-leftside");
       grid2.classList.remove("float-right");
       grid2.classList.add("float-out-rightside");
       setTimeout(() => {
-        project1.classList.add("hidden");
-        project1.classList.remove("fade-out");
         grid1.classList.add("float-left");
         grid1.classList.remove("float-out-leftside");
         grid2.classList.add("float-right");
         grid2.classList.remove("float-out-rightside");
+        project1.classList.add("hidden");
       }, 550);
     }
   };
 
+  // Function to close menu
   const closeMenu = () => {
-    const menu = document.getElementById("menu-page");
+    const menuPage = document.getElementById("menu-page");
 
-    menu.classList.add("fade-out");
+    menuPage.classList.add("fade-out");
     setTimeout(() => {
-      menu.classList.add("hidden");
-      menu.classList.remove("fade-out");
+      menuPage.classList.add("hidden");
+      menuPage.classList.remove("fade-out");
       setMenuVisible(false);
     }, 500);
   };
 
-  const goToHomepage = () => {
+  // Function to navigate to home page
+  const goToHomePage = () => {
     const homePage = document.getElementById("home-page");
     const menuPage = document.getElementById("menu-page");
     const project1 = document.getElementById("project-1");
@@ -81,24 +84,35 @@ function Navbar({ toggleDarkMode, toggleDarkTheme }) {
       "gallery-2",
       "gallery-3",
       "gallery-4",
-      "project-1",
     ];
 
-    pagesToHide.forEach((page) => {
-      const element = document.getElementById(page);
+    pagesToHide.forEach((pageId) => {
+      const page = document.getElementById(pageId);
 
-      if (element) {
-        element.classList.add("fade-out");
+      if (page) {
+        page.classList.add("fade-out");
         setTimeout(() => {
-          element.classList.add("hidden");
-          element.classList.remove("fade-out");
+          page.classList.add("hidden");
+          page.classList.remove("fade-out");
         }, 500);
       }
     });
 
+    setTimeout(() => {
+      homePage.classList.remove("hidden");
+    }, 600);
+
+    // Additional logic for menu page
+    if (menuPage) {
+      setTimeout(() => {
+        setMenuVisible(false);
+      }, 500);
+    }
+
+    // Additional logic for project page(s)
     if (project1) {
-      const grid1 = document.querySelector("#project-1 .grid-item-1");
-      const grid2 = document.querySelector("#project-1 .grid-item-2");
+      const grid1 = document.querySelector(".project-grid-item-1");
+      const grid2 = document.querySelector(".project-grid-item-2");
       grid1.classList.remove("float-left");
       grid1.classList.add("float-out-leftside");
       grid2.classList.remove("float-right");
@@ -111,16 +125,7 @@ function Navbar({ toggleDarkMode, toggleDarkTheme }) {
         grid2.classList.add("float-right");
         grid2.classList.remove("float-out-rightside");
         homePage.classList.remove("hidden");
-      }, 600);
-    }
-
-    if (menuPage) {
-      menuPage.classList.add("fade-out");
-      setTimeout(() => {
-        menuPage.classList.add("hidden");
-        menuPage.classList.remove("fade-out");
-        setMenuVisible(false);
-      }, 500);
+      }, 550);
     }
   };
 
@@ -129,9 +134,9 @@ function Navbar({ toggleDarkMode, toggleDarkTheme }) {
       <header>
         <nav>
           <div>
-            <button onClick={goToHomepage} className="brand">
+            <button onClick={goToHomePage} className="brand">
               <img
-                src={toggleDarkMode ? logoLight : logoDark}
+                src={toggleDarkMode ? logoLightMode : logoDarkMode}
                 width="45"
                 alt="Logotype"
               ></img>
@@ -155,7 +160,7 @@ function Navbar({ toggleDarkMode, toggleDarkTheme }) {
             <div>
               <button
                 onClick={() => showMenu("menu-page")}
-                className={`btn ${
+                className={`${
                   toggleDarkMode ? "menu-btn-light" : "menu-btn-dark"
                 }
               } ${isMenuVisible ? "hidden" : ""} `}

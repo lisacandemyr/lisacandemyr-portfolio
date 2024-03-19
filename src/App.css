@@ -2,8 +2,8 @@
   font-family: "Tangerine";
   src: url("fonts/TangerineRegular.woff2") format("woff2"),
     url("fonts/TangerineRegular.woff") format("woff");
-  font-weight: normal;
   font-style: normal;
+  font-weight: normal;
 }
 
 :root {
@@ -15,18 +15,8 @@
 }
 
 body {
-  background: var(--light-color);
-  color: var(--dark-color);
   margin: 0;
   padding: 0;
-}
-
-.light {
-  background: var(--light-color);
-}
-
-.dark {
-  background: var(--dark-color);
 }
 
 .text-light-mode {
@@ -47,22 +37,31 @@ body {
   -webkit-text-stroke: 0.75px var(--light-color);
 }
 
+.link {
+  font-family: var(--text-paragraph);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 7px 24px;
+  text-transform: uppercase;
+  transition: all 300ms ease-in-out;
+}
+
 .links-light-mode {
-  border: 1px solid var(--dark-color);
-  color: #c94d3a;
+  border: 2px dotted var(--dark-color);
+  color: var(--dark-color);
   transition: all 300ms ease-in-out;
 }
 
 .links-dark-mode {
-  border: 1px solid var(--light-color);
-  color: #ffcfd7;
+  border: 2px dotted var(--light-color);
+  color: var(--light-color);
   transition: all 300ms ease-in-out;
 }
 
 .links-light-mode:hover,
 .links-dark-mode:hover {
-  border: 1px solid var(--transparent);
-  transition: all 300ms ease-in-out;
+  border: 2px dotted var(--transparent);
+  transform: scale(1.1);
 }
 
 .hidden {
@@ -102,7 +101,7 @@ body {
 }
 
 .fade-in {
-  animation: fadeIn 2500ms;
+  animation: fadeIn 1500ms;
 }
 
 .fade-out {

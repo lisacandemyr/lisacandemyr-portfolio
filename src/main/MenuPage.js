@@ -2,10 +2,14 @@ import React, { useState, useEffect } from "react";
 import "./MenuPage.css";
 
 function MenuPage({ closeMenu, isMenuVisible, toggleDarkMode }) {
+  // State to track the selected page
   const [selectedPage, setSelectedPage] = useState(null);
 
+  // Effect to handle page visibility and menu button click
   useEffect(() => {
+    // Function to hide pages based on visibility
     const hidePages = () => {
+      // List of page IDs to hide
       const pagesToHide = [
         "home-page",
         "project-page",
@@ -19,6 +23,7 @@ function MenuPage({ closeMenu, isMenuVisible, toggleDarkMode }) {
         "project-1",
       ];
 
+      // Hide each page in the list
       pagesToHide.forEach((pageId) => {
         const page = document.getElementById(pageId);
         if (page) {
@@ -26,30 +31,31 @@ function MenuPage({ closeMenu, isMenuVisible, toggleDarkMode }) {
         }
       });
 
+      // If no page is selected and menu is not visible, display the home page
       if (!selectedPage && !isMenuVisible) {
         const home = document.getElementById("home-page");
         if (home) {
           setTimeout(() => {
             home.classList.remove("hidden");
-          }, 500);
+          }, 600);
         }
       }
 
+      // If menu is not visible, display the selected page
       if (!isMenuVisible) {
         const selectedElement = document.getElementById(selectedPage);
         if (selectedElement) {
           setTimeout(() => {
             selectedElement.classList.remove("hidden");
-          }, 500);
-        }
-        if (selectedElement === "home-page") {
-          setSelectedPage("home-page");
+          }, 600);
         }
       }
     };
 
+    // Call the function to hide pages
     hidePages();
 
+    // Event listener for the home button click
     const homeButton = document.querySelector(".brand");
     homeButton.addEventListener("click", () => {
       if (!isMenuVisible) {
@@ -58,7 +64,9 @@ function MenuPage({ closeMenu, isMenuVisible, toggleDarkMode }) {
     });
   }, [selectedPage, isMenuVisible]);
 
+  // Function to handle page clicks
   const handleClick = (pageId) => {
+    // List of page IDs
     const pages = [
       "home-page",
       "project-page",
@@ -73,6 +81,7 @@ function MenuPage({ closeMenu, isMenuVisible, toggleDarkMode }) {
       "project-1",
     ];
 
+    // Add fade-out effect to all pages
     pages.forEach((pageId) => {
       const element = document.getElementById(pageId);
       if (element) {
@@ -80,6 +89,7 @@ function MenuPage({ closeMenu, isMenuVisible, toggleDarkMode }) {
       }
     });
 
+    // Hide and display pages with delay
     setTimeout(() => {
       pages.forEach((pageId) => {
         const element = document.getElementById(pageId);
@@ -94,94 +104,84 @@ function MenuPage({ closeMenu, isMenuVisible, toggleDarkMode }) {
         selectedElement.classList.remove("hidden");
       }
 
+      // Set the selected page
       setSelectedPage(pageId);
-    }, 500);
+    }, 600);
 
+    // Close the menu
     closeMenu();
   };
 
   return (
     <div className={`MenuPage ${isMenuVisible ? "" : "hidden"}`} id="menu-page">
-      <div className="menu-page">
-        <ul className="float-right">
-          <li
+      <ul className="float-right">
+        <li
+          className={`${toggleDarkMode ? "menu-light-mode" : "menu-dark-mode"}`}
+        >
+          01
+          <button
+            onClick={() => handleClick("home-page")}
             className={`${
-              toggleDarkMode ? "menu-light-mode" : "menu-dark-mode"
+              toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
             }`}
           >
-            01
-            <button
-              onClick={() => handleClick("home-page")}
-              className={`${
-                toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
-              }`}
-            >
-              Home
-            </button>
-          </li>
-          <li
+            Home
+          </button>
+        </li>
+        <li
+          className={`${toggleDarkMode ? "menu-light-mode" : "menu-dark-mode"}`}
+        >
+          02
+          <button
+            onClick={() => handleClick("project-page")}
             className={`${
-              toggleDarkMode ? "menu-light-mode" : "menu-dark-mode"
+              toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
             }`}
           >
-            02
-            <button
-              onClick={() => handleClick("project-page")}
-              className={`${
-                toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
-              }`}
-            >
-              Projects
-            </button>
-          </li>
-          <li
-            className={`${
-              toggleDarkMode ? "menu-light-mode" : "menu-dark-mode"
+            Projects
+          </button>
+        </li>
+        <li
+          className={`${toggleDarkMode ? "menu-light-mode" : "menu-dark-mode"}`}
+        >
+          03
+          <button
+            onClick={() => handleClick("gallery-page")}
+            className={`gallery-btn ${
+              toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
             }`}
           >
-            03
-            <button
-              onClick={() => handleClick("gallery-page")}
-              className={`gallery-btn ${
-                toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
-              }`}
-            >
-              G<span className="more-spacing">a</span>lle
-              <span className="more-spacing">r</span>y
-            </button>
-          </li>
-          <li
+            G<span className="more-spacing">a</span>lle
+            <span className="more-spacing">r</span>y
+          </button>
+        </li>
+        <li
+          className={`${toggleDarkMode ? "menu-light-mode" : "menu-dark-mode"}`}
+        >
+          04
+          <button
+            onClick={() => handleClick("about-page")}
             className={`${
-              toggleDarkMode ? "menu-light-mode" : "menu-dark-mode"
+              toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
             }`}
           >
-            04
-            <button
-              onClick={() => handleClick("about-page")}
-              className={`${
-                toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
-              }`}
-            >
-              About
-            </button>
-          </li>
-          <li
-            className={`${
-              toggleDarkMode ? "menu-light-mode" : "menu-dark-mode"
+            About
+          </button>
+        </li>
+        <li
+          className={`${toggleDarkMode ? "menu-light-mode" : "menu-dark-mode"}`}
+        >
+          05
+          <button
+            onClick={() => handleClick("contact-page")}
+            className={`contact-btn ${
+              toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
             }`}
           >
-            05
-            <button
-              onClick={() => handleClick("contact-page")}
-              className={`contact-btn ${
-                toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
-              }`}
-            >
-              Con<span className="more-spacing">t</span>act
-            </button>
-          </li>
-        </ul>
-      </div>
+            Con<span className="more-spacing">t</span>act
+          </button>
+        </li>
+      </ul>
     </div>
   );
 }

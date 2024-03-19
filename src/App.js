@@ -6,45 +6,44 @@ import GalleryPage from "./main/GalleryPage.js";
 import AboutPage from "./main/AboutPage.js";
 import ContactPage from "./main/ContactPage.js";
 import MenuPage from "./main/MenuPage.js";
-import "./App.css";
-
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
+import "./App.css";
 
 function App() {
+  // State to manage dark mode toggle
   const [toggleDarkMode, setToggleDarkMode] = useState(true);
 
-  const rootStyles = document.documentElement.style;
-  rootStyles.setProperty("--filter", toggleDarkMode ? "none" : "invert(100%)");
-  rootStyles.setProperty("--opacity", toggleDarkMode ? "0.2" : "0.5");
-
-  const scrollbarTrackColor = toggleDarkMode ? "#c94d3a" : "#ffcfd7";
-  const scrollbarThumbColor = toggleDarkMode ? "#ffcfd780" : "#c94d3a80";
-  const scrollbarThumbColorHover = toggleDarkMode ? "#ffcfd7" : "#c94d3a";
-
+  // Function to toggle dark mode
   const toggleDarkTheme = () => {
     setToggleDarkMode(!toggleDarkMode);
   };
 
-  const lightBackground = "#ffcfd7";
-  const lightText = "#c94d3a";
-  const darkBackground = "#c94d3a";
-  const darkText = "#ffcfd7";
-
-  const darkTheme = createTheme({
+  // Theme creation based on dark mode state
+  const theme = createTheme({
     palette: {
       mode: toggleDarkMode ? "light" : "dark",
       background: {
-        default: toggleDarkMode ? lightBackground : darkBackground,
+        default: toggleDarkMode ? "#ffcfd7" : "#c94d3a",
       },
       text: {
-        primary: toggleDarkMode ? lightText : darkText,
+        primary: toggleDarkMode ? "#c94d3a" : "#ffcfd7",
       },
     },
   });
 
+  // Set intensity of grain filter based on dark mode state
+  const rootStyles = document.documentElement.style;
+  rootStyles.setProperty("--filter", toggleDarkMode ? "none" : "invert(100%)");
+  rootStyles.setProperty("--opacity", toggleDarkMode ? "0.3" : "0.6");
+
+  // Define scrollbar colors based on dark mode state
+  const scrollbarTrackColor = toggleDarkMode ? "#c94d3a" : "#ffcfd7";
+  const scrollbarThumbColor = toggleDarkMode ? "#ffcfd780" : "#c94d3a80";
+  const scrollbarThumbColorHover = toggleDarkMode ? "#ffcfd7" : "#c94d3a";
+
   return (
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={theme}>
       <CssBaseline />
       <div className="App">
         <div className="grain"></div>
@@ -58,7 +57,6 @@ function App() {
           <GalleryPage toggleDarkMode={toggleDarkMode} />
           <AboutPage toggleDarkMode={toggleDarkMode} />
           <ContactPage toggleDarkMode={toggleDarkMode} />
-          <MenuPage toggleDarkMode={toggleDarkMode} />
         </main>
       </div>
       <style>

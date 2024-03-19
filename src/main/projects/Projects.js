@@ -1,6 +1,7 @@
 import "../ProjectPage.css";
 
 function Projects({ toggleDarkMode }) {
+  // Function to show select project page
   const handleClick = () => {
     const projectPage = document.getElementById("project-page");
     const project1 = document.getElementById("project-1");
@@ -27,69 +28,51 @@ function Projects({ toggleDarkMode }) {
   };
 
   return (
-    <div className="Projects hidden page" id="project-page">
-      <div className="project-page">
-        <ul className="float-left">
-          <li
+    <div className="Projects hidden" id="project-page">
+      <ul className="float-left">
+        <li>
+          01
+          <button
+            onClick={() => handleClick("project-1")}
             className={`${
-              toggleDarkMode ? "project-light-mode" : "project-dark-mode"
+              toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
             }`}
           >
-            01
-            <button
-              onClick={() => handleClick("project-1")}
-              className={`${
-                toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
-              }`}
-            >
-              li<span className="sa">sa</span>
-              <span className="ca">ca</span>ndemyr
-            </button>
-          </li>
-          <li
+            li<span className="sa">sa</span>
+            <span className="ca">ca</span>ndemyr
+          </button>
+        </li>
+        <li>
+          02
+          <button
             className={`${
-              toggleDarkMode ? "project-light-mode" : "project-dark-mode"
+              toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
             }`}
           >
-            02
-            <button
-              className={`${
-                toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
-              }`}
-            >
-              Pending..
-            </button>
-          </li>
-          <li
+            Pending..
+          </button>
+        </li>
+        <li>
+          03
+          <button
             className={`${
-              toggleDarkMode ? "project-light-mode" : "project-dark-mode"
+              toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
             }`}
           >
-            03
-            <button
-              className={`${
-                toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
-              }`}
-            >
-              Pending..
-            </button>
-          </li>
-          <li
+            Pending..
+          </button>
+        </li>
+        <li>
+          04
+          <button
             className={`${
-              toggleDarkMode ? "project-light-mode" : "project-dark-mode"
+              toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
             }`}
           >
-            04
-            <button
-              className={`${
-                toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
-              }`}
-            >
-              Pending..
-            </button>
-          </li>
-        </ul>
-      </div>
+            Pending..
+          </button>
+        </li>
+      </ul>
     </div>
   );
 }
