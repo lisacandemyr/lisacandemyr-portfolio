@@ -18,12 +18,12 @@
 }
 
 .ContactPage a {
-  margin: 0 10px 10px 10px;
+  margin: 0 0 10px 10px;
 }
 
 @media (max-width: 400px) {
   .ContactPage {
-    margin: 50px 10px;
+    margin: 150px 10px;
   }
 
   .ContactPage h2 {
