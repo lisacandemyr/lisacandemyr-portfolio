@@ -8,6 +8,7 @@
   font-family: var(--text-headline);
   font-size: 55px;
   letter-spacing: -3px;
+  margin-right: 5px;
   text-transform: lowercase;
   transition: all 300ms ease-in-out;
 }
@@ -35,6 +36,7 @@
   .AboutPage h2 {
     font-size: 45px;
   }
+
   .AboutPage p {
     font-size: 11px;
   }
