@@ -24,36 +24,50 @@ function Gallery({ toggleDarkMode }) {
         G<span className="more-spacing">a</span>lle
         <span className="more-spacing">r</span>y
       </h2>
-      <div className="grid text-center fade-in">
+      <div
+        className={`grid text-center fade-in ${
+          toggleDarkMode
+            ? "gallery-border-light-mode"
+            : "gallery-border-dark-mode"
+        }`}
+      >
         <button
           onClick={() => handleClick("gallery-1")}
-          className="greenwich-market"
+          className={`greenwich-market ${
+            toggleDarkMode
+              ? "greenwich-market-light-mode"
+              : "greenwich-market-dark-mode"
+          }`}
         >
-          <div className="background">
-            <h3 className="gallery-headline">Greenwich Market</h3>
-            <p className="gallery-paragraph">Community</p>
-          </div>
+          <h3 className="gallery-headline">Greenwich Market</h3>
+          <p className="gallery-paragraph">Community</p>
         </button>
-        <button onClick={() => handleClick("gallery-2")} className="ehla-eat">
-          <div className="background">
-            <h3 className="gallery-headline">Ehla Eat</h3>
-            <p className="gallery-paragraph">Eastern Mediterranean Food</p>
-          </div>
+        <button
+          onClick={() => handleClick("gallery-2")}
+          className={`ehla-eat ${
+            toggleDarkMode ? "ehla-eat-light-mode" : "ehla-eat-dark-mode"
+          }`}
+        >
+          <h3 className="gallery-headline">Ehla Eat</h3>
+          <p className="gallery-paragraph">Eastern Mediterranean Food</p>
         </button>
         <button
           onClick={() => handleClick("gallery-3")}
-          className="ryan-london"
+          className={`ryan-london ${
+            toggleDarkMode ? "ryan-london-light-mode" : "ryan-london-dark-mode"
+          }`}
         >
-          <div className="background">
-            <h3 className="gallery-headline">Ryan London</h3>
-            <p className="gallery-paragraph">Leather Goods</p>
-          </div>
+          <h3 className="gallery-headline">Ryan London</h3>
+          <p className="gallery-paragraph">Leather Goods</p>
         </button>
-        <button onClick={() => handleClick("gallery-4")} className="live-music">
-          <div className="background">
-            <h3 className="gallery-headline">Live Music</h3>
-            <p className="gallery-paragraph">Events</p>
-          </div>
+        <button
+          onClick={() => handleClick("gallery-4")}
+          className={`live-music ${
+            toggleDarkMode ? "live-music-light-mode" : "live-music-dark-mode"
+          }`}
+        >
+          <h3 className="gallery-headline">Live Music</h3>
+          <p className="gallery-paragraph">Events</p>
         </button>
       </div>
     </div>
