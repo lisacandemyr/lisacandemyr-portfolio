@@ -19,23 +19,26 @@ function ProjectOne({ toggleDarkMode }) {
               toggleDarkMode ? "text-light-mode" : "text-dark-mode"
             }`}
           >
-            <div className="col-md-4">
+            <div
+              className={`col-lg-4 ${
+                toggleDarkMode ? "col-light-mode" : "col-dark-mode"
+              }`}
+            >
               <ul>
                 <li>
                   Code
                   <br />
-                  <span>tools</span>
+                  <span>platforms</span>
+                </li>
+                <p className="tool-specifications">VScode, GitHub, Netlify.</p>
+                <br />
+                <li>
+                  front-end languages
+                  <br />
+                  <span>and frameworks</span>
                 </li>
                 <p className="tool-specifications">
-                  <i className="fa-brands fa-html5"></i> HTML,{" "}
-                  <i className="fa-brands fa-css3-alt"></i> CSS,{" "}
-                  <i className="fa-brands fa-js"></i> JavaScript,{" "}
-                  <i className="fa-brands fa-react"></i> React,
-                  <br />
-                  <i className="fa-brands fa-bootstrap"></i> Bootstrap,{" "}
-                  <i className="fa-brands fa-google"></i> Googlefonts,
-                  <br />
-                  <i className="fa-solid fa-font-awesome"></i> Fontawesome.
+                  HTML, CSS, JavaScript, React, Bootstrap.
                 </p>
                 <br />
                 <li>
@@ -43,42 +46,35 @@ function ProjectOne({ toggleDarkMode }) {
                   <br />
                   <span>tools</span>
                 </li>
-                <p className="tool-specifications">
-                  <i className="fa-brands fa-figma"></i> Figma,{" "}
-                  <i className="fa-solid fa-image"></i> Photoshop.
-                </p>
+                <p className="tool-specifications">Figma, Photoshop.</p>
                 <br />
                 <li>
                   Photo
                   <br />
                   <span>editing tools</span>
                 </li>
-                <p className="tool-specifications">
-                  <i className="fa-regular fa-image"></i> Lightroom,{" "}
-                  <i className="fa-solid fa-image"></i> Photoshop.
-                </p>
+                <p className="tool-specifications">Lightroom, Photoshop.</p>
               </ul>
             </div>
-            <div className="col-md-8">
+            <div className="col-lg-8">
               <p>
-                Motivated by a genuine interest towards design and web
-                development, I embarked on <br />
-                an eight-month journey immersed in coding and learning through
-                SheCodes.io. <br />
-                This platform encapsulates all the knowledge and skills I've
-                acquired throughout <br />
-                the course and more.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
                 <br />
                 <br />
-                My personal portfolio is a manifestation of my identity as a
-                developer and a professional. With meticulous attention to
-                detail and a keen eye for design, I've crafted an intuitive and
-                visually appealing platform from scratch in VScode, that serves
-                as a virtual resume, showcasing my expertise, accomplishments
-                and projects.
+                <em>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Lacus vel facilisis volutpat est velit egestas dui. Nisl
+                  suscipit adipiscing bibendum est.
+                </em>
               </p>
-              <br />
-              <br />
+
               <button
                 className={`link btn ${
                   toggleDarkMode ? "links-dark-mode" : "links-light-mode"

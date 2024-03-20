@@ -43,7 +43,7 @@
 }
 
 .ProjectOne {
-  margin-top: 4.5%;
+  margin-top: 3.5%;
   overflow: hidden;
 }
 
@@ -68,59 +68,77 @@
   backdrop-filter: blur(2px);
   border-radius: 10px 0 0 10px;
   color: var(--dark-color);
-  padding: 20px;
   transition: all 300ms ease-in-out;
 }
 
 .grid-light-mode {
-  border: 1px solid var(--dark-color);
+  border-top: 1px solid var(--dark-color);
+  border-left: 1px solid var(--dark-color);
+  border-bottom: 1px solid var(--dark-color);
 }
 
 .grid-dark-mode {
-  border: 1px solid var(--light-color);
+  border-top: 1px solid var(--light-color);
+  border-left: 1px solid var(--light-color);
+  border-bottom: 1px solid var(--light-color);
 }
 
 .ProjectOne .row {
   align-items: center;
 }
 
-.ProjectOne .col-md-4 ul {
+.ProjectOne .col-lg-4 ul {
   font-family: var(--text-paragraph);
   font-size: 20px;
   font-weight: 500;
   list-style: none;
-  padding-left: 5px;
+  padding: 20px;
   text-transform: lowercase;
 }
 
-.ProjectOne .col-md-4 li {
+.ProjectOne .col-lg-4 li {
+  line-height: 20px;
   opacity: 0.75;
 }
 
-.ProjectOne .col-md-4 span {
+.ProjectOne .col-lg-4 span {
   font-size: 13px;
   position: relative;
-  top: -20px;
-  left: 8px;
+  top: -8px;
+  left: 10px;
+  margin-bottom: 20px;
 }
 
-.ProjectOne .col-md-4 .tool-specifications {
+.ProjectOne .col-lg-4 .tool-specifications {
   font-family: var(--text-paragraph);
   font-size: 15px;
   font-weight: 500;
-  margin: -20px 0 0 0;
+  line-height: 15px;
+  margin: -5px 0 0 0;
   opacity: 1;
 }
 
-.ProjectOne .col-md-8 {
+.ProjectOne .col-lg-8 {
   font-family: var(--text-paragraph);
   font-size: 12px;
   font-weight: 500;
+  line-height: 17px;
+  padding: 50px;
   text-transform: uppercase;
 }
 
+.ProjectOne .col-light-mode {
+  border-right: 1px dotted var(--dark-color);
+  transition: all 300ms ease-in-out;
+}
+
+.ProjectOne .col-dark-mode {
+  border-right: 1px dotted var(--light-color);
+  transition: all 300ms ease-in-out;
+}
+
 .ProjectOne .link {
-  margin: 0 20px 10px 0;
+  margin: 30px 20px 10px 0;
 }
 
 .ProjectOne .link:hover {
@@ -183,6 +201,22 @@
   }
 }
 
+@media (max-width: 991.5px) {
+  .ProjectOne .col-light-mode {
+    border-right: none;
+    border-bottom: 1px dotted var(--dark-color);
+    margin-left: 12px;
+    transition: all 300ms ease-in-out;
+  }
+
+  .ProjectOne .col-dark-mode {
+    border-right: none;
+    border-bottom: 1px dotted var(--light-color);
+    margin-left: 12px;
+    transition: all 300ms ease-in-out;
+  }
+}
+
 @media (max-width: 800px) {
   .Projects {
     justify-content: left;
@@ -191,6 +225,15 @@
 
   .ProjectOne {
     margin-top: 50px;
+  }
+
+  .ProjectOne .row {
+    row-gap: 20px;
+  }
+
+  .ProjectOne .col-lg-8 {
+    margin-top: -30px;
+    padding: 30px;
   }
 }
 
@@ -201,7 +244,12 @@
   }
 
   .ProjectOne .link {
+    margin: 5px 20px 5px 0;
     width: 147px;
+  }
+
+  .ProjectOne .col-lg-8 {
+    padding-right: 10px;
   }
 }
 
