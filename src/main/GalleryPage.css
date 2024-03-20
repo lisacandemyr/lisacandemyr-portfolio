@@ -16,19 +16,23 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-.GalleryPage h3 {
+.GalleryPage .gallery-headline {
   font-family: var(--text-paragraph);
   font-size: 28px;
-  letter-spacing: -1.25px;
+  letter-spacing: -1.5px;
   line-height: 26px;
+  position: relative;
+  top: 127px;
   text-transform: lowercase;
 }
 
-.GalleryPage p {
+.GalleryPage .gallery-paragraph {
   font-family: var(--text-paragraph);
-  font-size: 12px;
+  font-size: 11.5px;
   font-weight: 500;
   line-height: 0;
+  position: relative;
+  top: 123px;
   text-transform: uppercase;
 }
 
@@ -47,80 +51,80 @@
   transition: all 300ms ease-in-out;
 }
 
+.GalleryPage .background {
+  backdrop-filter: blur(5px);
+  height: 300px;
+  position: relative;
+  top: -115px;
+  transition: all 300ms ease-in-out;
+}
+
+.GalleryPage .background:hover {
+  backdrop-filter: blur(0);
+}
+
 .GalleryPage .greenwich-market {
   background-image: linear-gradient(
-      rgba(201, 77, 58, 0.7),
-      rgba(201, 77, 58, 0.7)
+      rgba(201, 77, 58, 0.9),
+      rgba(201, 77, 58, 0.9)
     ),
     url(gallery/greenwich-market.jpg);
+  background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100%;
+  max-height: 300px;
 }
 
 .GalleryPage .ehla-eat {
   background-image: linear-gradient(
-      rgba(201, 77, 58, 0.7),
-      rgba(201, 77, 58, 0.7)
+      rgba(201, 77, 58, 0.9),
+      rgba(201, 77, 58, 0.9)
     ),
     url(gallery/ehla-eat.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
+  max-height: 300px;
 }
 
 .GalleryPage .ryan-london {
   background-image: linear-gradient(
-      rgba(201, 77, 58, 0.7),
-      rgba(201, 77, 58, 0.7)
+      rgba(201, 77, 58, 0.9),
+      rgba(201, 77, 58, 0.9)
     ),
     url(gallery/ryan-london.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
+  max-height: 300px;
 }
 
 .GalleryPage .live-music {
   background-image: linear-gradient(
-      rgba(201, 77, 58, 0.6),
-      rgba(201, 77, 58, 0.6)
+      rgba(201, 77, 58, 0.8),
+      rgba(201, 77, 58, 0.8)
     ),
     url(gallery/music.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
+  max-height: 300px;
 }
 
 .GalleryPage .greenwich-market:hover {
-  background-image: linear-gradient(
-      rgba(201, 77, 58, 0.2),
-      rgba(201, 77, 58, 0.2)
-    ),
-    url(gallery/greenwich-market.jpg);
+  background-image: url(gallery/greenwich-market.jpg);
 }
 
 .GalleryPage .ehla-eat:hover {
-  background-image: linear-gradient(
-      rgba(201, 77, 58, 0.2),
-      rgba(201, 77, 58, 0.2)
-    ),
-    url(gallery/ehla-eat.jpg);
+  background-image: url(gallery/ehla-eat.jpg);
 }
 
 .GalleryPage .ryan-london:hover {
-  background-image: linear-gradient(
-      rgba(201, 77, 58, 0.2),
-      rgba(201, 77, 58, 0.2)
-    ),
-    url(gallery/ryan-london.jpg);
+  background-image: url(gallery/ryan-london.jpg);
 }
 
 .GalleryPage .live-music:hover {
-  background-image: linear-gradient(
-      rgba(201, 77, 58, 0.1),
-      rgba(201, 77, 58, 0.1)
-    ),
-    url(gallery/music.jpg);
+  background-image: url(gallery/music.jpg);
 }
 
 .GalleryPage .gallery-btn-light {
@@ -167,6 +171,8 @@
   font-size: 12px;
   font-weight: 500;
   margin-bottom: 0;
+  position: relative;
+  top: -10px;
   text-decoration: none;
   text-transform: uppercase;
   transition: all 300ms ease-in-out;
@@ -195,14 +201,33 @@
   color: rgba(255, 255, 255, 0);
 }
 
-.GalleryOne a,
-.GalleryTwo a,
-.GalleryThree a,
-.GalleryFour a {
+.GalleryOne .top-btn-light,
+.GalleryTwo .top-btn-light,
+.GalleryThree .top-btn-light,
+.GalleryFour .top-btn-light {
   animation: backToTop 1500ms infinite;
   border: 2px dotted var(--light-color);
   border-radius: 50% 50% 0 0;
   color: var(--light-color);
+  font-size: 40px;
+  padding: 0 12px;
+  position: fixed;
+  left: 50%;
+  bottom: -1px;
+  opacity: 0.75;
+  text-decoration: underline;
+  transform: translateX(-50%);
+  transition: all 300ms ease-in-out;
+}
+
+.GalleryOne .top-btn-dark,
+.GalleryTwo .top-btn-dark,
+.GalleryThree .top-btn-dark,
+.GalleryFour .top-btn-dark {
+  animation: backToTop 1500ms infinite;
+  border: 2px dotted var(--dark-color);
+  border-radius: 50% 50% 0 0;
+  color: var(--dark-color);
   font-size: 40px;
   padding: 0 12px;
   position: fixed;
@@ -304,7 +329,7 @@
   .GalleryThree h3,
   .GalleryFour h3 {
     font-size: 28px;
-    line-height: 25px;
+    top: 8px;
   }
 
   .GalleryOne p,
@@ -312,7 +337,8 @@
   .GalleryThree p,
   .GalleryFour p {
     font-size: 13px;
-    line-height: 0;
+    letter-spacing: -0.5px;
+    top: -15px;
   }
 
   .GalleryOne .gallery-container,
@@ -331,17 +357,6 @@
     font-size: 45px;
   }
 
-  .GalleryPage h3 {
-    font-size: 23px;
-    letter-spacing: -0.5px;
-    line-height: 20px;
-  }
-
-  .GalleryPage p {
-    font-size: 12px;
-    letter-spacing: -0.25px;
-  }
-
   .GalleryOne .gallery-container,
   .GalleryTwo .gallery-container,
   .GalleryThree .gallery-container {
@@ -357,8 +372,9 @@
   .GalleryThree h3,
   .GalleryFour h3 {
     font-size: 23px;
-    letter-spacing: -0.5px;
-    line-height: 20px;
+    letter-spacing: -1px;
+    line-height: 19px;
+    margin-bottom: 10px;
   }
 
   .GalleryOne p,
@@ -367,6 +383,7 @@
   .GalleryFour p {
     font-size: 12px;
     letter-spacing: -0.25px;
+    top: -10px;
     line-height: 12px;
   }
 }

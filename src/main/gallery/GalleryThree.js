@@ -79,7 +79,10 @@ function GalleryThree({ toggleDarkMode }) {
           />
         ))}
       </div>
-      <a href="#gallery-3">
+      <a
+        href="#gallery-3"
+        className={`${toggleDarkMode ? "top-btn-dark" : "top-btn-light"}`}
+      >
         <i className="fa-thin fa-angle-up"></i>
       </a>
     </div>

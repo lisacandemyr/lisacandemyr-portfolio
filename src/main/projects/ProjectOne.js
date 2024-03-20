@@ -5,16 +5,18 @@ function ProjectOne({ toggleDarkMode }) {
     <div className="ProjectOne hidden" id="project-1">
       <div className="grid">
         <div className="project-grid-item-1 float-left">
-          <div className="background"></div>
+          <div className="background">
+            <p>profile photo + logo</p>
+          </div>
         </div>
         <div
           className={`project-grid-item-2 float-right ${
-            toggleDarkMode ? "light-mode" : "dark-mode"
-          } `}
+            toggleDarkMode ? "grid-light-mode" : "grid-dark-mode"
+          }`}
         >
           <div
             className={`row ${
-              toggleDarkMode ? "text-dark-mode" : "text-light-mode"
+              toggleDarkMode ? "text-light-mode" : "text-dark-mode"
             }`}
           >
             <div className="col-md-4">
@@ -58,13 +60,14 @@ function ProjectOne({ toggleDarkMode }) {
               </ul>
             </div>
             <div className="col-md-8">
-              <h6>Branding / Web Developement / Photography</h6>
               <p>
                 Motivated by a genuine interest towards design and web
-                development, I embarked on an eight-month journey immersed in
-                coding and learning through SheCodes.io. This platform
-                encapsulates all the knowledge and skills I've acquired
-                throughout the course and more.
+                development, I embarked on <br />
+                an eight-month journey immersed in coding and learning through
+                SheCodes.io. <br />
+                This platform encapsulates all the knowledge and skills I've
+                acquired throughout <br />
+                the course and more.
                 <br />
                 <br />
                 My personal portfolio is a manifestation of my identity as a
@@ -74,6 +77,8 @@ function ProjectOne({ toggleDarkMode }) {
                 as a virtual resume, showcasing my expertise, accomplishments
                 and projects.
               </p>
+              <br />
+              <br />
               <button
                 className={`link btn ${
                   toggleDarkMode ? "links-dark-mode" : "links-light-mode"
@@ -87,7 +92,7 @@ function ProjectOne({ toggleDarkMode }) {
                 target="_blank"
                 rel="noreferrer"
                 className={`link btn ${
-                  toggleDarkMode ? "links-dark-mode" : "links-light-mode"
+                  toggleDarkMode ? "links-light-mode" : "links-dark-mode"
                 }`}
               >
                 GitHub Code

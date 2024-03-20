@@ -35,7 +35,7 @@ function App() {
   // Set intensity of grain filter based on dark mode state
   const rootStyles = document.documentElement.style;
   rootStyles.setProperty("--filter", toggleDarkMode ? "none" : "invert(100%)");
-  rootStyles.setProperty("--opacity", toggleDarkMode ? "0.3" : "0.6");
+  rootStyles.setProperty("--opacity", toggleDarkMode ? "0.2" : "0.5");
 
   // Define scrollbar colors based on dark mode state
   const scrollbarTrackColor = toggleDarkMode ? "#c94d3a" : "#ffcfd7";

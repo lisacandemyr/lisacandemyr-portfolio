@@ -29,23 +29,31 @@ function Gallery({ toggleDarkMode }) {
           onClick={() => handleClick("gallery-1")}
           className="greenwich-market"
         >
-          <h3>Greenwich Market</h3>
-          <p>Community</p>
+          <div className="background">
+            <h3 className="gallery-headline">Greenwich Market</h3>
+            <p className="gallery-paragraph">Community</p>
+          </div>
         </button>
         <button onClick={() => handleClick("gallery-2")} className="ehla-eat">
-          <h3>Ehla Eat</h3>
-          <p>Eastern Mediterranean Food</p>
+          <div className="background">
+            <h3 className="gallery-headline">Ehla Eat</h3>
+            <p className="gallery-paragraph">Eastern Mediterranean Food</p>
+          </div>
         </button>
         <button
           onClick={() => handleClick("gallery-3")}
           className="ryan-london"
         >
-          <h3>Ryan London</h3>
-          <p>Leather Goods</p>
+          <div className="background">
+            <h3 className="gallery-headline">Ryan London</h3>
+            <p className="gallery-paragraph">Leather Goods</p>
+          </div>
         </button>
         <button onClick={() => handleClick("gallery-4")} className="live-music">
-          <h3>Live Music</h3>
-          <p>Events</p>
+          <div className="background">
+            <h3 className="gallery-headline">Live Music</h3>
+            <p className="gallery-paragraph">Events</p>
+          </div>
         </button>
       </div>
     </div>
