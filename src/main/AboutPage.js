@@ -40,6 +40,7 @@ function AboutPage({ toggleDarkMode }) {
             toggleDarkMode ? "links-light-mode" : "links-dark-mode"
           }`}
           target="_blank"
+          rel="noreferrer"
           download="lisacandemyr-cv.pdf"
         >
           <i className="fa-regular fa-arrow-down-right"></i> My Resume
