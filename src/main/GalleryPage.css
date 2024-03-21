@@ -429,7 +429,8 @@
   .GalleryThree .grid,
   .GalleryFour .grid {
     grid-template-columns: 1fr 10fr 1fr;
-    margin-top: -50px;
+    margin-top: -35px;
+    margin-bottom: 10px;
   }
 
   .GalleryOne .grid button,

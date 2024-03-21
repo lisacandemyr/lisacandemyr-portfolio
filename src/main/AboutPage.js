@@ -36,7 +36,7 @@ function AboutPage({ toggleDarkMode }) {
       <p className="text-center">
         <a
           href={lisaCV}
-          className={`link btn float-up ${
+          className={`link btn fade-in ${
             toggleDarkMode ? "links-light-mode" : "links-dark-mode"
           }`}
           target="_blank"
