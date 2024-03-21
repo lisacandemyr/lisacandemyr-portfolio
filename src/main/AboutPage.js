@@ -16,13 +16,13 @@ function AboutPage({ toggleDarkMode }) {
           toggleDarkMode ? "text-light-mode" : "text-dark-mode"
         }`}
       >
-        Greetings, I'm Lisa - a <strong>junior web developer</strong> originally
-        from Sweden but currently based in Bath, UK.
+        Greetings, I'm Lisa - a <strong>junior web developer</strong> from
+        Sweden (currently based in Bath, UK).
         <br />
         <br />
         Alongside designing and building digital experiences, I also have a keen
-        interest in photography. I have previously done some professional work
-        as a <strong>photographer</strong> and have included some of it in my
+        interest in photography. I have previously worked as a professional{" "}
+        <strong>photographer</strong> and have included some of my work in my
         web developement portfolio.
         <br />
         <br />

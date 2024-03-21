@@ -20,7 +20,7 @@
   font-family: var(--text-paragraph);
   font-size: 28px;
   letter-spacing: -1.5px;
-  line-height: 26px;
+  line-height: 18px;
   text-transform: lowercase;
 }
 
@@ -357,6 +357,15 @@
     height: 500px;
   }
 
+  .GalleryPage .gallery-headline {
+    font-size: 25px;
+    letter-spacing: -1px;
+  }
+
+  .GalleryPage .gallery-paragraph {
+    font-size: 10px;
+  }
+
   .GalleryOne .grid,
   .GalleryTwo .grid,
   .GalleryThree .grid,
@@ -396,6 +405,16 @@
 @media (max-width: 400px) {
   .GalleryPage h2 {
     font-size: 45px;
+  }
+
+  .GalleryPage .gallery-headline {
+    font-size: 23px;
+    letter-spacing: -1px;
+    line-height: 14px;
+  }
+
+  .GalleryPage .gallery-paragraph {
+    font-size: 9.5px;
   }
 
   .GalleryOne .gallery-container,

@@ -23,10 +23,6 @@
   transition: all 300ms ease-in-out;
 }
 
-.AboutPage em {
-  opacity: 0.5;
-}
-
 @media (max-width: 400px) {
   .AboutPage {
     margin: 100px 10px;
