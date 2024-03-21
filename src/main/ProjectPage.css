@@ -84,10 +84,9 @@
 }
 
 .ProjectOne .project-grid-item-1 .logo {
-  position: fixed;
-  left: 50%;
-  bottom: 40%;
-  transform: translateX(-50%);
+  position: relative;
+  left: 60%;
+  top: 60%;
   width: 75px;
 }
 
@@ -259,6 +258,10 @@
   .Projects button {
     font-size: 45px;
     letter-spacing: -2px;
+  }
+
+  .Projects .logo {
+    top: -10px;
   }
 
   .ProjectOne .link {
