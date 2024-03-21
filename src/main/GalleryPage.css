@@ -180,7 +180,7 @@
 .GalleryTwo,
 .GalleryThree,
 .GalleryFour {
-  margin-top: -9.5%;
+  margin-top: -11.5%;
 }
 
 .GalleryOne .grid,
@@ -200,6 +200,7 @@
   font-family: var(--text-paragraph);
   font-size: 30px;
   letter-spacing: -1.5px;
+  line-height: 12.5px;
   text-transform: lowercase;
   transition: all 300ms ease-in-out;
 }
@@ -209,11 +210,10 @@
 .GalleryThree p,
 .GalleryFour p {
   font-family: var(--text-paragraph);
-  font-size: 12px;
+  font-size: 11.5px;
   font-weight: 500;
+  line-height: 12.5px;
   margin-bottom: 0;
-  position: relative;
-  top: -10px;
   text-decoration: none;
   text-transform: uppercase;
   transition: all 300ms ease-in-out;
@@ -247,14 +247,14 @@
 .GalleryThree .top-btn-light,
 .GalleryFour .top-btn-light {
   animation: backToTop 1500ms infinite;
-  border: 2px dotted var(--light-color);
+  border: 1px solid var(--light-color);
   border-radius: 50% 50% 0 0;
   color: var(--light-color);
   font-size: 40px;
   padding: 0 12px;
   position: fixed;
   left: 50%;
-  bottom: -1px;
+  bottom: -2px;
   opacity: 0.75;
   text-decoration: underline;
   transform: translateX(-50%);
@@ -266,14 +266,14 @@
 .GalleryThree .top-btn-dark,
 .GalleryFour .top-btn-dark {
   animation: backToTop 1500ms infinite;
-  border: 2px dotted var(--dark-color);
+  border: 1px solid var(--dark-color);
   border-radius: 50% 50% 0 0;
   color: var(--dark-color);
   font-size: 40px;
   padding: 0 12px;
   position: fixed;
   left: 50%;
-  bottom: -1px;
+  bottom: -2px;
   opacity: 0.75;
   text-decoration: underline;
   transform: translateX(-50%);
@@ -327,7 +327,6 @@
 @media (max-width: 1200px) {
   .GalleryPage .grid {
     grid-template-columns: 1fr 1fr;
-    height: 400px;
   }
 
   .GalleryOne .grid,
@@ -335,7 +334,6 @@
   .GalleryThree .grid,
   .GalleryFour .grid {
     grid-template-columns: 1fr 10fr 1fr;
-    height: 300px;
   }
 }
 
@@ -354,7 +352,6 @@
 
   .GalleryPage .grid {
     grid-template-columns: 1fr;
-    height: 500px;
   }
 
   .GalleryPage .gallery-headline {
@@ -365,29 +362,18 @@
     font-size: 10px;
   }
 
+  .GalleryOne,
+  .GalleryTwo,
+  .GalleryThree,
+  .GalleryFour {
+    margin-top: -13.5%;
+  }
+
   .GalleryOne .grid,
   .GalleryTwo .grid,
   .GalleryThree .grid,
   .GalleryFour .grid {
     grid-template-columns: 1fr 10fr 1fr;
-    height: 300px;
-  }
-
-  .GalleryOne h3,
-  .GalleryTwo h3,
-  .GalleryThree h3,
-  .GalleryFour h3 {
-    font-size: 28px;
-    top: 8px;
-  }
-
-  .GalleryOne p,
-  .GalleryTwo p,
-  .GalleryThree p,
-  .GalleryFour p {
-    font-size: 13px;
-    letter-spacing: -0.5px;
-    top: -15px;
   }
 
   .GalleryOne .gallery-container,
@@ -408,12 +394,18 @@
 
   .GalleryPage .gallery-headline {
     font-size: 23px;
-    letter-spacing: -1px;
     line-height: 14px;
   }
 
   .GalleryPage .gallery-paragraph {
     font-size: 9.5px;
+  }
+
+  .GalleryOne,
+  .GalleryTwo,
+  .GalleryThree,
+  .GalleryFour {
+    margin-top: -27%;
   }
 
   .GalleryOne .gallery-container,
@@ -431,18 +423,36 @@
   .GalleryThree h3,
   .GalleryFour h3 {
     font-size: 23px;
-    letter-spacing: -1px;
-    line-height: 19px;
-    margin-bottom: 10px;
+    line-height: 5px;
+  }
+
+  .GalleryOne .grid,
+  .GalleryTwo .grid,
+  .GalleryThree .grid,
+  .GalleryFour .grid {
+    grid-template-columns: 1fr 10fr 1fr;
+    height: 265px;
   }
 
   .GalleryOne p,
   .GalleryTwo p,
   .GalleryThree p,
   .GalleryFour p {
-    font-size: 12px;
-    letter-spacing: -0.25px;
-    top: -10px;
-    line-height: 12px;
+    font-size: 9.5px;
+    line-height: 10px;
+  }
+
+  .GalleryOne .top-btn-light,
+  .GalleryTwo .top-btn-light,
+  .GalleryThree .top-btn-light,
+  .GalleryFour .top-btn-light {
+    border: 1px dotted var(--light-color);
+  }
+
+  .GalleryOne .top-btn-dark,
+  .GalleryTwo .top-btn-dark,
+  .GalleryThree .top-btn-dark,
+  .GalleryFour .top-btn-dark {
+    border: 1px dotted var(--dark-color);
   }
 }
