@@ -1,3 +1,5 @@
+import logoLight from "../logo-light.png";
+import logoDark from "../logo-dark.png";
 import "../ProjectPage.css";
 
 function Projects({ toggleDarkMode }) {
@@ -38,8 +40,11 @@ function Projects({ toggleDarkMode }) {
               toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
             }`}
           >
-            li<span className="sa">sa</span>
-            <span className="ca">ca</span>ndemyr
+            <img
+              src={`${toggleDarkMode ? logoLight : logoDark}`}
+              className="logo"
+            />
+            portfolio
           </button>
         </li>
         <li>

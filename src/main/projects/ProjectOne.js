@@ -1,17 +1,24 @@
+import logoLight from "../logo-light.png";
+import logoDark from "../logo-dark.png";
 import "../ProjectPage.css";
 
 function ProjectOne({ toggleDarkMode }) {
   return (
     <div className="ProjectOne hidden" id="project-1">
       <div className="grid">
-        <div className="project-grid-item-1 float-left">
-          <div className="background">
-            <p>profile photo + logo</p>
-          </div>
+        <div
+          className={`project-grid-item-1 float-left ${
+            toggleDarkMode ? "grid-1-light-mode" : "grid-1-dark-mode"
+          }`}
+        >
+          <img
+            src={`${toggleDarkMode ? logoLight : logoDark}`}
+            className="logo"
+          />
         </div>
         <div
           className={`project-grid-item-2 float-right ${
-            toggleDarkMode ? "grid-light-mode" : "grid-dark-mode"
+            toggleDarkMode ? "grid-2-light-mode" : "grid-2-dark-mode"
           }`}
         >
           <div
@@ -28,9 +35,11 @@ function ProjectOne({ toggleDarkMode }) {
                 <li>
                   Code
                   <br />
-                  <span>platforms</span>
+                  <span>and hosting platforms</span>
                 </li>
-                <p className="tool-specifications">VScode, GitHub, Netlify.</p>
+                <p className="tool-specifications">
+                  VScode - GitHub - Netlify.
+                </p>
                 <br />
                 <li>
                   front-end languages
@@ -38,7 +47,7 @@ function ProjectOne({ toggleDarkMode }) {
                   <span>and frameworks</span>
                 </li>
                 <p className="tool-specifications">
-                  HTML, CSS, JavaScript, React, Bootstrap.
+                  HTML - CSS - JavaScript - React - Bootstrap.
                 </p>
                 <br />
                 <li>
@@ -46,14 +55,14 @@ function ProjectOne({ toggleDarkMode }) {
                   <br />
                   <span>tools</span>
                 </li>
-                <p className="tool-specifications">Figma, Photoshop.</p>
+                <p className="tool-specifications">Figma - Photoshop.</p>
                 <br />
                 <li>
                   Photo
                   <br />
                   <span>editing tools</span>
                 </li>
-                <p className="tool-specifications">Lightroom, Photoshop.</p>
+                <p className="tool-specifications">Lightroom - Photoshop.</p>
               </ul>
             </div>
             <div className="col-lg-8">
@@ -98,7 +107,7 @@ function ProjectOne({ toggleDarkMode }) {
         </div>
       </div>
       <div className="btn-container text-end">
-        <button className="project-next-btn btn" disabled>
+        <button className="project-next-btn btn">
           <i
             className={`fa-thin fa-angle-right ${
               toggleDarkMode

@@ -34,16 +34,16 @@
   transition: all 300ms ease-in-out;
 }
 
-.Projects .sa {
-  letter-spacing: -2px;
+.Projects .logo {
+  width: 50px;
+  position: relative;
+  top: -16px;
 }
 
-.Projects .ca {
-  letter-spacing: -1px;
-}
+/* Divider between ProjectPage and ProjectOne, (Two, Three & Four) */
 
 .ProjectOne {
-  margin-top: 3.5%;
+  margin-top: 25px;
   overflow: hidden;
 }
 
@@ -53,34 +53,48 @@
   grid-column-gap: 100px;
 }
 
-.ProjectOne .project-grid-item-1 {
-  background-image: url(https://wallpapers.com/images/high/retro-70s-aesthetic-background-1000-x-1500-kre61w3gw0qq89fk.webp);
-  border-radius: 0 10px 10px 0;
+.grid-1-light-mode {
+  border-top: 1px solid var(--dark-color);
+  border-right: 1px solid var(--dark-color);
+  border-bottom: 1px solid var(--dark-color);
 }
 
-.ProjectOne .project-grid-item-1 .background {
-  backdrop-filter: blur(25px);
-  border-radius: inherit;
-  height: 100%;
+.grid-1-dark-mode {
+  border-top: 1px solid var(--light-color);
+  border-right: 1px solid var(--light-color);
+  border-bottom: 1px solid var(--light-color);
 }
 
-.ProjectOne .project-grid-item-2 {
-  backdrop-filter: blur(2px);
-  border-radius: 10px 0 0 10px;
-  color: var(--dark-color);
-  transition: all 300ms ease-in-out;
-}
-
-.grid-light-mode {
+.grid-2-light-mode {
   border-top: 1px solid var(--dark-color);
   border-left: 1px solid var(--dark-color);
   border-bottom: 1px solid var(--dark-color);
 }
 
-.grid-dark-mode {
+.grid-2-dark-mode {
   border-top: 1px solid var(--light-color);
   border-left: 1px solid var(--light-color);
   border-bottom: 1px solid var(--light-color);
+}
+
+.ProjectOne .project-grid-item-1 {
+  backdrop-filter: blur(2px);
+  border-radius: 0 10px 10px 0;
+  transition: all 300ms ease-in-out;
+}
+
+.ProjectOne .project-grid-item-1 .logo {
+  position: fixed;
+  left: 50%;
+  bottom: 40%;
+  transform: translateX(-50%);
+  width: 75px;
+}
+
+.ProjectOne .project-grid-item-2 {
+  backdrop-filter: blur(2px);
+  border-radius: 10px 0 0 10px;
+  transition: all 300ms ease-in-out;
 }
 
 .ProjectOne .row {
@@ -103,10 +117,10 @@
 
 .ProjectOne .col-lg-4 span {
   font-size: 13px;
+  margin-bottom: 20px;
   position: relative;
   top: -8px;
   left: 10px;
-  margin-bottom: 20px;
 }
 
 .ProjectOne .col-lg-4 .tool-specifications {
@@ -123,8 +137,9 @@
   font-size: 12px;
   font-weight: 500;
   line-height: 17px;
-  padding: 50px;
+  padding: 40px;
   text-transform: uppercase;
+  transition: all 300ms ease-in-out;
 }
 
 .ProjectOne .col-light-mode {
@@ -137,8 +152,12 @@
   transition: all 300ms ease-in-out;
 }
 
+.ProjectOne .link:disabled {
+  transition: none;
+}
+
 .ProjectOne .link {
-  margin: 30px 20px 10px 0;
+  margin: 30px 10px 0 0;
 }
 
 .ProjectOne .link:hover {
@@ -146,15 +165,14 @@
   transform: scale(1.1);
 }
 
-.ProjectOne .btn-container {
-  padding: 25px 50px;
-}
-
 /* Change opacity to next btn when adding another project */
 .ProjectOne .project-next-btn {
   border: none;
+  color: var(--transparent);
   font-size: 40px;
-  opacity: 0;
+  padding: 25px 60px 0 60px;
+  opacity: 0.5;
+  transition: all 300ms ease-in-out;
 }
 
 .ProjectOne .project-next-btn:hover {
@@ -247,15 +265,11 @@
     margin: 5px 20px 5px 0;
     width: 147px;
   }
-
-  .ProjectOne .col-lg-8 {
-    padding-right: 10px;
-  }
 }
 
 @media (max-width: 400px) {
   .Projects {
-    margin-left: 5px;
+    margin: 50px 0 0 0;
   }
 
   .ProjectOne .grid {
