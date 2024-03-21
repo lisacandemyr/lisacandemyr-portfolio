@@ -1,11 +1,25 @@
 .MenuPage {
   display: flex;
   justify-content: center;
-  margin: 4.5% 30% 0 0;
+  margin: 3.5% 30% 0 0;
 }
 
 .MenuPage ul {
   list-style: none;
+}
+
+.MenuPage li {
+  font-family: var(--text-paragraph);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  transition: all 300ms ease-in-out;
+}
+
+.MenuPage li:hover {
+  color: var(--transparent);
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 .MenuPage button {
@@ -14,7 +28,6 @@
   font-family: var(--text-headline);
   font-size: 55px;
   letter-spacing: -3px;
-  margin-left: 10px;
   padding: 0;
   text-transform: lowercase;
   transition: all 300ms ease-in-out;
@@ -26,22 +39,6 @@
 
 .MenuPage .contact-btn {
   letter-spacing: -2px;
-}
-
-.MenuPage .menu-light-mode,
-.MenuPage .menu-dark-mode {
-  font-family: var(--text-paragraph);
-  font-size: 12px;
-  font-weight: 900;
-  letter-spacing: -1px;
-  transition: all 300ms ease-in-out;
-}
-
-.MenuPage .menu-light-mode:hover,
-.MenuPage .menu-dark-mode:hover {
-  color: var(--transparent);
-  cursor: pointer;
-  transform: scale(1.1);
 }
 
 @media (max-width: 800px) {
@@ -60,6 +57,6 @@
 
 @media (max-width: 400px) {
   .MenuPage {
-    margin-left: 5px;
+    margin: 50px 0 0 0;
   }
 }
