@@ -9,7 +9,7 @@ function ProjectOne({ toggleDarkMode }) {
             toggleDarkMode ? "grid-1-light-mode" : "grid-1-dark-mode"
           }`}
         >
-          <p>[profile image coming soon..]</p>
+          <p>[profile image]</p>
         </div>
         <div
           className={`project-grid-item-2 float-right ${
@@ -62,23 +62,23 @@ function ProjectOne({ toggleDarkMode }) {
             </div>
             <div className="col-lg-8">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Motivated by an interest in web development and design, I
+                enrolled in a coding bootcamp in August 2023 via SheCodes. It
+                allowed the opportunity to learn from professionals in the
+                industry and how to utilise the latest technologies. This
+                project embodies all the skills I've learnt throughout the
+                course.
                 <br />
                 <br />
                 <em>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Lacus vel facilisis volutpat est velit egestas dui. Nisl
-                  suscipit adipiscing bibendum est.
+                  To ensure my portfolio would become more than just a
+                  collection of code, I felt it was important to establish an
+                  identity as a developer. With time, meticulous attention to
+                  detail, and an eye for design, my vision came to life. This
+                  portfolio functions as a virtual resume, highlighting my
+                  strengths and accomplishments.
                 </em>
               </p>
-
               <button
                 className={`link btn ${
                   toggleDarkMode ? "links-dark-mode" : "links-light-mode"
@@ -101,7 +101,7 @@ function ProjectOne({ toggleDarkMode }) {
           </div>
         </div>
       </div>
-      <div className="btn-container text-end">
+      {/*   <div className="btn-container text-end">
         <button className="project-next-btn btn">
           <i
             className={`fa-thin fa-angle-right ${
@@ -111,7 +111,7 @@ function ProjectOne({ toggleDarkMode }) {
             }`}
           ></i>
         </button>
-      </div>
+      </div> */}
     </div>
   );
 }
