@@ -36,7 +36,7 @@ function Projects({ toggleDarkMode }) {
           01
           <button
             onClick={() => handleClick("project-1")}
-            className={`${
+            className={`ms-1 ${
               toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
             }`}
           >
@@ -50,7 +50,7 @@ function Projects({ toggleDarkMode }) {
         <li>
           02
           <button
-            className={`${
+            className={`ms-2 ${
               toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
             }`}
           >
@@ -60,7 +60,7 @@ function Projects({ toggleDarkMode }) {
         <li>
           03
           <button
-            className={`${
+            className={`ms-2 ${
               toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
             }`}
           >
@@ -70,7 +70,7 @@ function Projects({ toggleDarkMode }) {
         <li>
           04
           <button
-            className={`${
+            className={`ms-2 ${
               toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
             }`}
           >
