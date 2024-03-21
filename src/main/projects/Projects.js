@@ -43,6 +43,8 @@ function Projects({ toggleDarkMode }) {
             <img
               src={`${toggleDarkMode ? logoLight : logoDark}`}
               className="logo"
+              width="45"
+              alt="Logotype"
             />
             portfolio
           </button>

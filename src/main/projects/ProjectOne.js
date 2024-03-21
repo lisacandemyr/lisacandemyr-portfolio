@@ -1,5 +1,3 @@
-import logoLight from "../logo-light.png";
-import logoDark from "../logo-dark.png";
 import "../ProjectPage.css";
 
 function ProjectOne({ toggleDarkMode }) {
@@ -11,10 +9,7 @@ function ProjectOne({ toggleDarkMode }) {
             toggleDarkMode ? "grid-1-light-mode" : "grid-1-dark-mode"
           }`}
         >
-          <img
-            src={`${toggleDarkMode ? logoLight : logoDark}`}
-            className="logo"
-          />
+          <p>[profile image coming soon..]</p>
         </div>
         <div
           className={`project-grid-item-2 float-right ${
