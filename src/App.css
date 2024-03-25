@@ -212,7 +212,7 @@ body {
 .grain::before {
   animation: noise 7s steps(10) infinite;
   background-image: url(main/gallery/background-noise.jpg);
-  background-size: 200px;
+  background-size: 1%;
   background-repeat: repeat;
   content: "";
   filter: var(--filter);
