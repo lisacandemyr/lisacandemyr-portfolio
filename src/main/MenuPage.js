@@ -5,65 +5,6 @@ function MenuPage({ closeMenu, isMenuVisible, toggleDarkMode }) {
   // State to track the selected page
   const [selectedPage, setSelectedPage] = useState(null);
 
-  // Effect to handle page visibility and menu button click
-  useEffect(() => {
-    // Function to hide pages based on visibility
-    const hidePages = () => {
-      // List of page IDs to hide
-      const pagesToHide = [
-        "home-page",
-        "project-page",
-        "gallery-page",
-        "about-page",
-        "contact-page",
-        "gallery-1",
-        "gallery-2",
-        "gallery-3",
-        "gallery-4",
-        "project-1",
-      ];
-
-      // Hide each page in the list
-      pagesToHide.forEach((pageId) => {
-        const page = document.getElementById(pageId);
-        if (page) {
-          page.classList.add("hidden");
-        }
-      });
-
-      // If no page is selected and menu is not visible, display the home page
-      if (!selectedPage && !isMenuVisible) {
-        const home = document.getElementById("home-page");
-        if (home) {
-          setTimeout(() => {
-            home.classList.remove("hidden");
-          }, 600);
-        }
-      }
-
-      // If menu is not visible, display the selected page
-      if (!isMenuVisible) {
-        const selectedElement = document.getElementById(selectedPage);
-        if (selectedElement) {
-          setTimeout(() => {
-            selectedElement.classList.remove("hidden");
-          }, 600);
-        }
-      }
-    };
-
-    // Call the function to hide pages
-    hidePages();
-
-    // Event listener for the home button click
-    const homeButton = document.querySelector(".brand");
-    homeButton.addEventListener("click", () => {
-      if (!isMenuVisible) {
-        setSelectedPage("home-page");
-      }
-    });
-  }, [selectedPage, isMenuVisible]);
-
   // Function to handle page clicks
   const handleClick = (pageId) => {
     // List of page IDs
@@ -81,21 +22,12 @@ function MenuPage({ closeMenu, isMenuVisible, toggleDarkMode }) {
       "project-1",
     ];
 
-    // Add fade-out effect to all pages
-    pages.forEach((pageId) => {
-      const element = document.getElementById(pageId);
-      if (element) {
-        element.classList.add("fade-out");
-      }
-    });
-
     // Hide and display pages with delay
     setTimeout(() => {
       pages.forEach((pageId) => {
         const element = document.getElementById(pageId);
         if (element) {
           element.classList.add("hidden");
-          element.classList.remove("fade-out");
         }
       });
 
@@ -104,13 +36,30 @@ function MenuPage({ closeMenu, isMenuVisible, toggleDarkMode }) {
         selectedElement.classList.remove("hidden");
       }
 
-      // Set the selected page
       setSelectedPage(pageId);
     }, 600);
 
     // Close the menu
     closeMenu();
   };
+
+  // useEffect to handle menu visibility changes
+  useEffect(() => {
+    if (!isMenuVisible) {
+      if (selectedPage) {
+        const element = document.getElementById(selectedPage);
+        if (element) {
+          element.classList.remove("hidden");
+        }
+      } else {
+        // If selectedPage is null, show the home page
+        const homePage = document.getElementById("home-page");
+        if (selectedPage === null) {
+          homePage.classList.remove("hidden");
+        }
+      }
+    }
+  }, [isMenuVisible, selectedPage]);
 
   return (
     <div className={`MenuPage ${isMenuVisible ? "" : "hidden"}`} id="menu-page">

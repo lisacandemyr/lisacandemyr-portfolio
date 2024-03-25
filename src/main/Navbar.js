@@ -139,7 +139,7 @@ function Navbar({ toggleDarkMode, toggleDarkTheme }) {
                 src={toggleDarkMode ? logoLightMode : logoDarkMode}
                 width="45"
                 alt="Logotype"
-              ></img>
+              />
             </button>
           </div>
           <div className="btn-container">
