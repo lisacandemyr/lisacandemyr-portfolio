@@ -64,18 +64,18 @@ function ProjectOne({ toggleDarkMode }) {
               <p>
                 Motivated by an interest in web development and design, I
                 enrolled in a coding bootcamp in August 2023 via SheCodes. It
-                allowed the opportunity to learn from professionals in the
+                allowed the opportunity to learn from professionals within the
                 industry and how to utilise the latest technologies. This
                 project embodies all the skills I've learnt throughout the
                 course.
                 <br />
                 <br />
                 <em>
-                  To ensure my portfolio would become more than just a
-                  collection of code, I felt it was important to establish an
-                  identity as a developer. With time, meticulous attention to
-                  detail, and an eye for design, my vision came to life. This
-                  portfolio functions as a virtual resume, highlighting my
+                  To ensure my portfolio would be more than just a collection of
+                  code, I felt it was important to establish a brand and
+                  identity for myself as a developer. With time, great attention
+                  to detail and a keen eye for design, my vision came to life.
+                  This portfolio functions as a virtual resume, highlighting my
                   strengths and accomplishments.
                 </em>
               </p>
