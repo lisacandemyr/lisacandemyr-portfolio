@@ -261,6 +261,6 @@ body {
 
 @media (max-width: 800px) {
   .grain::before {
-    background-size: 165px;
+    background-size: 155px;
   }
 }
