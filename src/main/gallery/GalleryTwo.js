@@ -42,6 +42,7 @@ function GalleryTwo({ toggleDarkMode }) {
       <div className="grid fade-in">
         <div className="text-start">
           <button
+            title="Greenwich Market - Community Gallery"
             onClick={() => handleClick("gallery-1")}
             className="greenwich-market-btn btn"
           >
@@ -58,6 +59,7 @@ function GalleryTwo({ toggleDarkMode }) {
         </div>
         <div className="text-end">
           <button
+            title="Ryan London - Leather Goods Gallery"
             onClick={() => handleClick("gallery-3")}
             className="ryan-london-btn btn"
           >
@@ -73,6 +75,8 @@ function GalleryTwo({ toggleDarkMode }) {
         {imageList.map((image, index) => (
           <img
             key={index}
+            height="100%"
+            width="100%"
             src={image}
             alt={`Ehla Eat ${index}`}
             className="gallery-image"

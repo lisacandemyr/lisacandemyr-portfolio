@@ -80,6 +80,7 @@ function ProjectOne({ toggleDarkMode }) {
                 </em>
               </p>
               <button
+                title="Lisa's Portfolio Project"
                 className={`link btn ${
                   toggleDarkMode ? "links-dark-mode" : "links-light-mode"
                 }`}
@@ -88,6 +89,7 @@ function ProjectOne({ toggleDarkMode }) {
                 Show Project
               </button>
               <a
+                title="Link to Lisa's GitHub for Portfolio Project"
                 href="https://github.com/lisacandemyr/lisacandemyr-portfolio"
                 target="_blank"
                 rel="noreferrer"

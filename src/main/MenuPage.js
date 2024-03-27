@@ -69,6 +69,7 @@ function MenuPage({ closeMenu, isMenuVisible, toggleDarkMode }) {
         >
           01
           <button
+            title="Homepage"
             onClick={() => handleClick("home-page")}
             className={`ms-2 ${
               toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
@@ -82,6 +83,7 @@ function MenuPage({ closeMenu, isMenuVisible, toggleDarkMode }) {
         >
           02
           <button
+            title="Lisa's Web Projects"
             onClick={() => handleClick("project-page")}
             className={`ms-2 ${
               toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
@@ -95,6 +97,7 @@ function MenuPage({ closeMenu, isMenuVisible, toggleDarkMode }) {
         >
           03
           <button
+            title="Lisa's Photo Gallery"
             onClick={() => handleClick("gallery-page")}
             className={`ms-2 gallery-btn ${
               toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
@@ -109,6 +112,7 @@ function MenuPage({ closeMenu, isMenuVisible, toggleDarkMode }) {
         >
           04
           <button
+            title="About Lisa"
             onClick={() => handleClick("about-page")}
             className={`ms-2 ${
               toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
@@ -122,6 +126,7 @@ function MenuPage({ closeMenu, isMenuVisible, toggleDarkMode }) {
         >
           05
           <button
+            title="Contact Lisa"
             onClick={() => handleClick("contact-page")}
             className={`ms-2 contact-btn ${
               toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"

@@ -137,6 +137,7 @@ function Navbar({ toggleDarkMode, toggleDarkTheme }) {
             <button onClick={goToHomePage} className="brand">
               <img
                 src={toggleDarkMode ? logoLightMode : logoDarkMode}
+                height="45"
                 width="45"
                 alt="Logotype"
               />

@@ -13,6 +13,7 @@ function ContactPage({ toggleDarkMode }) {
       <p className="text-center fade-in">
         <strong>Email</strong>
         <a
+          title="Email Lisa"
           href="mailto:lisa_candemyr@hotmail.com"
           className={`link btn ${
             toggleDarkMode ? "links-light-mode" : "links-dark-mode"
@@ -25,16 +26,7 @@ function ContactPage({ toggleDarkMode }) {
       <p className="text-center fade-in">
         <strong>Socials</strong>
         <a
-          href="https://instagram.com/lisacandemyr"
-          className={`link btn ${
-            toggleDarkMode ? "links-light-mode" : "links-dark-mode"
-          }`}
-          target="_blank"
-          rel="noreferrer"
-        >
-          Instagram
-        </a>
-        <a
+          title="Lisa's LinkedIn Profile"
           href="https://www.linkedin.com/in/lisa-candemyr"
           className={`link btn ${
             toggleDarkMode ? "links-light-mode" : "links-dark-mode"
@@ -42,9 +34,10 @@ function ContactPage({ toggleDarkMode }) {
           target="_blank"
           rel="noreferrer"
         >
-          Linkedin
+          LinkedIn
         </a>
         <a
+          title="Lisa's GitHub Profile"
           href="https://github.com/lisacandemyr"
           className={`link btn ${
             toggleDarkMode ? "links-light-mode" : "links-dark-mode"

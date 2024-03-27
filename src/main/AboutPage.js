@@ -35,6 +35,7 @@ function AboutPage({ toggleDarkMode }) {
       </p>
       <p className="text-center">
         <a
+          title="Lisa's Resume PDF"
           href={lisaCV}
           className={`link btn fade-in ${
             toggleDarkMode ? "links-light-mode" : "links-dark-mode"

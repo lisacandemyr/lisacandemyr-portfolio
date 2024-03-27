@@ -32,6 +32,7 @@ function Gallery({ toggleDarkMode }) {
         }`}
       >
         <button
+          title="Greenwich Market - Community Gallery"
           onClick={() => handleClick("gallery-1")}
           className={`greenwich-market ${
             toggleDarkMode
@@ -43,6 +44,7 @@ function Gallery({ toggleDarkMode }) {
           <p className="gallery-paragraph">Community</p>
         </button>
         <button
+          title="Ehla Eat - Eastern Mediterranean Food Gallery"
           onClick={() => handleClick("gallery-2")}
           className={`ehla-eat ${
             toggleDarkMode ? "ehla-eat-light-mode" : "ehla-eat-dark-mode"
@@ -52,6 +54,7 @@ function Gallery({ toggleDarkMode }) {
           <p className="gallery-paragraph">Eastern Mediterranean Food</p>
         </button>
         <button
+          title="Ryan London - Leather Goods Gallery"
           onClick={() => handleClick("gallery-3")}
           className={`ryan-london ${
             toggleDarkMode ? "ryan-london-light-mode" : "ryan-london-dark-mode"
@@ -61,6 +64,7 @@ function Gallery({ toggleDarkMode }) {
           <p className="gallery-paragraph">Leather Goods</p>
         </button>
         <button
+          title="Live Music - Events Gallery"
           onClick={() => handleClick("gallery-4")}
           className={`live-music ${
             toggleDarkMode ? "live-music-light-mode" : "live-music-dark-mode"

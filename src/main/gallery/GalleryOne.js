@@ -51,6 +51,7 @@ function GalleryOne({ toggleDarkMode }) {
         </div>
         <div className="text-end">
           <button
+            title="Ehla Eat - Eastern Mediterranean Food Gallery"
             onClick={() => handleClick("gallery-2")}
             className="ehla-eat-btn btn"
           >
@@ -66,6 +67,8 @@ function GalleryOne({ toggleDarkMode }) {
         {imageList.map((image, index) => (
           <img
             key={index}
+            height="100%"
+            width="100%"
             src={image}
             alt={`Greenwich Market ${index}`}
             className="gallery-image"

@@ -42,8 +42,9 @@ function GalleryFour({ toggleDarkMode }) {
       <div className="grid fade-in">
         <div className="text-start">
           <button
+            title="Ryan London - Leather Goods Gallery"
             onClick={() => handleClick("gallery-3")}
-            className="ehla-eat-btn btn"
+            className="ryan-london-btn btn"
           >
             <i
               className={`fa-thin fa-angle-left ${
@@ -66,6 +67,8 @@ function GalleryFour({ toggleDarkMode }) {
         {imageList.map((image, index) => (
           <img
             key={index}
+            height="100%"
+            width="100%"
             src={image}
             alt={`Live Music ${index}`}
             className="gallery-image"

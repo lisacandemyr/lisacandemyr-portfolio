@@ -59,9 +59,10 @@ function HomePage({ toggleDarkMode }) {
           <span className="even-more-spacing">C</span>andemyr
         </span>
       </h1>
-      <h2 className="text-center">junior web developer and photographer</h2>
+      <h2 className="text-center">Junior Web Developer and Photographer</h2>
       <div className="text-center fade-in">
         <button
+          title="Lisa's Web Projects"
           onClick={() => handleClick("project-page")}
           className={`link btn ${
             toggleDarkMode ? "links-light-mode" : "links-dark-mode"
@@ -70,6 +71,7 @@ function HomePage({ toggleDarkMode }) {
           Projects
         </button>
         <button
+          title="Lisa's Photo Gallery"
           onClick={() => handleClick("gallery-page")}
           className={`link btn ${
             toggleDarkMode ? "links-light-mode" : "links-dark-mode"
@@ -78,6 +80,7 @@ function HomePage({ toggleDarkMode }) {
           Gallery
         </button>
         <button
+          title="About Lisa"
           onClick={() => handleClick("about-page")}
           className={`link btn ${
             toggleDarkMode ? "links-light-mode" : "links-dark-mode"
@@ -86,6 +89,7 @@ function HomePage({ toggleDarkMode }) {
           About Me
         </button>
         <button
+          title="Contact Lisa"
           onClick={() => handleClick("contact-page")}
           className={`link btn ${
             toggleDarkMode ? "links-light-mode" : "links-dark-mode"

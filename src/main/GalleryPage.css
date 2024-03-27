@@ -305,7 +305,6 @@
 .GalleryTwo .gallery-image,
 .GalleryThree .gallery-image,
 .GalleryFour .gallery-image {
-  max-width: 100%;
   transition: all 300ms ease-in-out;
 }
 

@@ -35,6 +35,7 @@ function Projects({ toggleDarkMode }) {
         <li>
           01
           <button
+            title="Portfolio Project"
             onClick={() => handleClick("project-1")}
             className={`ms-1 ${
               toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
@@ -43,6 +44,7 @@ function Projects({ toggleDarkMode }) {
             <img
               src={`${toggleDarkMode ? logoLight : logoDark}`}
               className="logo"
+              height="45"
               width="45"
               alt="Logotype"
             />
@@ -52,6 +54,7 @@ function Projects({ toggleDarkMode }) {
         <li>
           02
           <button
+            title="Project Pending.."
             className={`ms-2 ${
               toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
             }`}
@@ -62,6 +65,7 @@ function Projects({ toggleDarkMode }) {
         <li>
           03
           <button
+            title="Project Pending.."
             className={`ms-2 ${
               toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
             }`}
@@ -72,6 +76,7 @@ function Projects({ toggleDarkMode }) {
         <li>
           04
           <button
+            title="Project Pending.."
             className={`ms-2 ${
               toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
             }`}
