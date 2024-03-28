@@ -8,9 +8,7 @@ function ProjectOne({ toggleDarkMode }) {
           className={`project-grid-item-1 float-left ${
             toggleDarkMode ? "grid-1-light-mode" : "grid-1-dark-mode"
           }`}
-        >
-          <p>[profile image]</p>
-        </div>
+        ></div>
         <div
           className={`project-grid-item-2 float-right ${
             toggleDarkMode ? "grid-2-light-mode" : "grid-2-dark-mode"
@@ -30,32 +28,32 @@ function ProjectOne({ toggleDarkMode }) {
                 <li>
                   Code
                   <br />
-                  <span>and hosting platforms</span>
+                  <span>Tools and Hosting Platforms</span>
                 </li>
                 <p className="tool-specifications">
-                  VScode - GitHub - Netlify.
+                  VS Code - GitHub - Netlify.
                 </p>
                 <br />
                 <li>
-                  front-end languages
+                  Front-end Languages
                   <br />
-                  <span>and frameworks</span>
+                  <span>Libraries and Frameworks</span>
                 </li>
                 <p className="tool-specifications">
-                  HTML - CSS - JavaScript - React - Bootstrap.
+                  JavaScript - React - Bootstrap.
                 </p>
                 <br />
                 <li>
                   Design
                   <br />
-                  <span>tools</span>
+                  <span>Tools</span>
                 </li>
                 <p className="tool-specifications">Figma - Photoshop.</p>
                 <br />
                 <li>
                   Photo
                   <br />
-                  <span>editing tools</span>
+                  <span>Editing Tools</span>
                 </li>
                 <p className="tool-specifications">Lightroom - Photoshop.</p>
               </ul>
@@ -63,20 +61,36 @@ function ProjectOne({ toggleDarkMode }) {
             <div className="col-lg-8">
               <p>
                 Motivated by an interest in web development and design, I
-                enrolled in a coding bootcamp in August 2023 via SheCodes. It
-                allowed the opportunity to learn from professionals within the
-                industry and how to utilise the latest technologies. This
+                enrolled in a coding bootcamp in August 2023 via{" "}
+                <a
+                  title="SheCodes"
+                  href="https://shecodes.io"
+                  target="_blank"
+                  rel="noreferrer"
+                  className={`shecodes-link ${
+                    toggleDarkMode ? "text-light-mode" : "text-dark-mode"
+                  }`}
+                >
+                  SheCodes
+                </a>
+                . It allowed the opportunity to learn from professionals within
+                the industry and how to utilise the latest technologies. This
                 project embodies all the skills I've learnt throughout the
                 course.
                 <br />
                 <br />
                 <em>
-                  To ensure my portfolio would be more than just a collection of
-                  code, I felt it was important to establish a brand and
-                  identity for myself as a developer. With time, great attention
-                  to detail and a keen eye for design, my vision came to life.
-                  This portfolio functions as a virtual resume, highlighting my
-                  strengths and accomplishments.
+                  When it came to the vision for this project, I knew I wanted
+                  to combine a vibrant color theme with a minimalistic structure
+                  to keep a sleek and professional feel.
+                  <br />
+                  One of the keyfactors for me was to ensure that my portfolio
+                  would end up more than just a standalone project. With this in
+                  mind I took the opportunity to establish an identity and brand
+                  for myself. With time, great attention to detail and a keen
+                  eye for design, my vision came to life. This portfolio
+                  functions as a virtual resume, highlighting my skills,
+                  achievements and progression.
                 </em>
               </p>
               <button

@@ -21,14 +21,14 @@ function AboutPage({ toggleDarkMode }) {
         <br />
         <br />
         Alongside designing and building digital experiences, I also have a keen
-        interest in photography. I have previously worked as a professional{" "}
+        interest in photography. I have previously worked as a freelance{" "}
         <strong>photographer</strong> and have included some of my work in my
         web developement portfolio.
         <br />
         <br />
         <em>
-          This year I am dedicated to continuely improve my proficiency in web
-          development and design, alongside shooting more film photography.
+          This year I am dedicated to continuely improve my proficiency and
+          knowledge in web development and design, alongside shooting more film.
           Visit my website regularly to witness the expansion of my portfolio,
           featuring an array of my projects and images.
         </em>
