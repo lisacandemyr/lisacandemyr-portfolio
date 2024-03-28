@@ -4,7 +4,7 @@ import React from "react";
 function generateFileNames(prefix, count) {
   return Array.from(
     { length: count },
-    (_, index) => `${prefix}-${index + 1}.jpg`
+    (_, index) => `${prefix}-${index + 1}.webp`
   );
 }
 
