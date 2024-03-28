@@ -61,7 +61,7 @@
       rgba(255, 207, 215, 0.9),
       rgba(255, 207, 215, 0.9)
     ),
-    url(gallery/greenwich-market.jpg);
+    url(gallery/greenwich-market.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -73,7 +73,7 @@
       rgba(201, 77, 58, 0.9),
       rgba(201, 77, 58, 0.9)
     ),
-    url(gallery/greenwich-market.jpg);
+    url(gallery/greenwich-market.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -85,7 +85,7 @@
       rgba(255, 207, 215, 0.9),
       rgba(255, 207, 215, 0.9)
     ),
-    url(gallery/ehla-eat.jpg);
+    url(gallery/ehla-eat.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -97,7 +97,7 @@
       rgba(201, 77, 58, 0.9),
       rgba(201, 77, 58, 0.9)
     ),
-    url(gallery/ehla-eat.jpg);
+    url(gallery/ehla-eat.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -109,7 +109,7 @@
       rgba(255, 207, 215, 0.9),
       rgba(255, 207, 215, 0.9)
     ),
-    url(gallery/ryan-london.jpg);
+    url(gallery/ryan-london.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -121,7 +121,7 @@
       rgba(201, 77, 58, 0.9),
       rgba(201, 77, 58, 0.9)
     ),
-    url(gallery/ryan-london.jpg);
+    url(gallery/ryan-london.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -133,7 +133,7 @@
       rgba(255, 207, 215, 0.9),
       rgba(255, 207, 215, 0.9)
     ),
-    url(gallery/music.jpg);
+    url(gallery/music.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -145,7 +145,7 @@
       rgba(201, 77, 58, 0.7),
       rgba(201, 77, 58, 0.7)
     ),
-    url(gallery/music.jpg);
+    url(gallery/music.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -153,19 +153,19 @@
 }
 
 .GalleryPage .greenwich-market:hover {
-  background-image: url(gallery/greenwich-market.jpg);
+  background-image: url(gallery/greenwich-market.webp);
 }
 
 .GalleryPage .ehla-eat:hover {
-  background-image: url(gallery/ehla-eat.jpg);
+  background-image: url(gallery/ehla-eat.webp);
 }
 
 .GalleryPage .ryan-london:hover {
-  background-image: url(gallery/ryan-london.jpg);
+  background-image: url(gallery/ryan-london.webp);
 }
 
 .GalleryPage .live-music:hover {
-  background-image: url(gallery/music.jpg);
+  background-image: url(gallery/music.webp);
 }
 
 .GalleryPage .gallery-btn-light {
