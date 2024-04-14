@@ -52,14 +52,13 @@
 }
 
 .grid-1-light-mode {
-  background-image: linear-gradient(
-      rgba(255, 207, 215, 0.9),
-      rgba(255, 207, 215, 0.9)
-    ),
-    url(projects/profile-image.webp);
+  /* background-image: linear-gradient(
+    rgba(255, 207, 215, 0.9),
+    rgba(255, 207, 215, 0.9)
+  );
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100%; */
   border-top: 1px solid var(--dark-color);
   border-right: 1px solid var(--dark-color);
   border-bottom: 1px solid var(--dark-color);
@@ -67,14 +66,13 @@
 }
 
 .grid-1-dark-mode {
-  background-image: linear-gradient(
-      rgba(201, 77, 58, 0.9),
-      rgba(201, 77, 58, 0.9)
-    ),
-    url(projects/profile-image.webp);
+  /* background-image: linear-gradient(
+    rgba(201, 77, 58, 0.9),
+    rgba(201, 77, 58, 0.9)
+  );
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100%; */
   border-top: 1px solid var(--light-color);
   border-right: 1px solid var(--light-color);
   border-bottom: 1px solid var(--light-color);
