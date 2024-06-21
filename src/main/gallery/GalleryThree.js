@@ -54,8 +54,12 @@ function GalleryThree({ toggleDarkMode }) {
           </button>
         </div>
         <div className="text-center">
-          <h3>Ryan London</h3>
-          <p>Leather Goods</p>
+          <h3 className={`${
+            toggleDarkMode ? "text-light-mode" : "text-dark-mode"
+          }`}>Ryan London</h3>
+          <p className={`${
+            toggleDarkMode ? "text-light-mode" : "text-dark-mode"
+          }`}>Leather Goods</p>
         </div>
         <div className="text-end">
           <button

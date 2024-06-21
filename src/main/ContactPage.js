@@ -10,7 +10,8 @@ function ContactPage({ toggleDarkMode }) {
       >
         Con<span className="more-spacing">t</span>act
       </h2>
-      <p className="text-center fade-in">
+      <p className={`text-center fade-in ${toggleDarkMode ? "text-light-mode" : "text-dark-mode"}`}
+        >
         <strong>Email</strong>
         <a
           title="Email Lisa"
@@ -23,7 +24,7 @@ function ContactPage({ toggleDarkMode }) {
           <strong>@</strong>hotmail.com
         </a>
       </p>
-      <p className="text-center fade-in">
+      <p className={`text-center fade-in ${toggleDarkMode ? "text-light-mode" : "text-dark-mode"}`}>
         <strong>Socials</strong>
         <a
           title="Lisa's LinkedIn Profile"

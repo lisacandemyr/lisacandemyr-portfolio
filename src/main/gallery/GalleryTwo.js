@@ -54,8 +54,12 @@ function GalleryTwo({ toggleDarkMode }) {
           </button>
         </div>
         <div className="text-center">
-          <h3>Ehla Eat</h3>
-          <p>Eastern Mediterranean Food</p>
+          <h3 className={`${
+            toggleDarkMode ? "text-light-mode" : "text-dark-mode"
+          }`}>Ehla Eat</h3>
+          <p className={`${
+            toggleDarkMode ? "text-light-mode" : "text-dark-mode"
+          }`}>Eastern Mediterranean Food</p>
         </div>
         <div className="text-end">
           <button

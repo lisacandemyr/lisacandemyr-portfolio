@@ -20,6 +20,7 @@ function MenuPage({ closeMenu, isMenuVisible, toggleDarkMode }) {
       "gallery-3",
       "gallery-4",
       "project-1",
+      "project-2",
     ];
 
     // Hide and display pages with delay
@@ -65,7 +66,7 @@ function MenuPage({ closeMenu, isMenuVisible, toggleDarkMode }) {
     <div className={`MenuPage ${isMenuVisible ? "" : "hidden"}`} id="menu-page">
       <ul className="float-right">
         <li
-          className={`${toggleDarkMode ? "menu-light-mode" : "menu-dark-mode"}`}
+          className={`${toggleDarkMode ? "text-light-mode" : "text-dark-mode"}`}
         >
           01
           <button
@@ -79,7 +80,7 @@ function MenuPage({ closeMenu, isMenuVisible, toggleDarkMode }) {
           </button>
         </li>
         <li
-          className={`${toggleDarkMode ? "menu-light-mode" : "menu-dark-mode"}`}
+          className={`${toggleDarkMode ? "text-light-mode" : "text-dark-mode"}`}
         >
           02
           <button
@@ -93,7 +94,7 @@ function MenuPage({ closeMenu, isMenuVisible, toggleDarkMode }) {
           </button>
         </li>
         <li
-          className={`${toggleDarkMode ? "menu-light-mode" : "menu-dark-mode"}`}
+          className={`${toggleDarkMode ? "text-light-mode" : "text-dark-mode"}`}
         >
           03
           <button
@@ -108,7 +109,7 @@ function MenuPage({ closeMenu, isMenuVisible, toggleDarkMode }) {
           </button>
         </li>
         <li
-          className={`${toggleDarkMode ? "menu-light-mode" : "menu-dark-mode"}`}
+          className={`${toggleDarkMode ? "text-light-mode" : "text-dark-mode"}`}
         >
           04
           <button
@@ -122,7 +123,7 @@ function MenuPage({ closeMenu, isMenuVisible, toggleDarkMode }) {
           </button>
         </li>
         <li
-          className={`${toggleDarkMode ? "menu-light-mode" : "menu-dark-mode"}`}
+          className={`${toggleDarkMode ? "text-light-mode" : "text-dark-mode"}`}
         >
           05
           <button

@@ -56,22 +56,29 @@
   transition: all 300ms ease-in-out;
 }
 
+.grid-2-dark-mode {
+  background: rgba(65, 0, 51, 0.15);
+  backdrop-filter: blur(2px);
+  box-shadow: inset 0 0 100px rgba(196, 55, 90, 0.25), 0px 0px 10px rgba(53, 0, 13, 0.1);
+  margin: 10px 0;
+}
+
 .GalleryPage .greenwich-market-light-mode {
   background-image: linear-gradient(
-      rgba(255, 207, 215, 0.9),
-      rgba(255, 207, 215, 0.9)
-    ),
-    url(gallery/greenwich-market.webp);
+    rgba(255, 237, 216, 0.9),
+    rgba(255, 237, 216, 0.9)
+  ),url(gallery/greenwich-market.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
+  backdrop-filter: blur(2px); /* Blur effect */
   color: var(--dark-color);
 }
 
 .GalleryPage .greenwich-market-dark-mode {
   background-image: linear-gradient(
-      rgba(201, 77, 58, 0.9),
-      rgba(201, 77, 58, 0.9)
+      rgba(114, 25, 47, 0.9),
+      rgba(114, 25, 95, 0.9)
     ),
     url(gallery/greenwich-market.webp);
   background-position: center;
@@ -82,8 +89,8 @@
 
 .GalleryPage .ehla-eat-light-mode {
   background-image: linear-gradient(
-      rgba(255, 207, 215, 0.9),
-      rgba(255, 207, 215, 0.9)
+    rgba(255, 237, 216, 0.9),
+    rgba(255, 237, 216, 0.9)
     ),
     url(gallery/ehla-eat.webp);
   background-position: center;
@@ -94,8 +101,8 @@
 
 .GalleryPage .ehla-eat-dark-mode {
   background-image: linear-gradient(
-      rgba(201, 77, 58, 0.9),
-      rgba(201, 77, 58, 0.9)
+    rgba(114, 25, 47, 0.9),
+    rgba(114, 25, 95, 0.9)
     ),
     url(gallery/ehla-eat.webp);
   background-position: center;
@@ -106,8 +113,8 @@
 
 .GalleryPage .ryan-london-light-mode {
   background-image: linear-gradient(
-      rgba(255, 207, 215, 0.9),
-      rgba(255, 207, 215, 0.9)
+    rgba(255, 237, 216, 0.9),
+    rgba(255, 237, 216, 0.9)
     ),
     url(gallery/ryan-london.webp);
   background-position: center;
@@ -118,8 +125,8 @@
 
 .GalleryPage .ryan-london-dark-mode {
   background-image: linear-gradient(
-      rgba(201, 77, 58, 0.9),
-      rgba(201, 77, 58, 0.9)
+    rgba(114, 25, 47, 0.9),
+    rgba(114, 25, 95, 0.9)
     ),
     url(gallery/ryan-london.webp);
   background-position: center;
@@ -130,8 +137,8 @@
 
 .GalleryPage .live-music-light-mode {
   background-image: linear-gradient(
-      rgba(255, 207, 215, 0.9),
-      rgba(255, 207, 215, 0.9)
+    rgba(255, 237, 216, 0.9),
+    rgba(255, 237, 216, 0.9)
     ),
     url(gallery/music.webp);
   background-position: center;
@@ -142,8 +149,8 @@
 
 .GalleryPage .live-music-dark-mode {
   background-image: linear-gradient(
-      rgba(201, 77, 58, 0.7),
-      rgba(201, 77, 58, 0.7)
+    rgba(114, 25, 47, 0.9),
+    rgba(114, 25, 95, 0.9)
     ),
     url(gallery/music.webp);
   background-position: center;

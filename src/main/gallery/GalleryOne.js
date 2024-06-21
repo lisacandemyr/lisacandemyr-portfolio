@@ -46,8 +46,12 @@ function GalleryOne({ toggleDarkMode }) {
           </button>
         </div>
         <div className="text-center">
-          <h3>Greenwich Market</h3>
-          <p>Community</p>
+          <h3 className={`${
+            toggleDarkMode ? "text-light-mode" : "text-dark-mode"
+          }`}>Greenwich Market</h3>
+          <p className={`${
+            toggleDarkMode ? "text-light-mode" : "text-dark-mode"
+          }`}>Community</p>
         </div>
         <div className="text-end">
           <button

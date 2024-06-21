@@ -59,7 +59,9 @@ function HomePage({ toggleDarkMode }) {
           <span className="even-more-spacing">C</span>andemyr
         </span>
       </h1>
-      <h2 className="text-center">Junior Web Developer and Photographer</h2>
+      <h2 className={`text-center ${
+            toggleDarkMode ? "text-light-mode" : "text-dark-mode"
+          }`}>Junior Web Developer and Photographer</h2>
       <div className="text-center fade-in">
         <button
           title="Lisa's Web Projects"

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import MenuPage from "./MenuPage";
-import logoLightMode from "./logo-light.png";
-import logoDarkMode from "./logo-dark.png";
+import logoLightMode from "./logo-light-mode.png";
+import logoDarkMode from "./logo-dark-mode.png";
 import "./Navbar.css";
 
 function Navbar({ toggleDarkMode, toggleDarkTheme }) {
@@ -11,6 +11,7 @@ function Navbar({ toggleDarkMode, toggleDarkTheme }) {
   // Function to show menu
   const showMenu = (pageId) => {
     const project1 = document.getElementById("project-1");
+    const project2 = document.getElementById("project-2");
     const pages = [
       "home-page",
       "project-page",
@@ -40,8 +41,8 @@ function Navbar({ toggleDarkMode, toggleDarkTheme }) {
     });
 
     if (project1) {
-      const grid1 = document.querySelector(".project-grid-item-1");
-      const grid2 = document.querySelector(".project-grid-item-2");
+      const grid1 = document.querySelector(".project-grid-item-1-1");
+      const grid2 = document.querySelector(".project-grid-item-1-2");
       grid1.classList.remove("float-left");
       grid1.classList.add("float-out-leftside");
       grid2.classList.remove("float-right");
@@ -52,6 +53,22 @@ function Navbar({ toggleDarkMode, toggleDarkTheme }) {
         grid2.classList.add("float-right");
         grid2.classList.remove("float-out-rightside");
         project1.classList.add("hidden");
+      }, 550);
+    }
+
+    if (project2) {
+      const grid1 = document.querySelector(".project-grid-item-2-1");
+      const grid2 = document.querySelector(".project-grid-item-2-2");
+      grid1.classList.remove("float-left");
+      grid1.classList.add("float-out-leftside");
+      grid2.classList.remove("float-right");
+      grid2.classList.add("float-out-rightside");
+      setTimeout(() => {
+        grid1.classList.add("float-left");
+        grid1.classList.remove("float-out-leftside");
+        grid2.classList.add("float-right");
+        grid2.classList.remove("float-out-rightside");
+        project2.classList.add("hidden");
       }, 550);
     }
   };
@@ -73,6 +90,7 @@ function Navbar({ toggleDarkMode, toggleDarkTheme }) {
     const homePage = document.getElementById("home-page");
     const menuPage = document.getElementById("menu-page");
     const project1 = document.getElementById("project-1");
+    const project2 = document.getElementById("project-2");
 
     const pagesToHide = [
       "project-page",
@@ -109,10 +127,10 @@ function Navbar({ toggleDarkMode, toggleDarkTheme }) {
       }, 500);
     }
 
-    // Additional logic for project page(s)
+    // Additional logic for project pages
     if (project1) {
-      const grid1 = document.querySelector(".project-grid-item-1");
-      const grid2 = document.querySelector(".project-grid-item-2");
+      const grid1 = document.querySelector(".project-grid-item-1-1");
+      const grid2 = document.querySelector(".project-grid-item-1-2");
       grid1.classList.remove("float-left");
       grid1.classList.add("float-out-leftside");
       grid2.classList.remove("float-right");
@@ -120,6 +138,24 @@ function Navbar({ toggleDarkMode, toggleDarkTheme }) {
       setTimeout(() => {
         project1.classList.add("hidden");
         project1.classList.remove("fade-out");
+        grid1.classList.add("float-left");
+        grid1.classList.remove("float-out-leftside");
+        grid2.classList.add("float-right");
+        grid2.classList.remove("float-out-rightside");
+        homePage.classList.remove("hidden");
+      }, 550);
+    }
+
+    if (project2) {
+      const grid1 = document.querySelector(".project-grid-item-2-1");
+      const grid2 = document.querySelector(".project-grid-item-2-2");
+      grid1.classList.remove("float-left");
+      grid1.classList.add("float-out-leftside");
+      grid2.classList.remove("float-right");
+      grid2.classList.add("float-out-rightside");
+      setTimeout(() => {
+        project2.classList.add("hidden");
+        project2.classList.remove("fade-out");
         grid1.classList.add("float-left");
         grid1.classList.remove("float-out-leftside");
         grid2.classList.add("float-right");
