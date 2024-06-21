@@ -1,16 +1,34 @@
+import React from "react";
 import "../ProjectPage.css";
+import ProjectCardOne from "./project-card-one.png";
 
 function ProjectOne({ toggleDarkMode }) {
+  const onClickNext = (currentProjectId, nextProjectId) => {
+  const currentProject = document.getElementById(currentProjectId);
+  const nextProject = document.getElementById(nextProjectId);
+
+  if (!nextProject.classList.contains("hidden")) {
+    return;
+  }
+
+  currentProject.classList.add("fade-out");
+  setTimeout(() => {
+    currentProject.classList.add("hidden");
+    currentProject.classList.remove("fade-out");
+    nextProject.classList.remove("hidden");
+  }, 1000);
+};
+
   return (
     <div className="ProjectOne hidden" id="project-1">
       <div className="grid">
+        <div>
+          <img src={ProjectCardOne} className={`project-grid-item-1-1 float-left ${
+          toggleDarkMode ? "img-light-mode" : "img-dark-mode"
+        }`} alt="The Magician Tarot Card" />
+        </div>
         <div
-          className={`project-grid-item-1 float-left ${
-            toggleDarkMode ? "grid-1-light-mode" : "grid-1-dark-mode"
-          }`}
-        ></div>
-        <div
-          className={`project-grid-item-2 float-right ${
+          className={`project-grid-item-1-2 float-right ${
             toggleDarkMode ? "grid-2-light-mode" : "grid-2-dark-mode"
           }`}
         >
@@ -48,7 +66,14 @@ function ProjectOne({ toggleDarkMode }) {
                   <br />
                   <span>Tools</span>
                 </li>
-                <p className="tool-specifications">Figma - Photoshop.</p>
+                <p className="tool-specifications">Figma - Photoshop - <a
+                  title="SheCodes"
+                  href="https://icons8.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className={`project-link ${
+                    toggleDarkMode ? "text-light-mode" : "text-dark-mode"
+                  }`}>Icons8</a>.</p>
                 <br />
                 <li>
                   Photo
@@ -60,43 +85,28 @@ function ProjectOne({ toggleDarkMode }) {
             </div>
             <div className="col-lg-8">
               <p>
-                Motivated by an interest in web development and design, I
-                enrolled in a coding bootcamp in August 2023 via{" "}
-                <a
+                Motivated by an interest for web development and design, I
+                enrolled in a coding bootcamp through <a
                   title="SheCodes"
                   href="https://shecodes.io"
                   target="_blank"
                   rel="noreferrer"
-                  className={`shecodes-link ${
+                  className={`project-link ${
                     toggleDarkMode ? "text-light-mode" : "text-dark-mode"
                   }`}
                 >
                   SheCodes
-                </a>
-                . It allowed the opportunity to learn from professionals within
-                the industry and how to utilise the latest technologies. This
-                project embodies all the skills I've learnt throughout the
-                course.
+                </a> in August 2023. It allowed the opportunity to learn directly from industry professionals and gain insights into leveraging the latest technologies. 
                 <br />
                 <br />
                 <em>
-                  When it came to the vision for this project, I knew I wanted
-                  to combine a vibrant color theme with a minimalistic structure
-                  to keep a sleek and professional feel.
-                  <br />
-                  One of the keyfactors for me was to ensure that my portfolio
-                  would end up more than just a standalone project. With this in
-                  mind I took the opportunity to establish an identity and brand
-                  for myself. With time, great attention to detail and a keen
-                  eye for design, my vision came to life. This portfolio
-                  functions as a virtual resume, highlighting my skills,
-                  achievements and progression.
+                For this project, my vision was to create a static page with dynamic content that transitions smoothly using fade and float-in-and-out animations. I aimed to enhance user interaction by implementing a classic mode toggle, chosen for both its visual appeal and functional benefits. To add a playful touch, I incorporated an animated gradient background and a grain texture effect.
                 </em>
               </p>
               <button
                 title="Lisa's Portfolio Project"
                 className={`link btn ${
-                  toggleDarkMode ? "links-dark-mode" : "links-light-mode"
+                  toggleDarkMode ? "links-light-mode" : "links-dark-mode"
                 }`}
                 disabled
               >
@@ -117,8 +127,11 @@ function ProjectOne({ toggleDarkMode }) {
           </div>
         </div>
       </div>
-      {/*   <div className="btn-container text-end">
-        <button className="project-next-btn btn">
+      <div className="btn-container text-end">
+        <button className="project-next-btn btn"
+        title="Next Project - Putechnology"
+        onClick={() => onClickNext("project-1", "project-2")}
+        >
           <i
             className={`fa-thin fa-angle-right ${
               toggleDarkMode
@@ -127,7 +140,7 @@ function ProjectOne({ toggleDarkMode }) {
             }`}
           ></i>
         </button>
-      </div> */}
+      </div>
     </div>
   );
 }
