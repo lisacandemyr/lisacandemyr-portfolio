@@ -5,52 +5,52 @@ import ProjectPage from "./main/ProjectPage.js";
 import GalleryPage from "./main/GalleryPage.js";
 import AboutPage from "./main/AboutPage.js";
 import ContactPage from "./main/ContactPage.js";
-import MenuPage from "./main/MenuPage.js";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import "./App.css";
 
 function App() {
-  // State to manage dark mode toggle
+  // State to manage mode toggle
   const [toggleDarkMode, setToggleDarkMode] = useState(true);
 
-  // Function to toggle dark mode
+  // Function to toggle mode state
   const toggleDarkTheme = () => {
     setToggleDarkMode(!toggleDarkMode);
   };
 
-  // Theme creation based on dark mode state
+  // Colour theme based on mode state
   const theme = createTheme({
     palette: {
       mode: toggleDarkMode ? "light" : "dark",
-      background: {
-        default: toggleDarkMode ? "#ffcfd7" : "#c94d3a",
-      },
       text: {
         primary: toggleDarkMode ? "#c94d3a" : "#ffcfd7",
       },
     },
   });
-
-  // Set intensity of grain filter based on dark mode state
+  
+  // Settings for grain based on mode state
   const rootStyles = document.documentElement.style;
   rootStyles.setProperty("--filter", toggleDarkMode ? "none" : "invert(100%)");
-  rootStyles.setProperty("--opacity", toggleDarkMode ? "0.2" : "0.5");
+  rootStyles.setProperty("--opacity", toggleDarkMode ? "0.20" : "0.40");
 
-  // Define scrollbar colors based on dark mode state
-  const scrollbarTrackColor = toggleDarkMode ? "#c94d3a" : "#ffcfd7";
-  const scrollbarThumbColor = toggleDarkMode ? "#ffcfd780" : "#c94d3a80";
-  const scrollbarThumbColorHover = toggleDarkMode ? "#ffcfd7" : "#c94d3a";
+  // Settings for scrollbar based on mode state
+  const scrollbarTrackColor = toggleDarkMode ? "#a22544" : "#fcf8db";
+  const scrollbarThumbColor = toggleDarkMode ? "#fcf8dbbf" : "#a22544bf";
+  const scrollbarThumbColorHover = toggleDarkMode ? "#fcf8d9" : "#a22544";
 
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <div className="App">
         <div className="grain"></div>
-        <Navbar
-          toggleDarkMode={toggleDarkMode}
-          toggleDarkTheme={toggleDarkTheme}
-        />
+        <div className={`gradients-container ${toggleDarkMode ? "light-background" : "dark-background"}`}>
+        <div className="g1"></div>
+        <div className="g2"></div>
+        <div className="g3"></div>
+        <div className="g4"></div>
+        <div className="g5"></div>
+        </div>
+        <Navbar toggleDarkMode={toggleDarkMode} toggleDarkTheme={toggleDarkTheme}/>
         <main>
           <HomePage toggleDarkMode={toggleDarkMode} />
           <ProjectPage toggleDarkMode={toggleDarkMode} />
@@ -75,6 +75,7 @@ function App() {
 
           ::-webkit-scrollbar-thumb:hover {
             background-color: ${scrollbarThumbColorHover};
+            cursor: pointer;
           }
         `}
       </style>
