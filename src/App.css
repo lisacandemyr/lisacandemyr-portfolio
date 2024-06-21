@@ -10,7 +10,7 @@
   --dark-color: rgb(162, 37, 68);
   --light-color: rgb(252, 248, 217);
   --transparent: rgba(255, 255, 255, 0);
-  --box-shadow: 0px 0px 10px rgba(162, 37, 68, 0.1);
+  --box-shadow: 0px 0px 5px rgba(162, 37, 68, 0.1);
   --text-headline: "Tangerine";
   --text-paragraph: "Red Hat Display", sans-serif;
   --circle-size: 90%;
@@ -336,7 +336,7 @@ body {
 
 .grain::before {
   animation: noise 7s steps(10) infinite;
-  background-image: url(background-noise.jpg);
+  background-image: url(grain.jpg);
   background-size: 200px;
   background-repeat: repeat;
   content: "";
