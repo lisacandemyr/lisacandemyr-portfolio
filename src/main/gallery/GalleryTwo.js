@@ -1,4 +1,5 @@
 import React from "react";
+import "../GalleryPage.css";
 
 // Function to generate file names with a given prefix and count
 function generateFileNames(prefix, count) {
@@ -41,56 +42,24 @@ function GalleryTwo({ toggleDarkMode }) {
     <div className="GalleryTwo hidden" id="gallery-2">
       <div className="grid fade-in">
         <div className="text-start">
-          <button
-            title="Greenwich Market - Community Gallery"
-            onClick={() => handleClick("gallery-1")}
-            className="greenwich-market-btn btn"
-          >
-            <i
-              className={`fa-thin fa-angle-left ${
-                toggleDarkMode ? "gallery-btn-light" : "gallery-btn-dark"
-              }`}
-            ></i>
+          <button title="Greenwich Market - Community Gallery" onClick={() => handleClick("gallery-1")} className="greenwich-market-btn btn">
+            <i className={`fa-thin fa-angle-left ${toggleDarkMode ? "gallery-btn-light" : "gallery-btn-dark"}`}></i>
           </button>
         </div>
         <div className="text-center">
-          <h3 className={`${
-            toggleDarkMode ? "text-light-mode" : "text-dark-mode"
-          }`}>Ehla Eat</h3>
-          <p className={`${
-            toggleDarkMode ? "text-light-mode" : "text-dark-mode"
-          }`}>Eastern Mediterranean Food</p>
+          <h3 className={`${toggleDarkMode ? "text-light-mode" : "text-dark-mode"}`}>Ehla Eat</h3>
+          <p className={`${toggleDarkMode ? "text-light-mode" : "text-dark-mode"}`}>Eastern Mediterranean Food</p>
         </div>
         <div className="text-end">
-          <button
-            title="Ryan London - Leather Goods Gallery"
-            onClick={() => handleClick("gallery-3")}
-            className="ryan-london-btn btn"
-          >
-            <i
-              className={`fa-thin fa-angle-right ${
-                toggleDarkMode ? "gallery-btn-light" : "gallery-btn-dark"
-              }`}
-            ></i>
+          <button title="Ryan London - Leather Goods Gallery" onClick={() => handleClick("gallery-3")} className="ryan-london-btn btn">
+            <i className={`fa-thin fa-angle-right ${toggleDarkMode ? "gallery-btn-light" : "gallery-btn-dark"}`}></i>
           </button>
         </div>
       </div>
       <div className="gallery-container fade-in">
-        {imageList.map((image, index) => (
-          <img
-            key={index}
-            height="100%"
-            width="100%"
-            src={image}
-            alt={`Ehla Eat ${index}`}
-            className="gallery-image"
-          />
-        ))}
+        {imageList.map((image, index) => (<img key={index} height="100%" width="100%" src={image} alt={`Ehla Eat ${index}`} className="gallery-image" />))}
       </div>
-      <a
-        href="#gallery-2"
-        className={`${toggleDarkMode ? "top-btn-dark" : "top-btn-light"}`}
-      >
+      <a href="#gallery-2" className={`${toggleDarkMode ? "top-btn-dark" : "top-btn-light"}`}>
         <i className="fa-thin fa-angle-up"></i>
       </a>
     </div>

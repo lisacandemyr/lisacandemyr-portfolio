@@ -39,28 +39,19 @@
   transition: all 300ms ease-in-out;
 }
 
-.GalleryPage .gallery-border-light-mode {
-  border-top: 1px solid var(--dark-color);
-  border-bottom: 1px solid var(--dark-color);
-}
-
-.GalleryPage .gallery-border-dark-mode {
-  border-top: 1px solid var(--light-color);
-  border-bottom: 1px solid var(--light-color);
-}
-
 .GalleryPage button:hover {
   background-size: 105%;
-  color: rgba(255, 207, 215, 0.2);
+  color: rgba(252, 248, 217, 0.2);
   cursor: pointer;
   transition: all 300ms ease-in-out;
 }
 
-.grid-2-dark-mode {
-  background: rgba(65, 0, 51, 0.15);
-  backdrop-filter: blur(2px);
-  box-shadow: inset 0 0 100px rgba(196, 55, 90, 0.25), 0px 0px 10px rgba(53, 0, 13, 0.1);
-  margin: 10px 0;
+.GalleryPage .gallery-border-light-mode {
+  box-shadow: var(--box-shadow);
+}
+
+.GalleryPage .gallery-border-dark-mode {
+  box-shadow: 0px 0px 5px rgba(53, 0, 13, 0.1);
 }
 
 .GalleryPage .greenwich-market-light-mode {
@@ -71,7 +62,6 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
-  backdrop-filter: blur(2px); /* Blur effect */
   color: var(--dark-color);
 }
 
@@ -184,7 +174,6 @@
 }
 
 /* Divider between GalleryPage and GalleryOne, Two, Three & Four */
-
 .GalleryOne .grid,
 .GalleryTwo .grid,
 .GalleryThree .grid,
@@ -308,13 +297,6 @@
   transition: all 300ms ease-in-out;
 }
 
-.GalleryOne .gallery-image,
-.GalleryTwo .gallery-image,
-.GalleryThree .gallery-image,
-.GalleryFour .gallery-image {
-  transition: all 300ms ease-in-out;
-}
-
 @keyframes backToTop {
   0% {
     transform: translateY(0%) translateX(-50%);
@@ -328,145 +310,125 @@
 }
 
 @media (max-width: 1200px) {
-  .GalleryPage .grid {
-    grid-template-columns: 1fr 1fr;
-  }
+.GalleryPage .grid {
+  grid-template-columns: 1fr 1fr;
+}
 
-  /* Divider between GalleryPage and GalleryOne, Two, Three & Four */
-
-  .GalleryOne .grid,
-  .GalleryTwo .grid,
-  .GalleryThree .grid,
-  .GalleryFour .grid {
-    grid-template-columns: 1fr 10fr 1fr;
-    margin-top: -75px;
-  }
+.GalleryOne .grid,
+.GalleryTwo .grid,
+.GalleryThree .grid,
+.GalleryFour .grid {
+  grid-template-columns: 1fr 10fr 1fr;
+  margin-top: -75px;
+}
 }
 
 @media (max-width: 1000px) {
-  .GalleryOne .gallery-container,
-  .GalleryTwo .gallery-container,
-  .GalleryThree .gallery-container {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+.GalleryOne .gallery-container,
+.GalleryTwo .gallery-container,
+.GalleryThree .gallery-container {
+  grid-template-columns: 1fr 1fr 1fr;
+}
 }
 
 @media (max-width: 800px) {
-  .GalleryPage {
-    margin: 25px 0 0 0;
-  }
+.GalleryPage {
+  margin: 25px 0 0 0;
+}
 
-  .GalleryPage .grid {
-    grid-template-columns: 1fr;
-  }
+.GalleryPage .grid {
+  grid-template-columns: 1fr;
+}
 
-  .GalleryPage .gallery-headline {
-    font-size: 25px;
-  }
+.GalleryPage .gallery-headline {
+  font-size: 25px;
+}
 
-  .GalleryPage .gallery-paragraph {
-    font-size: 10px;
-  }
+.GalleryPage .gallery-paragraph {
+  font-size: 10px;
+}
 
-  /* Divider between GalleryPage and GalleryOne, Two, Three & Four */
+.GalleryOne .grid,
+.GalleryTwo .grid,
+.GalleryThree .grid,
+.GalleryFour .grid {
+  grid-template-columns: 1fr 10fr 1fr;
+  margin-top: -25px;
+}
 
-  .GalleryOne .grid,
-  .GalleryTwo .grid,
-  .GalleryThree .grid,
-  .GalleryFour .grid {
-    grid-template-columns: 1fr 10fr 1fr;
-    margin-top: -25px;
-  }
+.GalleryOne .grid button,
+.GalleryTwo .grid button,
+.GalleryThree .grid button,
+.GalleryFour .grid button {
+  padding: 40px 30px 0 30px;
+}
 
-  .GalleryOne .grid button,
-  .GalleryTwo .grid button,
-  .GalleryThree .grid button,
-  .GalleryFour .grid button {
-    padding: 40px 30px 0 30px;
-  }
+.GalleryOne .gallery-container,
+.GalleryTwo .gallery-container,
+.GalleryThree .gallery-container {
+  grid-template-columns: repeat(2, 1fr);
+}
 
-  .GalleryOne .gallery-container,
-  .GalleryTwo .gallery-container,
-  .GalleryThree .gallery-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .GalleryFour .gallery-container-2 {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.GalleryFour .gallery-container-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
 }
 
 @media (max-width: 500px) {
-  .GalleryOne h3,
-  .GalleryTwo h3,
-  .GalleryThree h3,
-  .GalleryFour h3 {
-    font-size: 23px;
-    line-height: 5px;
-  }
+.GalleryOne h3,
+.GalleryTwo h3,
+.GalleryThree h3,
+.GalleryFour h3 {
+  font-size: 23px;
+  line-height: 5px;
+}
 
-  .GalleryOne p,
-  .GalleryTwo p,
-  .GalleryThree p,
-  .GalleryFour p {
-    font-size: 9.5px;
-    line-height: 9px;
-  }
+.GalleryOne p,
+.GalleryTwo p,
+.GalleryThree p,
+.GalleryFour p {
+  font-size: 9.5px;
+  line-height: 9px;
+}
 }
 
 @media (max-width: 400px) {
-  .GalleryPage h2 {
-    font-size: 45px;
-  }
+.GalleryPage h2 {
+  font-size: 45px;
+}
 
-  .GalleryPage .gallery-headline {
-    font-size: 23px;
-    line-height: 14px;
-  }
+.GalleryPage .gallery-headline {
+  font-size: 23px;
+  line-height: 14px;
+}
 
-  .GalleryPage .gallery-paragraph {
-    font-size: 9.5px;
-  }
+.GalleryPage .gallery-paragraph {
+  font-size: 9.5px;
+}
 
-  /* Divider between GalleryPage and GalleryOne, Two, Three & Four */
+.GalleryOne .grid,
+.GalleryTwo .grid,
+.GalleryThree .grid,
+.GalleryFour .grid {
+  grid-template-columns: 1fr 10fr 1fr;
+  margin-top: -30px;
+  margin-bottom: 10px;
+}
 
-  .GalleryOne .grid,
-  .GalleryTwo .grid,
-  .GalleryThree .grid,
-  .GalleryFour .grid {
-    grid-template-columns: 1fr 10fr 1fr;
-    margin-top: -35px;
-    margin-bottom: 10px;
-  }
+.GalleryOne .grid button,
+.GalleryTwo .grid button,
+.GalleryThree .grid button,
+.GalleryFour .grid button {
+  padding: 40px 10px 0 10px;
+}
 
-  .GalleryOne .grid button,
-  .GalleryTwo .grid button,
-  .GalleryThree .grid button,
-  .GalleryFour .grid button {
-    padding: 40px 10px 0 10px;
-  }
+.GalleryOne .gallery-container,
+.GalleryTwo .gallery-container,
+.GalleryThree .gallery-container {
+  grid-template-columns: 1fr;
+}
 
-  .GalleryOne .gallery-container,
-  .GalleryTwo .gallery-container,
-  .GalleryThree .gallery-container {
-    grid-template-columns: 1fr;
-  }
-
-  .GalleryFour .gallery-container-2 {
-    grid-template-columns: 1fr;
-  }
-
-  .GalleryOne .top-btn-light,
-  .GalleryTwo .top-btn-light,
-  .GalleryThree .top-btn-light,
-  .GalleryFour .top-btn-light {
-    border: 1px dotted var(--light-color);
-  }
-
-  .GalleryOne .top-btn-dark,
-  .GalleryTwo .top-btn-dark,
-  .GalleryThree .top-btn-dark,
-  .GalleryFour .top-btn-dark {
-    border: 1px dotted var(--dark-color);
-  }
+.GalleryFour .gallery-container-2 {
+  grid-template-columns: 1fr;
+}
 }

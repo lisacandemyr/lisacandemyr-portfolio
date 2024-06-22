@@ -23,7 +23,7 @@ function App() {
     palette: {
       mode: toggleDarkMode ? "light" : "dark",
       text: {
-        primary: toggleDarkMode ? "#c94d3a" : "#ffcfd7",
+        primary: toggleDarkMode ? "#a22544" : "#fcf8db",
       },
     },
   });
@@ -44,11 +44,11 @@ function App() {
       <div className="App">
         <div className="grain"></div>
         <div className={`gradients-container ${toggleDarkMode ? "light-background" : "dark-background"}`}>
-        <div className="g1"></div>
-        <div className="g2"></div>
-        <div className="g3"></div>
-        <div className="g4"></div>
-        <div className="g5"></div>
+          <div className="g1"></div>
+          <div className="g2"></div>
+          <div className="g3"></div>
+          <div className="g4"></div>
+          <div className="g5"></div>
         </div>
         <Navbar toggleDarkMode={toggleDarkMode} toggleDarkTheme={toggleDarkTheme}/>
         <main>
@@ -68,9 +68,9 @@ function App() {
 
           ::-webkit-scrollbar-thumb {
             background-color: ${scrollbarThumbColor};
-            border-radius: 20px;
-            border: 6px solid transparent;
             background-clip: content-box;
+            border: 6px solid transparent;
+            border-radius: 20px;
           }
 
           ::-webkit-scrollbar-thumb:hover {

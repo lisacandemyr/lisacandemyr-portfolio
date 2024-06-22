@@ -42,21 +42,21 @@
 }
 
 @media (max-width: 800px) {
-  .MenuPage {
-    justify-content: left;
-    margin: 50px 0 0 30px;
-  }
+.MenuPage {
+  justify-content: left;
+  margin: 50px 0 0 30px;
+}
 }
 
 @media (max-width: 500px) {
-  .MenuPage button {
-    font-size: 45px;
-    letter-spacing: -2px;
-  }
+.MenuPage button {
+  font-size: 45px;
+  letter-spacing: -2px;
+}
 }
 
 @media (max-width: 400px) {
-  .MenuPage {
-    margin: 50px 0 0 0;
-  }
+.MenuPage {
+  margin: 50px 0 0 0;
+}
 }

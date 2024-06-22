@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import MenuPage from "./MenuPage";
 import logoLightMode from "./logo-light-mode.png";
 import logoDarkMode from "./logo-dark-mode.png";
+import MenuPage from "./MenuPage";
 import "./Navbar.css";
 
 function Navbar({ toggleDarkMode, toggleDarkTheme }) {
@@ -40,6 +40,7 @@ function Navbar({ toggleDarkMode, toggleDarkTheme }) {
       }
     });
 
+    // Animation for projectOne
     if (project1) {
       const grid1 = document.querySelector(".project-grid-item-1-1");
       const grid2 = document.querySelector(".project-grid-item-1-2");
@@ -56,6 +57,7 @@ function Navbar({ toggleDarkMode, toggleDarkTheme }) {
       }, 550);
     }
 
+    // Animation for projectTwo
     if (project2) {
       const grid1 = document.querySelector(".project-grid-item-2-1");
       const grid2 = document.querySelector(".project-grid-item-2-2");
@@ -127,7 +129,7 @@ function Navbar({ toggleDarkMode, toggleDarkTheme }) {
       }, 500);
     }
 
-    // Additional logic for project pages
+    // Animation for projectOne
     if (project1) {
       const grid1 = document.querySelector(".project-grid-item-1-1");
       const grid2 = document.querySelector(".project-grid-item-1-2");
@@ -146,6 +148,7 @@ function Navbar({ toggleDarkMode, toggleDarkTheme }) {
       }, 550);
     }
 
+    // Animation for projectTwo
     if (project2) {
       const grid1 = document.querySelector(".project-grid-item-2-1");
       const grid2 = document.querySelector(".project-grid-item-2-2");
@@ -171,52 +174,23 @@ function Navbar({ toggleDarkMode, toggleDarkTheme }) {
         <nav>
           <div>
             <button onClick={goToHomePage} className="brand">
-              <img
-                src={toggleDarkMode ? logoLightMode : logoDarkMode}
-                height="45"
-                width="45"
-                alt="Logotype"
-              />
+              <img src={toggleDarkMode ? logoLightMode : logoDarkMode} height="45" width="45" alt="Logotype" />
             </button>
           </div>
           <div className="btn-container">
             <div>
-              <button
-                className={`btn ${
-                  toggleDarkMode ? "theme-btn-light" : "theme-btn-dark"
-                }`}
-                onClick={toggleDarkTheme}
-              >
-                <i
-                  className={`fa-lightbulb ${
-                    toggleDarkMode ? "fa-solid" : "fa-thin"
-                  }`}
-                ></i>
+              <button className={`btn ${toggleDarkMode ? "theme-btn-light" : "theme-btn-dark"}`} onClick={toggleDarkTheme}>
+                <i className={`fa-lightbulb ${toggleDarkMode ? "fa-solid" : "fa-thin"}`}></i>
               </button>
             </div>
             <div>
-              <button
-                onClick={() => showMenu("menu-page")}
-                className={`${
-                  toggleDarkMode ? "menu-btn-light" : "menu-btn-dark"
-                }
-              } ${isMenuVisible ? "hidden" : ""} `}
-              >
+              <button onClick={() => showMenu("menu-page")} className={`${toggleDarkMode ? "menu-btn-light" : "menu-btn-dark"} } ${isMenuVisible ? "hidden" : ""} `}>
                 <i className="fa-thin fa-ellipsis-stroke-vertical"></i>
                 <i className="fa-thin fa-ellipsis-stroke-vertical"></i>
                 <i className="fa-thin fa-ellipsis-stroke-vertical"></i>
               </button>
-              <button
-                onClick={closeMenu}
-                className={`menu-btn-close btn ${
-                  isMenuVisible ? "" : "hidden"
-                }`}
-              >
-                <i
-                  className={`fa-solid fa-xmark ${
-                    toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
-                  }`}
-                ></i>
+              <button onClick={closeMenu} className={`menu-btn-close btn ${isMenuVisible ? "" : "hidden"}`}>
+                <i className={`fa-solid fa-xmark ${toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"}`}></i>
               </button>
             </div>
           </div>

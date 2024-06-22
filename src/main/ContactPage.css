@@ -22,16 +22,16 @@
 }
 
 @media (max-width: 400px) {
-  .ContactPage {
-    margin: 165px 10px;
-  }
+.ContactPage {
+  margin: 165px 10px;
+}
 
-  .ContactPage h2 {
-    font-size: 45px;
-  }
+.ContactPage h2 {
+  font-size: 45px;
+}
 
-  .ContactPage p,
-  .ContactPage a {
-    font-size: 11px;
-  }
+.ContactPage p,
+.ContactPage a {
+  font-size: 11px;
+}
 }

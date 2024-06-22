@@ -1,4 +1,5 @@
 import React from "react";
+import "../GalleryPage.css";
 
 // Function to generate file names with a given prefix and count
 function generateFileNames(prefix, count) {
@@ -41,56 +42,24 @@ function GalleryThree({ toggleDarkMode }) {
     <div className="GalleryThree hidden" id="gallery-3">
       <div className="grid fade-in">
         <div className="text-start">
-          <button
-            title="Ehla Eat - Eastern Mediterranean Food Gallery"
-            onClick={() => handleClick("gallery-2")}
-            className="ehla-eat-btn btn"
-          >
-            <i
-              className={`fa-thin fa-angle-left ${
-                toggleDarkMode ? "gallery-btn-light" : "gallery-btn-dark"
-              }`}
-            ></i>
+          <button title="Ehla Eat - Eastern Mediterranean Food Gallery" onClick={() => handleClick("gallery-2")} className="ehla-eat-btn btn">
+            <i className={`fa-thin fa-angle-left ${toggleDarkMode ? "gallery-btn-light" : "gallery-btn-dark"}`}></i>
           </button>
         </div>
         <div className="text-center">
-          <h3 className={`${
-            toggleDarkMode ? "text-light-mode" : "text-dark-mode"
-          }`}>Ryan London</h3>
-          <p className={`${
-            toggleDarkMode ? "text-light-mode" : "text-dark-mode"
-          }`}>Leather Goods</p>
+          <h3 className={`${toggleDarkMode ? "text-light-mode" : "text-dark-mode"}`}>Ryan London</h3>
+          <p className={`${toggleDarkMode ? "text-light-mode" : "text-dark-mode"}`}>Leather Goods</p>
         </div>
         <div className="text-end">
-          <button
-            title="Live Music - Events Gallery"
-            onClick={() => handleClick("gallery-4")}
-            className="live-music-btn btn"
-          >
-            <i
-              className={`fa-thin fa-angle-right ${
-                toggleDarkMode ? "gallery-btn-light" : "gallery-btn-dark"
-              }`}
-            ></i>
+          <button title="Live Music - Events Gallery" onClick={() => handleClick("gallery-4")} className="live-music-btn btn">
+            <i className={`fa-thin fa-angle-right ${toggleDarkMode ? "gallery-btn-light" : "gallery-btn-dark"}`}></i>
           </button>
         </div>
       </div>
       <div className="gallery-container fade-in">
-        {imageList.map((image, index) => (
-          <img
-            key={index}
-            height="100%"
-            width="100%"
-            src={image}
-            alt={`Ryan London ${index}`}
-            className="gallery-image"
-          />
-        ))}
+        {imageList.map((image, index) => (<img key={index} height="100%" width="100%" src={image} alt={`Ryan London ${index}`} className="gallery-image" />))}
       </div>
-      <a
-        href="#gallery-3"
-        className={`${toggleDarkMode ? "top-btn-dark" : "top-btn-light"}`}
-      >
+      <a href="#gallery-3" className={`${toggleDarkMode ? "top-btn-dark" : "top-btn-light"}`}>
         <i className="fa-thin fa-angle-up"></i>
       </a>
     </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import "../GalleryPage.css";
 
 // Function to generate file names with a given prefix and count
 function generateFileNames(prefix, count) {
@@ -41,25 +42,13 @@ function GalleryFour({ toggleDarkMode }) {
     <div className="GalleryFour hidden" id="gallery-4">
       <div className="grid fade-in">
         <div className="text-start">
-          <button
-            title="Ryan London - Leather Goods Gallery"
-            onClick={() => handleClick("gallery-3")}
-            className="ryan-london-btn btn"
-          >
-            <i
-              className={`fa-thin fa-angle-left ${
-                toggleDarkMode ? "gallery-btn-light" : "gallery-btn-dark"
-              }`}
-            ></i>
+          <button title="Ryan London - Leather Goods Gallery" onClick={() => handleClick("gallery-3")} className="ryan-london-btn btn">
+            <i className={`fa-thin fa-angle-left ${toggleDarkMode ? "gallery-btn-light" : "gallery-btn-dark"}`}></i>
           </button>
         </div>
         <div className="text-center">
-          <h3 className={`${
-            toggleDarkMode ? "text-light-mode" : "text-dark-mode"
-          }`}>Live Music</h3>
-          <p className={`${
-            toggleDarkMode ? "text-light-mode" : "text-dark-mode"
-          }`}>Events</p>
+          <h3 className={`${toggleDarkMode ? "text-light-mode" : "text-dark-mode"}`}>Live Music</h3>
+          <p className={`${toggleDarkMode ? "text-light-mode" : "text-dark-mode"}`}>Events</p>
         </div>
         <div className="text-end">
           <button className="transparent btn" disabled>
@@ -68,21 +57,9 @@ function GalleryFour({ toggleDarkMode }) {
         </div>
       </div>
       <div className="gallery-container-2 fade-in">
-        {imageList.map((image, index) => (
-          <img
-            key={index}
-            height="100%"
-            width="100%"
-            src={image}
-            alt={`Live Music ${index}`}
-            className="gallery-image"
-          />
-        ))}
+        {imageList.map((image, index) => (<img key={index} height="100%" width="100%" src={image} alt={`Live Music ${index}`} className="gallery-image" />))}
       </div>
-      <a
-        href="#gallery-4"
-        className={`${toggleDarkMode ? "top-btn-dark" : "top-btn-light"}`}
-      >
+      <a href="#gallery-4" className={`${toggleDarkMode ? "top-btn-dark" : "top-btn-light"}`}>
         <i className="fa-thin fa-angle-up"></i>
       </a>
     </div>

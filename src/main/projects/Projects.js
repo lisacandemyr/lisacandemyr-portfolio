@@ -91,62 +91,28 @@ function Projects({ toggleDarkMode }) {
   return (
     <div className="Projects hidden" id="project-page">
       <ul className="float-left">
-        <li className={`${toggleDarkMode ? "text-light-mode" : "text-dark-mode"}`}
-        >
+        <li className={`${toggleDarkMode ? "text-light-mode" : "text-dark-mode"}`}>
           01
-          <button
-            title="Portfolio Project"
-            onClick={() => handleClick("project-1")}
-            className={`ms-1 ${
-              toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
-            }`}
-          >
-            <img
-              src={`${toggleDarkMode ? logoLightMode : logoDarkMode}`}
-              className="logo"
-              height="45"
-              width="45"
-              alt="Logotype"
-            />
+          <button title="Portfolio Project" onClick={() => handleClick("project-1")} className={`ms-1 ${toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"}`}>
+            <img src={`${toggleDarkMode ? logoLightMode : logoDarkMode}`} className="logo" height="45" width="45" alt="Logotype" />
             portfolio
           </button>
         </li>
-        <li className={`${toggleDarkMode ? "text-light-mode" : "text-dark-mode"}`}
-        >
+        <li className={`${toggleDarkMode ? "text-light-mode" : "text-dark-mode"}`}>
           02
-          <button
-            title="Putechnology Project"
-            onClick={() => handleClick("project-2")}
-            className={`ms-2 ${
-              toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
-            }`}
-          >
+          <button title="Putechnology Project" onClick={() => handleClick("project-2")} className={`ms-2 ${toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"}`}>
             Putechnology
           </button>
         </li>
-        <li className={`${toggleDarkMode ? "text-light-mode" : "text-dark-mode"}`}
-        >
+        <li className={`${toggleDarkMode ? "text-light-mode" : "text-dark-mode"}`}>
           03
-          <button
-            title="Project Pending.."
-            onClick={() => handleClick("project-3")}
-            className={`ms-2 ${
-              toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
-            }`}
-          >
+          <button title="Project Pending.." onClick={() => handleClick("project-3")} className={`ms-2 ${toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"}`}>
             Pending..
           </button>
         </li>
-        <li className={`${toggleDarkMode ? "text-light-mode" : "text-dark-mode"}`}
-        >
+        <li className={`${toggleDarkMode ? "text-light-mode" : "text-dark-mode"}`}>
           04
-          <button
-            title="Project Pending.."
-            onClick={() => handleClick("project-4")}
-            className={`ms-2 ${
-              toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
-            }`}
-          >
+          <button title="Project Pending.." onClick={() => handleClick("project-4")} className={`ms-2 ${toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"}`}>
             Pending..
           </button>
         </li>

@@ -45,41 +45,39 @@
 }
 
 .Navbar .menu-btn-close {
-  color: var(--dark-color);
   font-size: 40px;
   line-height: 55px;
   margin: 0 7px 0 4.75px;
-  transition: all 750ms ease-in-out;
 }
 
 .Navbar .menu-btn-close:hover {
-  transform: rotateZ(360deg);
+  transform: scale(1.1);
 }
 
 @media (max-width: 800px) {
-  .Navbar nav {
-    margin: 30px 40px;
-  }
+.Navbar nav {
+  margin: 30px 40px;
+}
 }
 
 @media (max-width: 600px) {
-  .Navbar .theme-btn-light,
-  .Navbar .theme-btn-dark {
-    margin-right: 30px;
-  }
+.Navbar .theme-btn-light,
+.Navbar .theme-btn-dark {
+  margin-right: 30px;
+}
 }
 
 @media (max-width: 400px) {
-  .Navbar nav {
-    margin: 15px;
-  }
+.Navbar nav {
+  margin: 15px;
+}
 
-  .Navbar .btn-container {
-    padding-right: 5px;
-  }
+.Navbar .btn-container {
+  padding-right: 5px;
+}
 
-  .Navbar .theme-btn-light,
-  .Navbar .theme-btn-dark {
-    margin-right: 20px;
-  }
+.Navbar .theme-btn-light,
+.Navbar .theme-btn-dark {
+  margin-right: 20px;
+}
 }

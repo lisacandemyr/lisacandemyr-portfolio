@@ -24,16 +24,16 @@
 }
 
 @media (max-width: 400px) {
-  .AboutPage {
-    margin: 100px 10px;
-    padding: 0 10px;
-  }
+.AboutPage {
+  margin: 100px 10px;
+  padding: 0 10px;
+}
 
-  .AboutPage h2 {
-    font-size: 45px;
-  }
+.AboutPage h2 {
+  font-size: 45px;
+}
 
-  .AboutPage p {
-    font-size: 11px;
-  }
+.AboutPage p {
+  font-size: 11px;
+}
 }

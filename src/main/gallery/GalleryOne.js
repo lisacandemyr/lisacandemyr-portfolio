@@ -1,4 +1,5 @@
 import React from "react";
+import "../GalleryPage.css";
 
 // Function to generate file names with a given prefix and count
 function generateFileNames(prefix, count) {
@@ -46,43 +47,19 @@ function GalleryOne({ toggleDarkMode }) {
           </button>
         </div>
         <div className="text-center">
-          <h3 className={`${
-            toggleDarkMode ? "text-light-mode" : "text-dark-mode"
-          }`}>Greenwich Market</h3>
-          <p className={`${
-            toggleDarkMode ? "text-light-mode" : "text-dark-mode"
-          }`}>Community</p>
+          <h3 className={`${toggleDarkMode ? "text-light-mode" : "text-dark-mode"}`}>Greenwich Market</h3>
+          <p className={`${toggleDarkMode ? "text-light-mode" : "text-dark-mode"}`}>Community</p>
         </div>
         <div className="text-end">
-          <button
-            title="Ehla Eat - Eastern Mediterranean Food Gallery"
-            onClick={() => handleClick("gallery-2")}
-            className="ehla-eat-btn btn"
-          >
-            <i
-              className={`fa-thin fa-angle-right ${
-                toggleDarkMode ? "gallery-btn-light" : "gallery-btn-dark"
-              }`}
-            ></i>
+          <button title="Ehla Eat - Eastern Mediterranean Food Gallery" onClick={() => handleClick("gallery-2")} className="ehla-eat-btn btn">
+            <i className={`fa-thin fa-angle-right ${toggleDarkMode ? "gallery-btn-light" : "gallery-btn-dark"}`}></i>
           </button>
         </div>
       </div>
       <div className="gallery-container fade-in">
-        {imageList.map((image, index) => (
-          <img
-            key={index}
-            height="100%"
-            width="100%"
-            src={image}
-            alt={`Greenwich Market ${index}`}
-            className="gallery-image"
-          />
-        ))}
+        {imageList.map((image, index) => (<img key={index} height="100%" width="100%" src={image} alt={`Greenwich Market ${index}`} className="gallery-image" />))}
       </div>
-      <a
-        href="#gallery-1"
-        className={`${toggleDarkMode ? "top-btn-dark" : "top-btn-light"}`}
-      >
+      <a href="#gallery-1" className={`${toggleDarkMode ? "top-btn-dark" : "top-btn-light"}`}>
         <i className="fa-thin fa-angle-up"></i>
       </a>
     </div>

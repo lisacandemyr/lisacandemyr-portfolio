@@ -65,75 +65,35 @@ function MenuPage({ closeMenu, isMenuVisible, toggleDarkMode }) {
   return (
     <div className={`MenuPage ${isMenuVisible ? "" : "hidden"}`} id="menu-page">
       <ul className="float-right">
-        <li
-          className={`${toggleDarkMode ? "text-light-mode" : "text-dark-mode"}`}
-        >
+        <li className={`${toggleDarkMode ? "text-light-mode" : "text-dark-mode"}`}>
           01
           <button
-            title="Homepage"
-            onClick={() => handleClick("home-page")}
-            className={`ms-2 ${
-              toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
-            }`}
-          >
+            title="Homepage" onClick={() => handleClick("home-page")} className={`ms-2 ${toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"}`}>
             Home
           </button>
         </li>
-        <li
-          className={`${toggleDarkMode ? "text-light-mode" : "text-dark-mode"}`}
-        >
+        <li className={`${toggleDarkMode ? "text-light-mode" : "text-dark-mode"}`}>
           02
-          <button
-            title="Lisa's Web Projects"
-            onClick={() => handleClick("project-page")}
-            className={`ms-2 ${
-              toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
-            }`}
-          >
+          <button title="Lisa's Web Projects" onClick={() => handleClick("project-page")} className={`ms-2 ${toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"}`}>
             Projects
           </button>
         </li>
-        <li
-          className={`${toggleDarkMode ? "text-light-mode" : "text-dark-mode"}`}
-        >
+        <li className={`${toggleDarkMode ? "text-light-mode" : "text-dark-mode"}`}>
           03
-          <button
-            title="Lisa's Photo Gallery"
-            onClick={() => handleClick("gallery-page")}
-            className={`ms-2 gallery-btn ${
-              toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
-            }`}
-          >
-            G<span className="more-spacing">a</span>lle
-            <span className="more-spacing">r</span>y
+          <button title="Lisa's Photo Gallery" onClick={() => handleClick("gallery-page")} className={`ms-2 gallery-btn ${toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"}`}>
+            G<span className="space">a</span>lle<span className="space">r</span>y
           </button>
         </li>
-        <li
-          className={`${toggleDarkMode ? "text-light-mode" : "text-dark-mode"}`}
-        >
+        <li className={`${toggleDarkMode ? "text-light-mode" : "text-dark-mode"}`}>
           04
-          <button
-            title="About Lisa"
-            onClick={() => handleClick("about-page")}
-            className={`ms-2 ${
-              toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
-            }`}
-          >
+          <button title="About Lisa" onClick={() => handleClick("about-page")} className={`ms-2 ${toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"}`}>
             About
           </button>
         </li>
-        <li
-          className={`${toggleDarkMode ? "text-light-mode" : "text-dark-mode"}`}
-        >
+        <li className={`${toggleDarkMode ? "text-light-mode" : "text-dark-mode"}`}>
           05
-          <button
-            title="Contact Lisa"
-            onClick={() => handleClick("contact-page")}
-            className={`ms-2 contact-btn ${
-              toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"
-            }`}
-          >
-            Con<span className="more-spacing">t</span>act
+          <button title="Contact Lisa" onClick={() => handleClick("contact-page")} className={`ms-2 contact-btn ${toggleDarkMode ? "outline-light-mode" : "outline-dark-mode"}`}>
+            Con<span className="space">t</span>act
           </button>
         </li>
       </ul>
