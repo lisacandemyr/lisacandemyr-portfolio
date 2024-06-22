@@ -56,7 +56,7 @@ function GalleryFour({ toggleDarkMode }) {
           </button>
         </div>
       </div>
-      <div className="gallery-container-2 fade-in">
+      <div className={`gallery-container fade-in ${toggleDarkMode ? "gallery-border-light-mode" : "gallery-border-dark-mode"}`}>
         {imageList.map((image, index) => (<img key={index} height="100%" width="100%" src={image} alt={`Live Music ${index}`} className="gallery-image" />))}
       </div>
       <a href="#gallery-4" className={`${toggleDarkMode ? "top-btn-dark" : "top-btn-light"}`}>
