@@ -3,7 +3,7 @@
   src: url('fonts/TangerineRegular.woff2') format('woff2'),
       url('fonts/TangerineRegular.woff') format('woff'),
       url('fonts/TangerineRegular.ttf') format('truetype'),
-      url('fonts/Tangerine.otf') format('svg');
+      url('fonts/Tangerine.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
