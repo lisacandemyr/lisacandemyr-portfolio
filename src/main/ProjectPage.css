@@ -35,7 +35,7 @@
 
 .Projects .logo {
   position: relative;
-  top: -7px;
+  top: -14px;
 }
 
 /* Divider between ProjectPage and ProjectOne, Two, (Three & Four) */
@@ -277,6 +277,7 @@
 .Projects .logo {
   height: 40px;
   width: 40px;
+  top: -13px;
 }
 }
 
