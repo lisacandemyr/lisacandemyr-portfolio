@@ -1,3 +1,14 @@
+@font-face {
+  font-family: 'Tangerine';
+  src: url('fonts/TangerineRegular.woff2') format('woff2'),
+      url('fonts/TangerineRegular.woff') format('woff'),
+      url('fonts/TangerineRegular.ttf') format('truetype'),
+      url('fonts/Tangerine.otf') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --box-shadow: 0px 0px 5px rgba(162, 37, 68, 0.1);
   --circle-size: 90%;
