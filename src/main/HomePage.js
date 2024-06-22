@@ -38,7 +38,7 @@ function HomePage({ toggleDarkMode }) {
         Hey I’m <span className={`size ${toggleDarkMode ? "size-light-mode" : "size-dark-mode"}`}>Li<span className="sa">sa</span></span><span className="hide"> <span className="ca">Ca</span>ndemyr.</span><span className={`size-surname hidden ${toggleDarkMode ? "size-surname-light" : "size-surname-dark"}`}><span className="more-space">C</span>andemyr</span>
       </h1>
       <h2 className={`text-center ${toggleDarkMode ? "text-light-mode" : "text-dark-mode"}`}>
-        Junior Web Developer and Photographer
+        <span className="hide">Junior Web </span>Developer and Photographer
       </h2>
       <div className="text-center fade-in">
         <button title="Lisa's Web Projects" onClick={() => handleClick("project-page")} className={`link btn ${toggleDarkMode ? "links-light-mode" : "links-dark-mode"}`}>

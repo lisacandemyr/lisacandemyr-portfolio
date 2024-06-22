@@ -54,7 +54,7 @@
 
 @media (max-width: 400px) {
 .HomePage {
-  margin: 50px 10px;
+  margin: 60px 10px;
 }
 
 .HomePage h1 {
@@ -103,7 +103,7 @@
 
 .HomePage h2 {
   font-size: 30px;
-  letter-spacing: -2px;
+  letter-spacing: -2.5px;
   line-height: 30px;
   margin: 100px 20px 20px 20px;
 }
@@ -115,13 +115,8 @@
 
 @media (max-width: 350px) {
 .HomePage h2 {
-    font-size: 25px;
-    letter-spacing: -1.5px;
-    line-height: 25px;
-    margin: 100px 20px 20px 20px;
-  }
-  
-  .HomePage .link {
-    width: 130px;
-  }
-  }
+  font-size: 25px;
+  letter-spacing: -1.5px;
+  line-height: 25px;
+}
+}
