@@ -1,5 +1,4 @@
 import React from "react";
-import ProjectCardTwo from "./project-card-two.png";
 import "../ProjectPage.css";
 
 function ProjectTwo({ toggleDarkMode }) {
@@ -27,10 +26,8 @@ function ProjectTwo({ toggleDarkMode }) {
   return (
     <div className="ProjectTwo hidden" id="project-2">
       <div className="grid">
-        <div>
-          <img src={ProjectCardTwo} className={`project-grid-item-2-1 float-left ${toggleDarkMode ? "img-light-mode" : "img-dark-mode"}`} alt="The Ace of Pentacles Tarot Card" />
-        </div>
-        <div className={`project-grid-item-2-2 float-right ${toggleDarkMode ? "grid-2-light-mode" : "grid-2-dark-mode"}`}>
+        <div className={`project-grid-item-2-1 float-left ${toggleDarkMode ? "grid-light-mode" : "grid-dark-mode"}`}></div>
+        <div className={`project-grid-item-2-2 float-right ${toggleDarkMode ? "grid-light-mode" : "grid-dark-mode"}`}>
           <div className={`row ${toggleDarkMode ? "text-light-mode" : "text-dark-mode"}`}>
             <div className={`col-lg-4 ${toggleDarkMode ? "col-light-mode" : "col-dark-mode"}`}>
               <ul>
@@ -86,7 +83,7 @@ function ProjectTwo({ toggleDarkMode }) {
           </div>
         </div>
       </div>
-      <div className="btn-container text-end">
+      <div className="btn-container fade-in text-end">
       <button className="project-prev-btn btn" title="Previous Project - Lisa's Portfolio" onClick={() => onClickPrev("project-2", "project-1")}>
           <i className={`fa-thin fa-angle-left ${toggleDarkMode ? "project-btn-light-mode" : "project-btn-dark-mode"}`}></i>
         </button>
