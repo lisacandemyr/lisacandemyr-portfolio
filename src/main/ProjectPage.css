@@ -197,13 +197,10 @@
     background-position: center;
   }
   25% {
-    background-position: right;
-  }
-  50% {
-    background-position: center;
+    background-position: left;
   }
   75% {
-    background-position: left;
+    background-position: right;
   }
   100% {
     background-position: center;
